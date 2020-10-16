@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly bpmnAble="false" formTarget="src/main/webapp/views/logged/bancosList.search.view.html" resourceType="JAVA" ruleDescription="Consultas" ruleName="Consultas" ruleSynchronous="false" ruleTimeout="300" ruleType="I">
+  <metadata scale="1" scrollx="414.0000000000002" scrolly="-116.80000000000013" target="n=1cKL)B179uB%~xI6=M"/>
+  <block colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Creates a function with an output." type="procedures_defreturn" x="-187" y="83">
+    <mutation>
+      <arg name="bancId"/>
+      <arg name="dataInicio"/>
+      <arg name="dataFim"/>
+    </mutation>
+    <field name="NAME">fncQryTablespaces</field>
+    <comment h="80" pinned="false" w="160">Consultas</comment>
+    <statement name="STACK">
+      <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="kd*MBLZzCOF11wT[EwCl" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+        <field name="VAR">data</field>
+        <value name="VALUE">
+          <block colour="#aa2f00" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Eb:e9[~b}ck/lm-~45bm" multilayer="false" namespace="cronapi.database.Operations.query" origintype="procedures_sql_callreturn" output="true" returntype="ObjectType.DATASET" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EOpen%20query%20database%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20retrieve%20data%20from%20database%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Entity%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Query%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Query%20params%20:%20List%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20DataSet%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_callreturn">
+            <mutation data="%7B%22queryBuilderJson%22:%7B%22isEmpty%22:true,%22isRawSql%22:true,%22sqlContent%22:%22select%20v.dataInicioGraph,%20v.dataInicioRef,%20v.tablespaceName,%20v.totalAlocado%20from%20VyOrclTablespaces%20v%20%20%5Cr%5Cnwhere%20v.bancId%20=%20:bancId%20%5Cr%5Cnand%20v.eventoExecucaoId%20in%20(select%20max(x.eventoExecucaoId)%20from%20%20VyOrclTablespaces%20x%20where%20v.bancId%20=%20x.bancId%20and%20x.dataInicio%20between%20:dataInicio%20and%20:dataFim%20group%20by%20x.dataInicio)%20%5Cr%5Cnorder%20by%20v.tablespaceName%20asc,%20v.dataInicioRef%20asc%22,%22multiTenant%22:false,%22paginatorAutomatic%22:false,%22pagination%22:true,%22rulesPagination%22:%5B%7B%22func%22:%22limit%22,%22value%22:%22:limit%22%7D,%7B%22func%22:%22offset%22,%22value%22:%22:offset%22%7D%5D%7D,%22entity%22:%22VyOrclTablespaces%22,%22entityFullName%22:%22reports.entity.VyOrclTablespaces%22,%22filter%22:%22select%20v.dataInicioGraph,%20v.dataInicioRef,%20v.tablespaceName,%20v.totalAlocado%20from%20VyOrclTablespaces%20v%20%20%5Cr%5Cnwhere%20v.bancId%20=%20:bancId%20%5Cr%5Cnand%20v.eventoExecucaoId%20in%20(select%20max(x.eventoExecucaoId)%20from%20%20VyOrclTablespaces%20x%20where%20v.bancId%20=%20x.bancId%20and%20x.dataInicio%20between%20:dataInicio%20and%20:dataFim%20group%20by%20x.dataInicio)%20%5Cr%5Cnorder%20by%20v.tablespaceName%20asc,%20v.dataInicioRef%20asc%22,%22queryMode%22:%22object%22,%22params%22:%22%5B%5C%22bancId%5C%22,%5C%22dataInicio%5C%22,%5C%22dataFim%5C%22,%5C%22limit%5C%22,%5C%22offset%5C%22%5D%22,%22wizardType%22:%22SELECT%22%7D" name="{{cronapi.database.Operations.query}}">
+              <arg name="bancId"/>
+              <arg name="dataInicio"/>
+              <arg name="dataFim"/>
+              <arg name="limit"/>
+              <arg name="offset"/>
+            </mutation>
+            <value name="ARG0">
+              <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="}Y}OFUU[uURP1$g9Ig06" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">bancId</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="D}%6.K@Woics0n.0f|^q" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">dataInicio</field>
+              </block>
+            </value>
+            <value name="ARG2">
+              <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="cycrsEg5.`+Pn(D=ilB-" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">dataFim</field>
+              </block>
+            </value>
+            <value name="ARG3">
+              <block colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Q4`%BY?udU{;GxErkgGg" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                <field name="NUM">1000000</field>
+              </block>
+            </value>
+            <value name="ARG4">
+              <block colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="mp2sP[4yL{]icGXMUUNL" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=")Ja0)g5Z4{PGGWVh9z!9" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+        <field name="VAR">data</field>
+      </block>
+    </value>
+  </block>
+  <block colour="#995ba5" id="+`(M.CEO3Mf5ByOaw!Dk" origintype="procedures_defreturn" output="false" tooltip="Creates a function with an output." type="procedures_defreturn" x="-227" y="151">
+    <mutation>
+      <arg name="bancId"/>
+      <arg name="dataInicio"/>
+      <arg name="dataFim"/>
+    </mutation>
+    <field name="NAME">fncQryChamados</field>
+    <comment h="80" pinned="false" w="160">Consultas</comment>
+    <statement name="STACK">
+      <block colour="#0088ee" dependencyby="+`(M.CEO3Mf5ByOaw!Dk" id="WIY[7+Vc8tON+ts0+qyi" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+        <field name="VAR">data</field>
+        <value name="VALUE">
+          <block colour="#aa2f00" dependencyby="+`(M.CEO3Mf5ByOaw!Dk" id=".8=30f)b5uC+xuQp8nd2" multilayer="false" namespace="cronapi.database.Operations.query" origintype="procedures_sql_callreturn" output="true" returntype="ObjectType.DATASET" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EOpen%20query%20database%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20retrieve%20data%20from%20database%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Entity%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Query%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Query%20params%20:%20List%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20DataSet%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_callreturn">
+            <mutation data="%7B%22queryBuilderJson%22:%7B%22isEmpty%22:true,%22isRawSql%22:true,%22sqlContent%22:%22select%20v%20from%20VwApontamentosChamados%20v%5Cr%5Cnwhere%20v.itemCodigo%20=%20(select%20x.itemCodigo%20from%20VwBancos%20x%20where%20x.id%20=%20:bancId)%5Cr%5Cnand%20v.sugiroNaoFaturar%20is%20null%5Cr%5Cnand%20(v.data%20between%20:dataInicio%20and%20:dataFim%20or%20v.status%20=%20'AG')%5Cr%5Cnorder%20by%20v.codigoChamado,v.descServico,v.descStatus,v.descricao,%20v.data,%20v.horaInicio%22,%22multiTenant%22:false,%22paginatorAutomatic%22:false,%22pagination%22:true,%22rulesPagination%22:%5B%7B%22func%22:%22limit%22,%22value%22:%22:limit%22%7D,%7B%22func%22:%22offset%22,%22value%22:%22:offset%22%7D%5D%7D,%22entity%22:%22VwApontamentosChamados%22,%22entityFullName%22:%22reports.entity.VwApontamentosChamados%22,%22filter%22:%22select%20v%20from%20VwApontamentosChamados%20v%5Cr%5Cnwhere%20v.itemCodigo%20=%20(select%20x.itemCodigo%20from%20VwBancos%20x%20where%20x.id%20=%20:bancId)%5Cr%5Cnand%20v.sugiroNaoFaturar%20is%20null%5Cr%5Cnand%20(v.data%20between%20:dataInicio%20and%20:dataFim%20or%20v.status%20=%20'AG')%5Cr%5Cnorder%20by%20v.codigoChamado,v.descServico,v.descStatus,v.descricao,%20v.data,%20v.horaInicio%22,%22queryMode%22:%22object%22,%22params%22:%22%5B%5C%22bancId%5C%22,%5C%22dataInicio%5C%22,%5C%22dataFim%5C%22,%5C%22limit%5C%22,%5C%22offset%5C%22%5D%22,%22wizardType%22:%22SELECT%22%7D" name="{{cronapi.database.Operations.query}}">
+              <arg name="bancId"/>
+              <arg name="dataInicio"/>
+              <arg name="dataFim"/>
+              <arg name="limit"/>
+              <arg name="offset"/>
+            </mutation>
+            <value name="ARG0">
+              <block colour="#0088ee" dependencyby="+`(M.CEO3Mf5ByOaw!Dk" id="ZO}|g/wMNxtF}PYs3y/G" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">bancId</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block colour="#0088ee" dependencyby="+`(M.CEO3Mf5ByOaw!Dk" id="Xklk4]+df0g{VWmWwbYo" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">dataInicio</field>
+              </block>
+            </value>
+            <value name="ARG2">
+              <block colour="#0088ee" dependencyby="+`(M.CEO3Mf5ByOaw!Dk" id="|q{$%(FLD$kD^tPCxCl;" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">dataFim</field>
+              </block>
+            </value>
+            <value name="ARG3">
+              <block colour="#5b67a5" dependencyby="+`(M.CEO3Mf5ByOaw!Dk" id="1?;-Q]7@]|EnMI=b*ZbM" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                <field name="NUM">1000000</field>
+              </block>
+            </value>
+            <value name="ARG4">
+              <block colour="#5b67a5" dependencyby="+`(M.CEO3Mf5ByOaw!Dk" id="!uvyBw#`$/=Ec8P2eT[I" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block colour="#0088ee" dependencyby="+`(M.CEO3Mf5ByOaw!Dk" id="8UwLP3]S0fK1hR.*5!K!" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+        <field name="VAR">data</field>
+      </block>
+    </value>
+  </block>
+  <block colour="#fca03b" id="tuU{z}iJ3#^z5I3;)sHa" origintype="procedures_defreturn" output="false" tooltip="Creates a function with an output." type="procedures_defreturn" x="-247" y="158">
+    <mutation>
+      <arg name="bancId"/>
+      <arg name="dataInicio"/>
+      <arg name="dataFim"/>
+    </mutation>
+    <field name="NAME">fcnQryVxOrclArchivedLogHour</field>
+    <comment h="80" pinned="false" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block colour="#0088ee" dependencyby="tuU{z}iJ3#^z5I3;)sHa" id="l^8yuEQdGB6*m.HGIwxV" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+        <field name="VAR">data</field>
+        <value name="VALUE">
+          <block colour="#aa2f00" dependencyby="tuU{z}iJ3#^z5I3;)sHa" id="e4WV[Y8r-n.F%QhqtfZH" multilayer="false" namespace="cronapi.database.Operations.query" origintype="procedures_sql_callreturn" output="true" returntype="ObjectType.DATASET" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EOpen%20query%20database%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20retrieve%20data%20from%20database%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Entity%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Query%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Query%20params%20:%20List%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20DataSet%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_callreturn">
+            <mutation data="%7B%22queryBuilderJson%22:%7B%22isValid%22:true,%22isEmpty%22:false,%22operationType%22:%22object%22,%22type%22:%22select%22,%22rulesEntity%22:%5B%7B%22entity%22:%22VxOrclArchivedLogHour%22,%22namespace%22:%22reports.entity.VxOrclArchivedLogHour%22,%22alias%22:%22v%22%7D%5D,%22rulesSelect%22:%5B%7B%22func%22:%22get%22,%22field%22:%22v%22,%22type%22:%22string%22%7D%5D,%22rulesGroupBy%22:%5B%5D,%22rulesHaving%22:%5B%5D,%22rulesOrderBy%22:%5B%7B%22func%22:%22get%22,%22field%22:%22v.dataArchiveLog%22,%22order%22:%22asc%22%7D%5D,%22rules%22:%7B%22condition%22:%22AND%22,%22rules%22:%5B%7B%22id%22:%22v.bancId%22,%22field%22:%22v.bancId%22,%22type%22:%22double%22,%22input%22:%22text%22,%22operator%22:%22equal%22,%22value%22:%22:bancId%22,%22valueIsField%22:false%7D,%7B%22id%22:%22v.dataArchiveLog%22,%22field%22:%22v.dataArchiveLog%22,%22type%22:%22date%22,%22input%22:%22text%22,%22operator%22:%22between%22,%22value%22:%5B%22:dataInicio%22,%22:dataFim%22%5D,%22valueIsField%22:false%7D%5D,%22not%22:false,%22valid%22:true%7D,%22isRawSql%22:false,%22multiTenant%22:false,%22paginatorAutomatic%22:false,%22pagination%22:true,%22rulesPagination%22:%5B%7B%22func%22:%22limit%22,%22value%22:%22:limit%22%7D,%7B%22func%22:%22offset%22,%22value%22:%22:offset%22%7D%5D%7D,%22entity%22:%22VxOrclArchivedLogHour%22,%22entityFullName%22:%22reports.entity.VxOrclArchivedLogHour%22,%22filter%22:%22select%20v%20from%20VxOrclArchivedLogHour%20v%20where%20v.bancId%20=%20:bancId%20AND%20v.dataArchiveLog%20BETWEEN%20:dataInicio%20AND%20:dataFim%20%20%20order%20by%20v.dataArchiveLog%20asc%22,%22queryMode%22:%22object%22,%22params%22:%22%5B%5C%22bancId%5C%22,%5C%22dataInicio%5C%22,%5C%22dataFim%5C%22,%5C%22limit%5C%22,%5C%22offset%5C%22%5D%22%7D" name="{{cronapi.database.Operations.query}}">
+              <arg name="bancId"/>
+              <arg name="dataInicio"/>
+              <arg name="dataFim"/>
+              <arg name="limit"/>
+              <arg name="offset"/>
+            </mutation>
+            <value name="ARG0">
+              <block colour="#0088ee" dependencyby="tuU{z}iJ3#^z5I3;)sHa" id="K((CR9st(,q@.J%_S#)R" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">bancId</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block colour="#0088ee" dependencyby="tuU{z}iJ3#^z5I3;)sHa" id="Y^*Klgrcr,-JedaO5Qf:" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">dataInicio</field>
+              </block>
+            </value>
+            <value name="ARG2">
+              <block colour="#0088ee" dependencyby="tuU{z}iJ3#^z5I3;)sHa" id="Zn/K]*%bKwzX_r0y#`8L" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">dataFim</field>
+              </block>
+            </value>
+            <value name="ARG3">
+              <block colour="#5b67a5" dependencyby="tuU{z}iJ3#^z5I3;)sHa" id="39QHq5Tk(L[[9TF|,JFi" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                <field name="NUM">1000000</field>
+              </block>
+            </value>
+            <value name="ARG4">
+              <block colour="#5b67a5" dependencyby="tuU{z}iJ3#^z5I3;)sHa" id="$HGx2G$cELJ*?5ox24Do" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block colour="#0088ee" dependencyby="tuU{z}iJ3#^z5I3;)sHa" id="[=yWMOEUw1gnU_tZOXm=" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+        <field name="VAR">data</field>
+      </block>
+    </value>
+  </block>
+  <block colour="#995ba5" id="+$ou*j79.5O@1)P`7mgL" origintype="procedures_defreturn" output="false" tooltip="Creates a function with an output." type="procedures_defreturn" x="-287" y="161">
+    <mutation>
+      <arg name="bancId"/>
+      <arg name="dataInicio"/>
+      <arg name="dataFim"/>
+    </mutation>
+    <field name="NAME">fncQryBancosStatusSessoes</field>
+    <comment h="80" pinned="false" w="160">Consultas</comment>
+    <statement name="STACK">
+      <block colour="#0088ee" dependencyby="+$ou*j79.5O@1)P`7mgL" id="(`34zcq|V8=fqZ55M`hB" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+        <field name="VAR">data</field>
+        <value name="VALUE">
+          <block colour="#aa2f00" dependencyby="+$ou*j79.5O@1)P`7mgL" id="F+GHsL_4xuj!K#$f!u9R" multilayer="false" namespace="cronapi.database.Operations.query" origintype="procedures_sql_callreturn" output="true" returntype="ObjectType.DATASET" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EOpen%20query%20database%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20retrieve%20data%20from%20database%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Entity%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Query%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Query%20params%20:%20List%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20DataSet%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_callreturn">
+            <mutation data="%7B%22queryBuilderJson%22:%7B%22isValid%22:true,%22isEmpty%22:false,%22operationType%22:%22object%22,%22type%22:%22select%22,%22rulesEntity%22:%5B%7B%22entity%22:%22VwOrclSessions%22,%22namespace%22:%22reports.entity.VwOrclSessions%22,%22alias%22:%22v%22%7D%5D,%22rulesSelect%22:%5B%7B%22func%22:%22get%22,%22field%22:%22v%22,%22type%22:%22string%22%7D%5D,%22rulesGroupBy%22:%5B%5D,%22rulesHaving%22:%5B%5D,%22rulesOrderBy%22:%5B%7B%22func%22:%22get%22,%22field%22:%22v.dataGeracao%22,%22order%22:%22asc%22%7D,%7B%22func%22:%22get%22,%22field%22:%22v.dataHora%22,%22order%22:%22asc%22%7D%5D,%22rules%22:%7B%22condition%22:%22AND%22,%22rules%22:%5B%7B%22id%22:%22v.bancId%22,%22field%22:%22v.bancId%22,%22type%22:%22double%22,%22input%22:%22text%22,%22operator%22:%22equal%22,%22value%22:%22:bancId%22,%22valueIsField%22:false%7D,%7B%22id%22:%22v.dataGeracao%22,%22field%22:%22v.dataGeracao%22,%22type%22:%22date%22,%22input%22:%22text%22,%22operator%22:%22between%22,%22value%22:%5B%22:dataInicio%22,%22:dataFim%22%5D,%22valueIsField%22:false%7D%5D,%22not%22:false,%22valid%22:true%7D,%22isRawSql%22:false,%22multiTenant%22:false,%22paginatorAutomatic%22:false,%22pagination%22:true,%22rulesPagination%22:%5B%7B%22func%22:%22limit%22,%22value%22:%22:limit%22%7D,%7B%22func%22:%22offset%22,%22value%22:%22:offset%22%7D%5D%7D,%22entity%22:%22VwOrclSessions%22,%22entityFullName%22:%22reports.entity.VwOrclSessions%22,%22filter%22:%22select%20v%20from%20VwOrclSessions%20v%20where%20v.bancId%20=%20:bancId%20AND%20v.dataGeracao%20BETWEEN%20:dataInicio%20AND%20:dataFim%20%20%20order%20by%20v.dataGeracao%20asc,%20v.dataHora%20asc%22,%22queryMode%22:%22object%22,%22params%22:%22%5B%5C%22bancId%5C%22,%5C%22dataInicio%5C%22,%5C%22dataFim%5C%22,%5C%22limit%5C%22,%5C%22offset%5C%22%5D%22,%22wizardType%22:%22SELECT%22%7D" name="{{cronapi.database.Operations.query}}">
+              <arg name="bancId"/>
+              <arg name="dataInicio"/>
+              <arg name="dataFim"/>
+              <arg name="limit"/>
+              <arg name="offset"/>
+            </mutation>
+            <value name="ARG0">
+              <block colour="#0088ee" dependencyby="+$ou*j79.5O@1)P`7mgL" id="|U./7SPl[-g2_v7zLoOI" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">bancId</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block colour="#0088ee" dependencyby="+$ou*j79.5O@1)P`7mgL" id="!Ul1ElsE6pp+2eIy+*[f" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">dataInicio</field>
+              </block>
+            </value>
+            <value name="ARG2">
+              <block colour="#0088ee" dependencyby="+$ou*j79.5O@1)P`7mgL" id="Y~qfOTBj(=QPw4{P+7Pb" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">dataFim</field>
+              </block>
+            </value>
+            <value name="ARG3">
+              <block colour="#5b67a5" dependencyby="+$ou*j79.5O@1)P`7mgL" id="@lmjniWGDBX3ybsu.T%j" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                <field name="NUM">1000000</field>
+              </block>
+            </value>
+            <value name="ARG4">
+              <block colour="#5b67a5" dependencyby="+$ou*j79.5O@1)P`7mgL" id="k*58Xn:ztzkIPQtK}cz=" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block colour="#0088ee" dependencyby="+$ou*j79.5O@1)P`7mgL" id="S%G/]U~h^A*C;a{:Kk5*" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+        <field name="VAR">data</field>
+      </block>
+    </value>
+  </block>
+  <block colour="#995ba5" id="n=1cKL)B179uB%~xI6=M" origintype="procedures_defreturn" output="false" tooltip="Creates a function with an output." type="procedures_defreturn" x="-174" y="192">
+    <mutation>
+      <arg name="bancId"/>
+      <arg name="dataInicio"/>
+      <arg name="dataFim"/>
+    </mutation>
+    <field name="NAME">fncQryTablespacesGraph</field>
+    <comment h="80" pinned="false" w="160">Consultas</comment>
+    <statement name="STACK">
+      <block colour="#0088ee" dependencyby="n=1cKL)B179uB%~xI6=M" id="2*nI+a|9Uh4_Cw~QCiTy" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+        <field name="VAR">databaseSize</field>
+        <value name="VALUE">
+          <block colour="#fca03b" dependencyby="n=1cKL)B179uB%~xI6=M" id="I5xi[5Ju$za/ly5-GDwZ" origintype="procedures_callreturn" output="true" tooltip="Run the user-defined function 'fncQryTablespacesTotal' and use its output." type="procedures_callreturn">
+            <mutation name="fncQryTablespacesTotal" return-raw-type="undefined">
+              <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+              <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicio"/>
+              <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataFim"/>
+            </mutation>
+            <value name="ARG0">
+              <block colour="#0088ee" dependencyby="n=1cKL)B179uB%~xI6=M" id="7t_`]~R+jh@@v}!n:e^*" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">bancId</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block colour="#0088ee" dependencyby="n=1cKL)B179uB%~xI6=M" id=";6y#Xyw~@;Uxq^oU$*[-" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">dataInicio</field>
+              </block>
+            </value>
+            <value name="ARG2">
+              <block colour="#0088ee" dependencyby="n=1cKL)B179uB%~xI6=M" id="g/9-XA6|uV|{,xG(F[uE" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">dataFim</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block colour="#5b80a5" dependencyby="n=1cKL)B179uB%~xI6=M" id="U[cMbl,BdIT@%VKBsk[5" origintype="controls_if" output="false" tooltip="function () { [native code] }" type="controls_if">
+            <value name="IF0">
+              <block colour="#5b80a5" dependencyby="n=1cKL)B179uB%~xI6=M" id="obsX_?vAOMe4c3U$[I+l" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block colour="#0088ee" dependencyby="n=1cKL)B179uB%~xI6=M" id=",~;QR{JeRGdxb-O?vwED" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                    <field name="VAR">databaseSize</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block colour="#5b67a5" dependencyby="n=1cKL)B179uB%~xI6=M" id="M1]LN,o^[:$SD;yOeaWh" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block colour="#0088ee" dependencyby="n=1cKL)B179uB%~xI6=M" id="s*`VB+:fr*$f*Q1`)J]D" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+                <field name="VAR">databaseSize</field>
+                <value name="VALUE">
+                  <block colour="#5b67a5" dependencyby="n=1cKL)B179uB%~xI6=M" id="#qkdtd}8@/1ko%x/vlUh" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block colour="#0088ee" dependencyby="n=1cKL)B179uB%~xI6=M" id="{JG)a_ZZ`C2M2G_BDSK%" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+                <field name="VAR">data</field>
+                <value name="VALUE">
+                  <block colour="#aa2f00" dependencyby="n=1cKL)B179uB%~xI6=M" id="]1@*kqDid3U2ypzjvl%1" multilayer="false" namespace="cronapi.database.Operations.query" origintype="procedures_sql_callreturn" output="true" returntype="ObjectType.DATASET" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EOpen%20query%20database%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20retrieve%20data%20from%20database%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Entity%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Query%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Query%20params%20:%20List%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20DataSet%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_callreturn">
+                    <mutation data="%7B%22queryBuilderJson%22:%7B%22isEmpty%22:true,%22isRawSql%22:true,%22sqlContent%22:%22select%20v.dataInicioGraph,%20v.dataInicioRef,%20v.tablespaceName,%20v.totalAlocado%20from%20VyOrclTablespaces%20v%20%20%5Cr%5Cnwhere%20v.bancId%20=%20:bancId%20%5Cr%5Cnand%20v.eventoExecucaoId%20in%20(select%20max(x.eventoExecucaoId)%20from%20%20VyOrclTablespaces%20x%20where%20v.bancId%20=%20x.bancId%20and%20x.dataInicio%20between%20:dataInicio%20and%20:dataFim%20group%20by%20x.dataInicio)%20%5Cr%5Cnand%20(%20v.totalAlocado%20/%20:databaseSize%20*%20100%20%3E%201%20)%5Cr%5Cnorder%20by%20v.dataInicioRef%20asc%22,%22multiTenant%22:false,%22paginatorAutomatic%22:false,%22pagination%22:true,%22rulesPagination%22:%5B%7B%22func%22:%22limit%22,%22value%22:%22:limit%22%7D,%7B%22func%22:%22offset%22,%22value%22:%22:offset%22%7D%5D%7D,%22entity%22:%22VyOrclTablespaces%22,%22entityFullName%22:%22reports.entity.VyOrclTablespaces%22,%22filter%22:%22select%20v.dataInicioGraph,%20v.dataInicioRef,%20v.tablespaceName,%20v.totalAlocado%20from%20VyOrclTablespaces%20v%20%20%5Cr%5Cnwhere%20v.bancId%20=%20:bancId%20%5Cr%5Cnand%20v.eventoExecucaoId%20in%20(select%20max(x.eventoExecucaoId)%20from%20%20VyOrclTablespaces%20x%20where%20v.bancId%20=%20x.bancId%20and%20x.dataInicio%20between%20:dataInicio%20and%20:dataFim%20group%20by%20x.dataInicio)%20%5Cr%5Cnand%20(%20v.totalAlocado%20/%20:databaseSize%20*%20100%20%3E%201%20)%5Cr%5Cnorder%20by%20v.dataInicioRef%20asc%22,%22queryMode%22:%22object%22,%22params%22:%22%5B%5C%22bancId%5C%22,%5C%22dataInicio%5C%22,%5C%22dataFim%5C%22,%5C%22databaseSize%5C%22,%5C%22limit%5C%22,%5C%22offset%5C%22%5D%22%7D" name="{{cronapi.database.Operations.query}}">
+                      <arg name="bancId"/>
+                      <arg name="dataInicio"/>
+                      <arg name="dataFim"/>
+                      <arg name="databaseSize"/>
+                      <arg name="limit"/>
+                      <arg name="offset"/>
+                    </mutation>
+                    <value name="ARG0">
+                      <block colour="#0088ee" dependencyby="n=1cKL)B179uB%~xI6=M" id="Pp|aZx,x9+fvsCgo4:.R" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block colour="#0088ee" dependencyby="n=1cKL)B179uB%~xI6=M" id="u1vT69-AY;^c]$M:i}6G" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                        <field name="VAR">dataInicio</field>
+                      </block>
+                    </value>
+                    <value name="ARG2">
+                      <block colour="#0088ee" dependencyby="n=1cKL)B179uB%~xI6=M" id="qgM+$aiD+%,S]][iFSkl" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                        <field name="VAR">dataFim</field>
+                      </block>
+                    </value>
+                    <value name="ARG3">
+                      <block colour="#0088ee" dependencyby="n=1cKL)B179uB%~xI6=M" id="d,oV,m9`e:W:En`+w/_b" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                        <field name="VAR">databaseSize</field>
+                      </block>
+                    </value>
+                    <value name="ARG4">
+                      <block colour="#5b67a5" dependencyby="n=1cKL)B179uB%~xI6=M" id="P:VX$_ExCQ/a?+8t{9QL" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                        <field name="NUM">1000000</field>
+                      </block>
+                    </value>
+                    <value name="ARG5">
+                      <block colour="#5b67a5" dependencyby="n=1cKL)B179uB%~xI6=M" id=")H!pmFJl(oZ-~aI)v:d?" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block colour="#0088ee" dependencyby="n=1cKL)B179uB%~xI6=M" id="u}YFu0L?tlG#8)7y=-zG" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+        <field name="VAR">data</field>
+      </block>
+    </value>
+  </block>
+  <block colour="#995ba5" id="U83*EK,3r]c$J7}#By3Z" origintype="procedures_defreturn" output="false" tooltip="Creates a function with an output." type="procedures_defreturn" x="-398" y="214">
+    <mutation>
+      <arg name="bancId"/>
+    </mutation>
+    <field name="NAME">fncQryBancosLimite</field>
+    <comment h="80" pinned="false" w="160">Consultas</comment>
+    <statement name="STACK">
+      <block colour="#0088ee" dependencyby="U83*EK,3r]c$J7}#By3Z" id="szs%qDru-/HSRl}vV*!K" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+        <field name="VAR">data</field>
+        <value name="VALUE">
+          <block colour="#aa2f00" dependencyby="U83*EK,3r]c$J7}#By3Z" id="cG7O[E4al#h8;G#Q=([n" multilayer="false" namespace="cronapi.database.Operations.query" origintype="procedures_sql_callreturn" output="true" returntype="ObjectType.DATASET" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EOpen%20query%20database%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20retrieve%20data%20from%20database%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Entity%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Query%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Query%20params%20:%20List%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20DataSet%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_callreturn">
+            <mutation data="%7B%22queryBuilderJson%22:%7B%22isValid%22:true,%22isEmpty%22:false,%22operationType%22:%22object%22,%22type%22:%22select%22,%22rulesEntity%22:%5B%7B%22entity%22:%22VwBancos%22,%22namespace%22:%22reports.entity.VwBancos%22,%22alias%22:%22v%22%7D%5D,%22rulesSelect%22:%5B%7B%22func%22:%22get%22,%22field%22:%22v.id%22,%22type%22:%22double%22%7D,%7B%22func%22:%22get%22,%22field%22:%22v.numMaxSessoes%22,%22type%22:%22double%22%7D%5D,%22rulesGroupBy%22:%5B%5D,%22rulesHaving%22:%5B%5D,%22rulesOrderBy%22:%5B%5D,%22rules%22:%7B%22condition%22:%22AND%22,%22rules%22:%5B%7B%22id%22:%22v.id%22,%22field%22:%22v.id%22,%22type%22:%22double%22,%22input%22:%22text%22,%22operator%22:%22equal%22,%22value%22:%22:bancId%22,%22valueIsField%22:false%7D%5D,%22not%22:false,%22valid%22:true%7D,%22isRawSql%22:false,%22multiTenant%22:false,%22paginatorAutomatic%22:false,%22pagination%22:false%7D,%22entity%22:%22VwBancos%22,%22entityFullName%22:%22reports.entity.VwBancos%22,%22filter%22:%22select%20v.id,%20v.numMaxSessoes%20from%20VwBancos%20v%20where%20v.id%20=%20:bancId%22,%22queryMode%22:%22object%22,%22params%22:%22%5B%5C%22bancId%5C%22%5D%22,%22wizardType%22:%22SELECT%22%7D" name="{{cronapi.database.Operations.query}}">
+              <arg name="bancId"/>
+            </mutation>
+            <value name="ARG0">
+              <block colour="#0088ee" dependencyby="U83*EK,3r]c$J7}#By3Z" id="ForRKfJAyaX$b2Ob7Al_" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">bancId</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block colour="#aa2f00" dependencyby="U83*EK,3r]c$J7}#By3Z" id="7{%aiP=):g$bRFYc9Wv|" multilayer="false" namespace="cronapi.database.Operations.getField" origintype="procedures_get_field" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EGet%20field%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20that%20retrieve%20the%20field%20of%20current%20data%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Datasource%20:%20Object%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Field%20name%20:%20String%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Object%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.database.Operations.getField%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.database.Operations.getField%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_get_field">
+        <mutation name="{{cronapi.database.Operations.getField}}">
+          <arg name="Datasource"/>
+          <arg name="Field name"/>
+        </mutation>
+        <value name="PARAM0">
+          <block colour="#0088ee" dependencyby="U83*EK,3r]c$J7}#By3Z" id="Lw9QYj#K)1JgXqyS@7,D" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+            <field name="VAR">data</field>
+          </block>
+        </value>
+        <value name="PARAM1">
+          <block colour="#5ba593" dependencyby="U83*EK,3r]c$J7}#By3Z" id="]me|C}`%.6xch#R:vi}B" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+            <field name="TEXT">this[1]</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block colour="#995ba5" id="kjMTZ~nOs5V+4uY:8f^k" origintype="procedures_defreturn" output="false" tooltip="Creates a function with an output." type="procedures_defreturn" x="-377" y="213">
+    <mutation>
+      <arg name="bancId"/>
+      <arg name="dataInicio"/>
+      <arg name="dataFim"/>
+    </mutation>
+    <field name="NAME">fncQryTablespacesTotal</field>
+    <comment h="80" pinned="false" w="160">Consultas</comment>
+    <statement name="STACK">
+      <block colour="#0088ee" dependencyby="kjMTZ~nOs5V+4uY:8f^k" id="!T?^dd+q{I-|$z2vqN{X" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+        <field name="VAR">data</field>
+        <value name="VALUE">
+          <block colour="#aa2f00" dependencyby="kjMTZ~nOs5V+4uY:8f^k" id="pqXcv^~vbp8NYGcvV8`K" multilayer="false" namespace="cronapi.database.Operations.query" origintype="procedures_sql_callreturn" output="true" returntype="ObjectType.DATASET" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EOpen%20query%20database%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20retrieve%20data%20from%20database%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Entity%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Query%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Query%20params%20:%20List%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20DataSet%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_callreturn">
+            <mutation data="%7B%22queryBuilderJson%22:%7B%22isEmpty%22:true,%22isRawSql%22:true,%22sqlContent%22:%22SELECT%20y.bancId,%20SUM(y.sumAllocMbbytes)%20as%20sumAllocMbbytes%5Cr%5CnFROM%20%20%20VmOrclTablespaces%20y%20%5Cr%5CnWHERE%20%20y.bancId%20=%20:bancId%20%5Cr%5CnAND%20y.eventoExecucaoId%20IN%20(%20%5Cr%5Cn%20%20%20SELECT%20MAX(x.eventoExecucaoId)%20FROM%20VmOrclTablespaces%20x%20%5Cr%5Cn%20%20%20WHERE%20y.bancId%20=%20x.bancId%20and%20x.dataInicio%20between%20:dataInicio%20and%20:dataFim)%20%5Cr%5Cngroup%20by%20y.bancId%20%20%20%20%22,%22multiTenant%22:false,%22paginatorAutomatic%22:true,%22pagination%22:false%7D,%22entity%22:%22VmOrclTablespaces%22,%22entityFullName%22:%22reports.entity.VmOrclTablespaces%22,%22filter%22:%22SELECT%20y.bancId,%20SUM(y.sumAllocMbbytes)%20as%20sumAllocMbbytes%5Cr%5CnFROM%20%20%20VmOrclTablespaces%20y%20%5Cr%5CnWHERE%20%20y.bancId%20=%20:bancId%20%5Cr%5CnAND%20y.eventoExecucaoId%20IN%20(%20%5Cr%5Cn%20%20%20SELECT%20MAX(x.eventoExecucaoId)%20FROM%20VmOrclTablespaces%20x%20%5Cr%5Cn%20%20%20WHERE%20y.bancId%20=%20x.bancId%20and%20x.dataInicio%20between%20:dataInicio%20and%20:dataFim)%20%5Cr%5Cngroup%20by%20y.bancId%22,%22queryMode%22:%22object%22,%22params%22:%22%5B%5C%22bancId%5C%22,%5C%22dataInicio%5C%22,%5C%22dataFim%5C%22%5D%22%7D" name="{{cronapi.database.Operations.query}}">
+              <arg name="bancId"/>
+              <arg name="dataInicio"/>
+              <arg name="dataFim"/>
+            </mutation>
+            <value name="ARG0">
+              <block colour="#0088ee" dependencyby="kjMTZ~nOs5V+4uY:8f^k" id="Y{BRso?}H8TiaN1GmF%@" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">bancId</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block colour="#0088ee" dependencyby="kjMTZ~nOs5V+4uY:8f^k" id="Z,{;G.^,UGaU:2:.$)D?" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">dataInicio</field>
+              </block>
+            </value>
+            <value name="ARG2">
+              <block colour="#0088ee" dependencyby="kjMTZ~nOs5V+4uY:8f^k" id="L?M|wOP!@_L1.wjps,^a" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">dataFim</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block colour="#aa2f00" dependencyby="kjMTZ~nOs5V+4uY:8f^k" id="NN1U7aD36If*90Me![Q;" multilayer="false" namespace="cronapi.database.Operations.getField" origintype="procedures_get_field" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20campo%20do%20registro%20do%20cursor%20atual%20da%20fonte%20de%20dados%20%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Nome%20do%20campo%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.database.Operations.getField%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.database.Operations.getField%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_get_field">
+        <mutation name="{{cronapi.database.Operations.getField}}">
+          <arg name="Fonte de dados"/>
+          <arg name="Nome do campo"/>
+        </mutation>
+        <value name="PARAM0">
+          <block colour="#0088ee" dependencyby="kjMTZ~nOs5V+4uY:8f^k" id="GN`f;cAqAfhv%)kRr+$t" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+            <field name="VAR">data</field>
+          </block>
+        </value>
+        <value name="PARAM1">
+          <block colour="#db802b" dependencyby="kjMTZ~nOs5V+4uY:8f^k" id="S}8w`Ccf4b$:Urbvp2fa" origintype="procedures_get_field_datasource" output="true" type="procedures_get_field_datasource">
+            <mutation name="">
+              <arg label="v.bancId" value="this[0]"/>
+              <arg label="v.sumAllocMbbytes" value="this[1]"/>
+            </mutation>
+            <field name="SELECT">this[1]</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block colour="#995ba5" id="hi=rdFaL9)n,vZs7-jZe" origintype="procedures_defreturn" output="false" tooltip="Creates a function with an output." type="procedures_defreturn" x="-287" y="213">
+    <mutation>
+      <arg name="bancId"/>
+      <arg name="dataInicio"/>
+      <arg name="dataFim"/>
+    </mutation>
+    <field name="NAME">fncQryBancosStatusSessoesList</field>
+    <comment h="80" pinned="false" w="160">Consultas</comment>
+    <statement name="STACK">
+      <block colour="#0088ee" dependencyby="hi=rdFaL9)n,vZs7-jZe" id="ixS0jz:r*ivHfiTERC.%" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+        <field name="VAR">data</field>
+        <value name="VALUE">
+          <block colour="#aa2f00" dependencyby="hi=rdFaL9)n,vZs7-jZe" id="+)dzPrZ,#xc[xg,H=Gni" multilayer="false" namespace="cronapi.database.Operations.query" origintype="procedures_sql_callreturn" output="true" returntype="ObjectType.DATASET" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EOpen%20query%20database%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20retrieve%20data%20from%20database%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Entity%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Query%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Query%20params%20:%20List%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20DataSet%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_callreturn">
+            <mutation data="%7B%22queryBuilderJson%22:%7B%22isValid%22:true,%22isEmpty%22:false,%22operationType%22:%22object%22,%22type%22:%22select%22,%22rulesEntity%22:%5B%7B%22entity%22:%22BancosStatusSessoes%22,%22namespace%22:%22reports.entity.BancosStatusSessoes%22,%22alias%22:%22b%22%7D%5D,%22rulesSelect%22:%5B%7B%22func%22:%22get%22,%22field%22:%22b%22,%22type%22:%22string%22%7D%5D,%22rulesGroupBy%22:%5B%5D,%22rulesHaving%22:%5B%5D,%22rulesOrderBy%22:%5B%7B%22func%22:%22get%22,%22field%22:%22b.dataGeracao%22,%22order%22:%22asc%22%7D%5D,%22rules%22:%7B%22condition%22:%22AND%22,%22rules%22:%5B%7B%22id%22:%22b.bancId%22,%22field%22:%22b.bancId%22,%22type%22:%22double%22,%22input%22:%22text%22,%22operator%22:%22equal%22,%22value%22:%22:bancId%22,%22valueIsField%22:false%7D,%7B%22id%22:%22b.dataGeracao%22,%22field%22:%22b.dataGeracao%22,%22type%22:%22date%22,%22input%22:%22text%22,%22operator%22:%22between%22,%22value%22:%5B%22:dataInicio%22,%22:dataFim%22%5D,%22valueIsField%22:false%7D,%7B%22id%22:%22b.qtdeSessoesAtivas%22,%22field%22:%22b.qtdeSessoesAtivas%22,%22type%22:%22double%22,%22input%22:%22text%22,%22operator%22:%22greater_or_equal%22,%22value%22:%22:numMaxSessoes%22,%22valueIsField%22:false%7D%5D,%22not%22:false,%22valid%22:true%7D,%22isRawSql%22:false,%22multiTenant%22:false,%22paginatorAutomatic%22:false,%22pagination%22:true,%22rulesPagination%22:%5B%7B%22func%22:%22limit%22,%22value%22:%22:limit%22%7D,%7B%22func%22:%22offset%22,%22value%22:%22:offset%22%7D%5D%7D,%22entity%22:%22Bancos%22,%22entityFullName%22:%22reports.entity.BancosStatusSessoes%22,%22filter%22:%22select%20b%20from%20BancosStatusSessoes%20b%20where%20b.bancId%20=%20:bancId%20AND%20b.dataGeracao%20BETWEEN%20:dataInicio%20AND%20:dataFim%20AND%20b.qtdeSessoesAtivas%20%3E=%20:numMaxSessoes%20%20%20order%20by%20b.dataGeracao%20asc%22,%22queryMode%22:%22object%22,%22params%22:%22%5B%5C%22bancId%5C%22,%5C%22dataInicio%5C%22,%5C%22dataFim%5C%22,%5C%22numMaxSessoes%5C%22,%5C%22limit%5C%22,%5C%22offset%5C%22%5D%22%7D" name="{{cronapi.database.Operations.query}}">
+              <arg name="bancId"/>
+              <arg name="dataInicio"/>
+              <arg name="dataFim"/>
+              <arg name="numMaxSessoes"/>
+              <arg name="limit"/>
+              <arg name="offset"/>
+            </mutation>
+            <value name="ARG0">
+              <block colour="#0088ee" dependencyby="hi=rdFaL9)n,vZs7-jZe" id="eV+OcoV|:TJZ9i4@)@i]" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">bancId</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block colour="#0088ee" dependencyby="hi=rdFaL9)n,vZs7-jZe" id="wnr4m~5=9:6qP?({@3RO" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">dataInicio</field>
+              </block>
+            </value>
+            <value name="ARG2">
+              <block colour="#0088ee" dependencyby="hi=rdFaL9)n,vZs7-jZe" id="Eem:;LV7(VgAy*}MyJNS" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">dataFim</field>
+              </block>
+            </value>
+            <value name="ARG3">
+              <block colour="#fca03b" dependencyby="hi=rdFaL9)n,vZs7-jZe" id="M6f67HDEPYPKHiC.4*N9" origintype="procedures_callreturn" output="true" tooltip="Run the user-defined function 'fncQryBancosLimite' and use its output." type="procedures_callreturn">
+                <mutation name="fncQryBancosLimite" return-raw-type="undefined">
+                  <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                </mutation>
+                <value name="ARG0">
+                  <block colour="#0088ee" dependencyby="hi=rdFaL9)n,vZs7-jZe" id="6Ra=Q3h1f)Kgds_6a^+m" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                    <field name="VAR">bancId</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="ARG4">
+              <block colour="#5b67a5" dependencyby="hi=rdFaL9)n,vZs7-jZe" id="]vDfVtd(R1*l$eIHZD^;" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                <field name="NUM">1000000</field>
+              </block>
+            </value>
+            <value name="ARG5">
+              <block colour="#5b67a5" dependencyby="hi=rdFaL9)n,vZs7-jZe" id="+S7fV40c-@q++?*a~JcF" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block colour="#0088ee" dependencyby="hi=rdFaL9)n,vZs7-jZe" id="xBRJy?0*Rb#HYO=%h[`V" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+        <field name="VAR">data</field>
+      </block>
+    </value>
+  </block>
+  <block colour="#995ba5" id="g!NK^/Tu;h%*[6v4WTyr" origintype="procedures_defreturn" output="false" tooltip="Creates a function with an output." type="procedures_defreturn" x="-176" y="245">
+    <mutation>
+      <arg name="bancId"/>
+      <arg name="dataInicio"/>
+      <arg name="dataFim"/>
+    </mutation>
+    <field name="NAME">fncQryOrclTablespacesAno</field>
+    <comment h="80" pinned="false" w="160">Consultas</comment>
+    <statement name="STACK">
+      <block colour="#0088ee" dependencyby="g!NK^/Tu;h%*[6v4WTyr" id="%rQegF-X(aLkYeVep|rs" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+        <field name="VAR">dataInicioAux</field>
+        <value name="VALUE">
+          <block colour="#7d9137" dependencyby="g!NK^/Tu;h%*[6v4WTyr" id="}qAq66a}e!l/,b``~*Zt" multilayer="false" namespace="cronapi.dateTime.Operations.incMonth" origintype="procedures_callreturn" output="true" returntype="ObjectType.DATETIME" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EIncrease%20month%20on%20date%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20increment%20month%20on%20date%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Date%20:%20DateTime%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Months%20to%20increase%20:%20Long%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20DateTime%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.dateTime.Operations.incMonth%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.dateTime.Operations.incMonth%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+            <mutation name="{{cronapi.dateTime.Operations.incMonth}}" return-raw-type="cronapi.Var">
+              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.DATETIME" name="Date"/>
+              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.LONG" name="Months to increase"/>
+            </mutation>
+            <value name="ARG0">
+              <block colour="#0088ee" dependencyby="g!NK^/Tu;h%*[6v4WTyr" id="o}$uPa1nHu3JuH(dyVL1" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">dataInicio</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <shadow colour="#5b67a5" dependencyby="g!NK^/Tu;h%*[6v4WTyr" id="B-e6n[t+),X9Au;V4=)r" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                <field name="NUM">-13</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block colour="#0088ee" dependencyby="g!NK^/Tu;h%*[6v4WTyr" id="D-Jq,TJmFR{XFJU(zrdN" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+            <field name="VAR">data</field>
+            <value name="VALUE">
+              <block colour="#aa2f00" dependencyby="g!NK^/Tu;h%*[6v4WTyr" id="Axv[Vs#k@[{Jub6q8@bg" multilayer="false" namespace="cronapi.database.Operations.query" origintype="procedures_sql_callreturn" output="true" returntype="ObjectType.DATASET" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EOpen%20query%20database%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20retrieve%20data%20from%20database%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Entity%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Query%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Query%20params%20:%20List%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20DataSet%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_callreturn">
+                <mutation data="%7B%22queryBuilderJson%22:%7B%22isValid%22:true,%22isEmpty%22:false,%22operationType%22:%22object%22,%22type%22:%22select%22,%22rulesEntity%22:%5B%7B%22entity%22:%22VyOrclTablespacesAno%22,%22namespace%22:%22reports.entity.VyOrclTablespacesAno%22,%22alias%22:%22v%22%7D%5D,%22rulesSelect%22:%5B%7B%22func%22:%22get%22,%22field%22:%22v%22,%22type%22:%22string%22%7D%5D,%22rulesGroupBy%22:%5B%5D,%22rulesHaving%22:%5B%5D,%22rulesOrderBy%22:%5B%7B%22func%22:%22get%22,%22field%22:%22v.dataInicio%22,%22order%22:%22asc%22%7D%5D,%22rules%22:%7B%22condition%22:%22AND%22,%22rules%22:%5B%7B%22id%22:%22v.bancId%22,%22field%22:%22v.bancId%22,%22type%22:%22double%22,%22input%22:%22text%22,%22operator%22:%22equal%22,%22value%22:%22:bancId%22,%22valueIsField%22:false%7D,%7B%22id%22:%22v.dataInicio%22,%22field%22:%22v.dataInicio%22,%22type%22:%22date%22,%22input%22:%22text%22,%22operator%22:%22between%22,%22value%22:%5B%22:dataInicio%22,%22:dataFim%22%5D,%22valueIsField%22:false%7D%5D,%22not%22:false,%22valid%22:true%7D,%22isRawSql%22:false,%22multiTenant%22:false,%22paginatorAutomatic%22:false,%22pagination%22:false%7D,%22entity%22:%22VyOrclTablespacesAno%22,%22entityFullName%22:%22reports.entity.VyOrclTablespacesAno%22,%22filter%22:%22select%20v%20from%20VyOrclTablespacesAno%20v%20where%20v.bancId%20=%20:bancId%20AND%20v.dataInicio%20BETWEEN%20:dataInicio%20AND%20:dataFim%20%20%20order%20by%20v.dataInicio%20asc%22,%22queryMode%22:%22object%22,%22params%22:%22%5B%5C%22bancId%5C%22,%5C%22dataInicio%5C%22,%5C%22dataFim%5C%22%5D%22,%22wizardType%22:%22SELECT%22%7D" name="{{cronapi.database.Operations.query}}">
+                  <arg name="bancId"/>
+                  <arg name="dataInicio"/>
+                  <arg name="dataFim"/>
+                </mutation>
+                <value name="ARG0">
+                  <block colour="#0088ee" dependencyby="g!NK^/Tu;h%*[6v4WTyr" id="?o*U`V7Wjn{epojH5Tnm" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                    <field name="VAR">bancId</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block colour="#0088ee" dependencyby="g!NK^/Tu;h%*[6v4WTyr" id="-QHm##vZdDxV)nftB]}n" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                    <field name="VAR">dataInicioAux</field>
+                  </block>
+                </value>
+                <value name="ARG2">
+                  <block colour="#0088ee" dependencyby="g!NK^/Tu;h%*[6v4WTyr" id="q}q4Md:y];@^C}j+CUi:" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                    <field name="VAR">dataFim</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block colour="#0088ee" dependencyby="g!NK^/Tu;h%*[6v4WTyr" id="-M,LvF]Rk:[~(Tl~)!_H" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+        <field name="VAR">data</field>
+      </block>
+    </value>
+  </block>
+</blockly>

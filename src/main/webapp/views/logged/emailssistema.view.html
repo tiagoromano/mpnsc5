@@ -1,0 +1,167 @@
+
+
+<datasource data-component="crn-datasource" filter="" name="EmailsSistema" entity="base.query544183" keys="id" rows-per-page="100" class="" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;codiRemeEmail&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;destinatario&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;assunto&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;corpoEmail&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;dataEmail&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;dataProcessamento&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;flgEnviado&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;spool&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;idBanco&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;status&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;flgShw&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;codiUsua&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;emailCorpoGrade&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;flgEnviadoDescricao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}]" condition="" lazy="true" parameters="" dependent-lazy-post="" checkrequired=""></datasource>
+
+        <div ng-hide="EmailsSistema.inserting || EmailsSistema.editing" data-component="crn-textinput" id="crn-datasource-filter-general42033" class="">
+            <div class="form-group">
+                <label for="textinput-filter" class="">{{"template.crud.search" | translate}}</label>
+                <input type="text" ng-model="vars.search" id="textinput-filter" class="form-control k-textbox" value="" placeholder="{{'template.crud.search' | translate}}">
+            </div>
+        </div>
+
+<div ng-hide="EmailsSistema.editing || EmailsSistema.inserting" class="component-holder ng-binding ng-scope" data-component="crn-cron-grid" id="cron-crn-grid-search">
+    <cron-grid options="{&quot;dataSourceScreen&quot;:{&quot;name&quot;:&quot;EmailsSistema&quot;,&quot;entity&quot;:&quot;base.query544183&quot;,&quot;entityDataSource&quot;:{&quot;id&quot;:&quot;base.query544183&quot;,&quot;customId&quot;:&quot;query544183&quot;,&quot;name&quot;:&quot;EmailsSistema&quot;,&quot;customQueryName&quot;:&quot;qryEmailSistema&quot;,&quot;paramValues&quot;:[{&quot;fieldName&quot;:&quot;dataEmail&quot;}],&quot;entityFullName&quot;:&quot;base.entity.EmailsSistema&quot;,&quot;schemaFields&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;codiRemeEmail&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;destinatario&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;assunto&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;corpoEmail&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;dataEmail&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;dataProcessamento&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;flgEnviado&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;spool&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;idBanco&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;status&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;flgShw&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;codiUsua&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;emailCorpoGrade&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;flgEnviadoDescricao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;type&quot;:&quot;customQuery&quot;},&quot;keys&quot;:&quot;id&quot;,&quot;rowsPerPage&quot;:&quot;100&quot;,&quot;schema&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;codiRemeEmail&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;destinatario&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;assunto&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;corpoEmail&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;dataEmail&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;dataProcessamento&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;flgEnviado&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;spool&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;idBanco&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;status&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;flgShw&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;codiUsua&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;emailCorpoGrade&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;flgEnviadoDescricao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;parameters&quot;:&quot;&quot;,&quot;condition&quot;:&quot;&quot;,&quot;dependentLazyPost&quot;:&quot;&quot;,&quot;lazy&quot;:&quot;true&quot;,&quot;checkrequired&quot;:&quot;&quot;,&quot;onBeforeCreate&quot;:&quot;&quot;,&quot;onAfterCreate&quot;:&quot;&quot;,&quot;onBeforeUpdate&quot;:&quot;&quot;,&quot;onAfterUpdate&quot;:&quot;&quot;,&quot;onBeforeDelete&quot;:&quot;&quot;,&quot;onAfterDelete&quot;:&quot;&quot;,&quot;onAfterFill&quot;:&quot;&quot;,&quot;dataComponent&quot;:&quot;crn-datasource&quot;,&quot;id&quot;:&quot;&quot;,&quot;oldName&quot;:&quot;&quot;},&quot;allowPaging&quot;:true,&quot;allowSorting&quot;:true,&quot;allowGrouping&quot;:false,&quot;allowSelectionTotalPageToShow&quot;:true,&quot;allowRefreshGrid&quot;:true,&quot;allowSelectionRow&quot;:true,&quot;batchMode&quot;:true,&quot;hideModalButtons&quot;:true,&quot;editable&quot;:&quot;datasource&quot;,&quot;pathView&quot;:&quot;src/main/webapp/views/logged/emailssistema.view.html&quot;,&quot;modelGrid&quot;:&quot;custom&quot;,&quot;columns&quot;:[{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;dataEmail&quot;,&quot;headerText&quot;:&quot;Data Email&quot;,&quot;type&quot;:&quot;date&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:true,&quot;format&quot;:&quot;DD/MM/YYYY HH:mm:ss&quot;,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;inputType&quot;:&quot;date&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;schema&quot;:[]},&quot;relationDataSource&quot;:{&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;startswith&quot;:&quot;Starts with&quot;,&quot;contains&quot;:&quot;Contains&quot;,&quot;endswith&quot;:&quot;Ends With&quot;},&quot;customTemplate&quot;:false},&quot;dateOptions&quot;:{&quot;type&quot;:&quot;date&quot;,&quot;dateInput&quot;:true},&quot;aggregates&quot;:[],&quot;widthDevices&quot;:[{&quot;width&quot;:&quot;10%&quot;,&quot;device&quot;:&quot;deviceBig&quot;,&quot;visible&quot;:true},{&quot;width&quot;:&quot;10%&quot;,&quot;device&quot;:&quot;deviceDesktop&quot;,&quot;visible&quot;:true}]},{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;destinatario&quot;,&quot;headerText&quot;:&quot;Destinatário&quot;,&quot;type&quot;:&quot;string&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:true,&quot;format&quot;:&quot;&quot;,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;schema&quot;:[]},&quot;relationDataSource&quot;:{&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;startswith&quot;:&quot;Starts with&quot;,&quot;contains&quot;:&quot;Contains&quot;,&quot;endswith&quot;:&quot;Ends With&quot;},&quot;customTemplate&quot;:false},&quot;aggregates&quot;:[],&quot;widthDevices&quot;:[{&quot;width&quot;:&quot;14%&quot;,&quot;device&quot;:&quot;deviceBig&quot;,&quot;visible&quot;:true},{&quot;width&quot;:&quot;14%&quot;,&quot;device&quot;:&quot;deviceDesktop&quot;,&quot;visible&quot;:true}]},{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;assunto&quot;,&quot;headerText&quot;:&quot;Assunto&quot;,&quot;type&quot;:&quot;string&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:true,&quot;format&quot;:&quot;&quot;,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;schema&quot;:[]},&quot;relationDataSource&quot;:{&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;startswith&quot;:&quot;Starts with&quot;,&quot;contains&quot;:&quot;Contains&quot;,&quot;endswith&quot;:&quot;Ends With&quot;},&quot;customTemplate&quot;:false},&quot;aggregates&quot;:[],&quot;widthDevices&quot;:[{&quot;width&quot;:&quot;14%&quot;,&quot;device&quot;:&quot;deviceBig&quot;,&quot;visible&quot;:true},{&quot;width&quot;:&quot;14%&quot;,&quot;device&quot;:&quot;deviceDesktop&quot;,&quot;visible&quot;:true}]},{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;emailCorpoGrade&quot;,&quot;headerText&quot;:&quot;Corpo&quot;,&quot;type&quot;:&quot;string&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:true,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;alignment&quot;:&quot;left&quot;,&quot;inputType&quot;:&quot;default&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;schema&quot;:[]},&quot;relationDataSource&quot;:{&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;contains&quot;:&quot;Contains&quot;,&quot;startswith&quot;:&quot;Starts with&quot;,&quot;endswith&quot;:&quot;Ends With&quot;},&quot;customTemplate&quot;:false},&quot;aggregates&quot;:[],&quot;widthDevices&quot;:[{&quot;width&quot;:&quot;30%&quot;,&quot;device&quot;:&quot;deviceBig&quot;,&quot;visible&quot;:true},{&quot;width&quot;:&quot;30%&quot;,&quot;device&quot;:&quot;deviceDesktop&quot;,&quot;visible&quot;:true}]},{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;flgEnviado&quot;,&quot;displayField&quot;:&quot;flgEnviadoDescricao&quot;,&quot;headerText&quot;:&quot;Flg Enviado&quot;,&quot;type&quot;:&quot;string&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:true,&quot;format&quot;:&quot;&quot;,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;schema&quot;:[]},&quot;relationDataSource&quot;:{&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;startswith&quot;:&quot;Starts with&quot;,&quot;contains&quot;:&quot;Contains&quot;,&quot;endswith&quot;:&quot;Ends With&quot;},&quot;customTemplate&quot;:false},&quot;aggregates&quot;:[],&quot;widthDevices&quot;:[{&quot;width&quot;:&quot;10%&quot;,&quot;device&quot;:&quot;deviceBig&quot;,&quot;visible&quot;:true},{&quot;width&quot;:&quot;10%&quot;,&quot;device&quot;:&quot;deviceDesktop&quot;,&quot;visible&quot;:true}]},{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;spool&quot;,&quot;headerText&quot;:&quot;Spool&quot;,&quot;type&quot;:&quot;string&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:true,&quot;format&quot;:&quot;&quot;,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;schema&quot;:[]},&quot;relationDataSource&quot;:{&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;startswith&quot;:&quot;Starts with&quot;,&quot;contains&quot;:&quot;Contains&quot;,&quot;endswith&quot;:&quot;Ends With&quot;},&quot;customTemplate&quot;:false},&quot;aggregates&quot;:[],&quot;widthDevices&quot;:[{&quot;width&quot;:&quot;10%&quot;,&quot;device&quot;:&quot;deviceBig&quot;,&quot;visible&quot;:true},{&quot;width&quot;:&quot;10%&quot;,&quot;device&quot;:&quot;deviceDesktop&quot;,&quot;visible&quot;:true}]},{&quot;dataType&quot;:&quot;Command&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:false,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;command&quot;:&quot;edit&quot;,&quot;required&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;schema&quot;:[]},&quot;relationDataSource&quot;:{&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;startswith&quot;:&quot;Starts with&quot;,&quot;contains&quot;:&quot;Contains&quot;,&quot;endswith&quot;:&quot;Ends With&quot;},&quot;customTemplate&quot;:false},&quot;aggregates&quot;:[],&quot;widthDevices&quot;:[{&quot;width&quot;:&quot;11%&quot;,&quot;device&quot;:&quot;deviceBig&quot;,&quot;visible&quot;:true},{&quot;width&quot;:&quot;10%&quot;,&quot;device&quot;:&quot;deviceDesktop&quot;,&quot;visible&quot;:true}]}],&quot;toolBarButtons&quot;:[{&quot;type&quot;:&quot;Title&quot;,&quot;template&quot;:&quot;<div class=\&quot;crn-grid-title\&quot;>Gerência de Emails - Últimos 30 dias</div>&quot;}],&quot;details&quot;:[],&quot;groupings&quot;:[]}" ng-model="vars.grid42033" class="" style="">
+    </cron-grid>
+</div>
+
+<div data-component="crn-form" id="crn-form-form-EmailsSistema-42033">
+    <div class="form" ng-show="EmailsSistema.editing || EmailsSistema.inserting">
+        <form crn-datasource="EmailsSistema" class="">
+            <div class="tool-bar" ng-hide="datasource.editing || datasource.inserting">
+                <button class="btn btn-primary btn-fab k-button" data-component="crn-button" ng-click="datasource.startInserting()"><span class="k-icon k-i-plus"></span></button>
+                <button class="btn btn-primary btn-fab k-button" data-component="crn-button" ng-click="datasource.startEditing()"><span class="k-icon k-i-edit"></span></button>
+                <button class="btn btn-primary btn-fab k-button" data-component="crn-button" ng-disabled="!datasource.hasPrevious()" ng-click="datasource.previous()"><span class="k-icon k-i-arrow-chevron-left"></span></button>
+                <button class="btn btn-primary btn-fab k-button" data-component="crn-button" ng-disabled="!datasource.hasNext()" ng-click="datasource.next()"><span class="k-icon k-i-arrow-chevron-right"></span></button>
+                <button class="btn btn-danger btn-fab k-button" data-component="crn-button" ng-click="datasource.remove()"><span class="k-icon k-i-close"></span></button>
+            </div>
+            <div class="active-bar" ng-hide="!datasource.editing &amp;&amp; !datasource.inserting">
+                <button class="btn btn-success btn-fab k-button" id="btn_crud_post41107" data-component="crn-button" ng-click="datasource.post()"><span class="k-icon k-i-check"></span></button>
+                <button class="btn btn-danger btn-fab k-button" id="btn_crud_cancel41107" data-component="crn-button" ng-click="datasource.cancel()"><span class="k-icon k-i-cancel"></span></button>
+            </div>
+            <br>
+            <fieldset ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting">
+
+
+                    <div data-component="crn-textinput" id="crn-textinput-assunto-42033" class="" cronapp-security="enabled : None">
+                        <div class="form-group">
+                                <label for="textinput-assunto" class="">Assunto</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                    <input maxlength="200" type="text" ng-model="EmailsSistema.active.assunto" class="form-control k-textbox" id="textinput-assunto" placeholder="Assunto" mask="" mask-placeholder="" ng-required="false">
+                             <!-- end if !model.hasCronappFramework() -->
+                        </div>
+                    </div>
+
+
+                    <div data-component="crn-textinput" id="crn-textinput-destinatario-42033" class="" cronapp-security="enabled : None">
+                        <div class="form-group">
+                                <label for="textinput-destinatario" class="">Destinatário</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                    <input maxlength="500" type="text" ng-model="EmailsSistema.active.destinatario" class="form-control k-textbox" id="textinput-destinatario" placeholder="Destinatário" mask="" mask-placeholder="" ng-required="false">
+                             <!-- end if !model.hasCronappFramework() -->
+                        </div>
+                    </div>
+
+
+                    <div data-component="crn-textinput" id="crn-textinput-corpoEmail-42033" class="" cronapp-security="enabled : None">
+                        <div class="form-group">
+                                <label for="textinput-corpoEmail" class="">Corpo Email</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                    <input maxlength="4000" type="text" ng-model="EmailsSistema.active.corpoEmail" class="form-control k-textbox" id="textinput-corpoEmail" placeholder="Corpo Email" mask="" mask-placeholder="" ng-required="false">
+                             <!-- end if !model.hasCronappFramework() -->
+                        </div>
+                    </div>
+
+
+                    <div data-component="crn-textinput" id="crn-textinput-spool-42033" class="" cronapp-security="enabled : None">
+                        <div class="form-group">
+                                <label for="textinput-spool" class="">Spool</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                    <input type="text" ng-model="EmailsSistema.active.spool" class="form-control k-textbox" id="textinput-spool" placeholder="Spool" mask="" mask-placeholder="" ng-required="false">
+                             <!-- end if !model.hasCronappFramework() -->
+                        </div>
+                    </div>
+
+
+                    <div data-component="crn-textinput" id="crn-textinput-codiRemeEmail-42033" class="" cronapp-security="enabled : None">
+                        <div class="form-group">
+                                <label for="textinput-codiRemeEmail" class="">Código Remetente</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                    <input type="number" ng-model="EmailsSistema.active.codiRemeEmail" class="form-control k-textbox" id="textinput-codiRemeEmail" placeholder="Código Remetente" mask="" mask-placeholder="" ng-required="false">
+                             <!-- end if !model.hasCronappFramework() -->
+                        </div>
+                    </div>
+
+
+                    <div data-component="crn-textinput" id="crn-textinput-dataEmail-42033" class="" cronapp-security="enabled : None">
+                        <div class="form-group">
+                                <label for="textinput-dataEmail" class="">Data Email</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                    <input type="date" ng-model="EmailsSistema.active.dataEmail" class="form-control k-textbox" id="textinput-dataEmail" placeholder="Data Email" mask="" mask-placeholder="" ng-required="false">
+                             <!-- end if !model.hasCronappFramework() -->
+                        </div>
+                    </div>
+
+
+                    <div data-component="crn-textinput" id="crn-textinput-dataProcessamento-42033" class="" cronapp-security="enabled : None">
+                        <div class="form-group">
+                                <label for="textinput-dataProcessamento" class="">Data Processamento</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                    <input type="date" ng-model="EmailsSistema.active.dataProcessamento" class="form-control k-textbox" id="textinput-dataProcessamento" placeholder="Data Processamento" mask="" mask-placeholder="" ng-required="false">
+                             <!-- end if !model.hasCronappFramework() -->
+                        </div>
+                    </div>
+
+
+                    <div data-component="crn-textinput" id="crn-textinput-flgEnviado-42033" class="" cronapp-security="enabled : Administrators">
+                        <div class="form-group">
+                                <label for="textinput-flgEnviado" class="">Flg Enviado</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                    <input type="text" ng-model="EmailsSistema.active.flgEnviado" class="form-control k-textbox" id="textinput-flgEnviado" placeholder="Flg Enviado" mask="" mask-placeholder="" ng-required="false">
+                             <!-- end if !model.hasCronappFramework() -->
+                        </div>
+                    </div>
+
+
+                    <div data-component="crn-textinput" id="crn-textinput-idBanco-42033" class="" cronapp-security="enabled : None">
+                        <div class="form-group">
+                                <label for="textinput-idBanco" class="">Id Banco</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                    <input type="number" ng-model="EmailsSistema.active.idBanco" class="form-control k-textbox" id="textinput-idBanco" placeholder="Id Banco" mask="" mask-placeholder="" ng-required="false">
+                             <!-- end if !model.hasCronappFramework() -->
+                        </div>
+                    </div>
+
+
+                    <div data-component="crn-textinput" id="crn-textinput-status-42033" class="" cronapp-security="enabled : None">
+                        <div class="form-group">
+                                <label for="textinput-status" class="">Status</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                    <input type="text" ng-model="EmailsSistema.active.status" class="form-control k-textbox" id="textinput-status" placeholder="Status" mask="" mask-placeholder="" ng-required="false">
+                             <!-- end if !model.hasCronappFramework() -->
+                        </div>
+                    </div>
+
+
+                    <div data-component="crn-textinput" id="crn-textinput-flgShw-42033" class="" cronapp-security="enabled : None">
+                        <div class="form-group">
+                                <label for="textinput-flgShw" class="">Flg Shw</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                    <input type="text" ng-model="EmailsSistema.active.flgShw" class="form-control k-textbox" id="textinput-flgShw" placeholder="Flg Shw" mask="" mask-placeholder="" ng-required="false">
+                             <!-- end if !model.hasCronappFramework() -->
+                        </div>
+                    </div>
+
+
+                    <div data-component="crn-textinput" id="crn-textinput-codiUsua-42033" class="" cronapp-security="enabled : None">
+                        <div class="form-group">
+                                <label for="textinput-codiUsua" class="">Codi Usua</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                    <input type="text" ng-model="EmailsSistema.active.codiUsua" class="form-control k-textbox" id="textinput-codiUsua" placeholder="Codi Usua" mask="" mask-placeholder="" ng-required="false">
+                             <!-- end if !model.hasCronappFramework() -->
+                        </div>
+                    </div>
+                <!-- NtoN  -->
+                <!-- NtoN  end-->
+            </fieldset>
+        </form>
+        <form>
+            <fieldset>
+                <!-- OneToN -->
+                <!-- OneToOne  end -->
+            </fieldset>
+        </form>
+         
+    </div>
+</div>
+
+

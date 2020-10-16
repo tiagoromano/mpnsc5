@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly bpmnAble="false" formTarget="src/main/webapp/views/admin/user.view.html" resourceType="JS" ruleDescription="User" ruleName="User" ruleSynchronous="false" ruleTimeout="300" ruleType="I">
+  <metadata scale="1" scrollx="631.5999999999998" scrolly="8" target="wwRQoTC$CSLnI*/{sBj0"/>
+  <block colour="#fca03b" id="wwRQoTC$CSLnI*/{sBj0" origintype="procedures_defnoreturn" output="false" tooltip="Creates a function with no output." type="procedures_defnoreturn" x="-426" y="88">
+    <field name="NAME">setLogin</field>
+    <comment h="80" pinned="false" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block colour="#0088ee" dependencyby="wwRQoTC$CSLnI*/{sBj0" id="0!QXZs}y[q0PzL6YnkE!" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+        <field name="VAR">email</field>
+        <value name="VALUE">
+          <block colour="#934848" dependencyby="wwRQoTC$CSLnI*/{sBj0" id="!/-E+LY{E_kvr@?jG[@B" inline="true" multilayer="false" namespace="cronapi.screen.getValueOfField" origintype="procedures_callreturn" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EGet%20value%20of%20field%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20get%20value%20of%20field%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Field%20:%20String%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Object%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.getValueOfField%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.getValueOfField%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+            <mutation name="{{cronapi.screen.getValueOfField}}" return-raw-type="undefined">
+              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Field"/>
+            </mutation>
+            <value name="ARG0">
+              <block colour="#934848" dependencyby="wwRQoTC$CSLnI*/{sBj0" id="`hfap6}[Gyplz,{zAFWE" origintype="form_fieldscreen_callreturn" output="true" type="form_fieldscreen_callreturn">
+                <field name="SELECT">User.active.email</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block colour="#0088ee" dependencyby="wwRQoTC$CSLnI*/{sBj0" id="AK%iiE/{bg^`Rs5m@zHu" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+            <field name="VAR">login</field>
+            <value name="VALUE">
+              <block colour="#934848" dependencyby="wwRQoTC$CSLnI*/{sBj0" id="!mpFF_:Z.^dfq.N(~;:D" inline="true" multilayer="false" namespace="cronapi.screen.getValueOfField" origintype="procedures_callreturn" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EGet%20value%20of%20field%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20get%20value%20of%20field%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Field%20:%20String%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Object%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.getValueOfField%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.getValueOfField%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                <mutation name="{{cronapi.screen.getValueOfField}}" return-raw-type="undefined">
+                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Field"/>
+                </mutation>
+                <value name="ARG0">
+                  <block colour="#934848" dependencyby="wwRQoTC$CSLnI*/{sBj0" id="]2Y?2fe.Rp/Sp/dH@,2N" origintype="form_fieldscreen_callreturn" output="true" type="form_fieldscreen_callreturn">
+                    <field name="SELECT">User.active.login</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block colour="#5b80a5" dependencyby="wwRQoTC$CSLnI*/{sBj0" id=";}gEP0:Lut4PI?/kkuWN" origintype="controls_if" output="false" tooltip="function () { [native code] }" type="controls_if">
+                <value name="IF0">
+                  <block colour="#5b80a5" dependencyby="wwRQoTC$CSLnI*/{sBj0" id="HhzTDF}t`$KMa;^I5B3J" origintype="logic_operation" output="true" tooltip="Return true if both inputs equal each other." type="logic_operation">
+                    <mutation items="2"/>
+                    <field name="OP1">OR</field>
+                    <value name="ARG0">
+                      <block colour="#5b80a5" dependencyby="wwRQoTC$CSLnI*/{sBj0" id="!Dj*R89N9j/hIK1rO9i1" origintype="logic_negate" output="true" tooltip="Returns true if the input is false. Returns false if the input is true." type="logic_negate">
+                        <value name="BOOL">
+                          <block colour="#5b80a5" dependencyby="wwRQoTC$CSLnI*/{sBj0" id="~rMs{nL$Jh+hujs4q8!T" inline="true" multilayer="false" namespace="cronapi.logic.isNullOrEmpty" origintype="procedures_callreturn" output="true" returntype="ObjectType.BOOLEAN" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3Eis%20null%20or%20empty?%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20that%20check%20if%20a%20variable%20is%20null%20or%20empty%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20%20:%20Object%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Boolean%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.logic.isNullOrEmpty%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.logic.isNullOrEmpty%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                            <mutation name="{{cronapi.logic.isNullOrEmpty}}" return-raw-type="undefined">
+                              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name=""/>
+                            </mutation>
+                            <value name="ARG0">
+                              <block colour="#0088ee" dependencyby="wwRQoTC$CSLnI*/{sBj0" id="uhFDPak-*sIOFnP}fE4T" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                                <field name="VAR">login</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block colour="#5b80a5" dependencyby="wwRQoTC$CSLnI*/{sBj0" id="vUScT^9UcpU^J]YbBOkn" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                        <field name="OP">NEQ</field>
+                        <value name="A">
+                          <block colour="#0088ee" dependencyby="wwRQoTC$CSLnI*/{sBj0" id="EweM|kg^(mKKD:l?wTU%" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                            <field name="VAR">login</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block colour="#5ba593" dependencyby="wwRQoTC$CSLnI*/{sBj0" id="Ft;5uWmSxr.H4gl3i3A+" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">admin</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block colour="#934848" dependencyby="wwRQoTC$CSLnI*/{sBj0" id="dx$RNZR+{vKFI=x}$0*7" multilayer="true" namespace="cronapi.screen.changeValueOfField" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EChange%20field%20value%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20change%20field%20value%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Field%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Value%20:%20String%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.changeValueOfField%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.changeValueOfField%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+                    <mutation name="{{cronapi.screen.changeValueOfField}}" return-raw-type="undefined">
+                      <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Field"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Value"/>
+                    </mutation>
+                    <value name="ARG0">
+                      <block colour="#934848" dependencyby="wwRQoTC$CSLnI*/{sBj0" id="UtTb/{$,$:k|%5r:H%pw" origintype="form_fieldscreen_callreturn" output="true" type="form_fieldscreen_callreturn">
+                        <field name="SELECT">User.active.login</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <shadow colour="#5ba593" dependencyby="wwRQoTC$CSLnI*/{sBj0" id="RhKdY-cI/wkp;CO}a7:)" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                        <field name="TEXT"/>
+                      </shadow>
+                      <block colour="#0088ee" dependencyby="wwRQoTC$CSLnI*/{sBj0" id="w|/ou3yuYLpKu;liXgcJ" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                        <field name="VAR">email</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block colour="#934848" dependencyby="wwRQoTC$CSLnI*/{sBj0" id="GaOq3S$(a4p31qylC+4j" multilayer="true" namespace="cronapi.screen.post" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EPost%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20that%20call%20the%20post()%20method%20of%20datasource%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Datasource%20:%20Object%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.post%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.post%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+                    <mutation name="{{cronapi.screen.post}}" return-raw-type="undefined">
+                      <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Datasource"/>
+                    </mutation>
+                    <value name="ARG0">
+                      <block colour="#934848" dependencyby="wwRQoTC$CSLnI*/{sBj0" id="dMdyuv3,^u3?(7CD,KuK" origintype="datasource_from_screen" output="true" type="datasource_from_screen">
+                        <field name="SELECT">User</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Creates a function with an output." type="procedures_defreturn" x="-347" y="158">
+    <field name="NAME">getListSato</field>
+    <comment h="80" pinned="false" w="160">User</comment>
+    <statement name="STACK">
+      <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="}5f#lFO2T(%l$]a!l*T=" multilayer="true" namespace="cronapi.screen.showModal" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EShow%20modal%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20that%20shows%20a%20modal%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Identifier%20:%20Object%3C/span%3E%3Cdiv%3E%20Component%20identifier%20to%20be%20showed%20on%20screen%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.showModal%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.showModal%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+        <mutation name="{{cronapi.screen.showModal}}" return-raw-type="undefined">
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Identifier"/>
+        </mutation>
+        <value name="ARG0">
+          <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="y*!1N6g/=O9,f1thM,qM" origintype="ids_from_screen" output="true" type="ids_from_screen">
+            <field name="SELECT">modal1615</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block colour="#fca03b" id="^[_qBo9W/-f},sl*cF)5" origintype="procedures_defreturn" output="false" tooltip="Creates a function with an output." type="procedures_defreturn" x="-412" y="218">
+    <field name="NAME">closeModalSato</field>
+    <comment h="80" pinned="false" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block colour="#934848" dependencyby="^[_qBo9W/-f},sl*cF)5" id="J/Z0aUS?S?V0bwVQ]7GT" multilayer="true" namespace="cronapi.screen.hideModal" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EHide%20modal%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20that%20hides%20a%20modal%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Identifier%20:%20Object%3C/span%3E%3Cdiv%3E%20Component%20identifier%20to%20be%20showed%20on%20screen%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.hideModal%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.hideModal%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+        <mutation name="{{cronapi.screen.hideModal}}" return-raw-type="undefined">
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Identifier"/>
+        </mutation>
+        <value name="ARG0">
+          <block colour="#934848" dependencyby="^[_qBo9W/-f},sl*cF)5" id="kqgZ8DB*`zit]S%yAn8`" origintype="ids_from_screen" output="true" type="ids_from_screen">
+            <field name="SELECT">modal1615</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+</blockly>

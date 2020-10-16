@@ -1,0 +1,60 @@
+
+
+<datasource data-component="crn-datasource" filter="" name="LogMensagens" entity="base.query446400" keys="id" rows-per-page="10" class="" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;mensagem&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;dataGeracao&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false}]" condition="{&quot;maxRecord&quot;:100,&quot;params&quot;:[{&quot;fieldName&quot;:&quot;dataGeracao&quot;,&quot;fieldValue&quot;:&quot;&quot;}],&quot;expression&quot;:{&quot;type&quot;:&quot;AND&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;%&quot;,&quot;left&quot;:&quot;mensagem&quot;,&quot;right&quot;:&quot;{{vars.search|raw}}&quot;,&quot;args&quot;:[]}]}}" lazy="true" parameters="" dependent-lazy-post="" checkrequired=""></datasource>
+
+        <div ng-hide="LogMensagens.inserting || LogMensagens.editing" data-component="crn-textinput" id="crn-datasource-filter-general79218" class="">
+            <div class="form-group">
+                <label for="textinput-filter" class="">{{"template.crud.search" | translate}}</label>
+                <input type="text" ng-model="vars.search" id="textinput-filter" class="form-control k-textbox" value="" placeholder="{{'template.crud.search' | translate}}">
+            </div>
+        </div>
+
+<div ng-hide="LogMensagens.editing || LogMensagens.inserting" class="component-holder ng-binding ng-scope" data-component="crn-cron-grid" id="cron-crn-grid-search">
+    <cron-grid options="{&quot;dataSourceScreen&quot;:{&quot;name&quot;:&quot;LogMensagens&quot;,&quot;entity&quot;:&quot;base.query446400&quot;,&quot;entityDataSource&quot;:{&quot;id&quot;:&quot;base.query446400&quot;,&quot;customId&quot;:&quot;query446400&quot;,&quot;name&quot;:&quot;LogMensagens&quot;,&quot;customQueryName&quot;:&quot;qrlyLogMensagens&quot;,&quot;paramValues&quot;:[{&quot;fieldName&quot;:&quot;dataGeracao&quot;}],&quot;entityFullName&quot;:&quot;base.entity.LogMensagens&quot;,&quot;schemaFields&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;mensagem&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;dataGeracao&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false}],&quot;type&quot;:&quot;customQuery&quot;},&quot;keys&quot;:&quot;id&quot;,&quot;rowsPerPage&quot;:&quot;10&quot;,&quot;schema&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;mensagem&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;dataGeracao&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false}],&quot;parameters&quot;:&quot;&quot;,&quot;condition&quot;:&quot;{\&quot;maxRecord\&quot;:100,\&quot;params\&quot;:[{\&quot;fieldName\&quot;:\&quot;dataGeracao\&quot;,\&quot;fieldValue\&quot;:\&quot;\&quot;}],\&quot;expression\&quot;:{\&quot;type\&quot;:\&quot;AND\&quot;,\&quot;args\&quot;:[{\&quot;type\&quot;:\&quot;%\&quot;,\&quot;left\&quot;:\&quot;mensagem\&quot;,\&quot;right\&quot;:\&quot;{{vars.search|raw}}\&quot;,\&quot;args\&quot;:[]}]}}&quot;,&quot;dependentLazyPost&quot;:&quot;&quot;,&quot;lazy&quot;:&quot;true&quot;,&quot;checkrequired&quot;:&quot;&quot;,&quot;onBeforeCreate&quot;:&quot;&quot;,&quot;onAfterCreate&quot;:&quot;&quot;,&quot;onBeforeUpdate&quot;:&quot;&quot;,&quot;onAfterUpdate&quot;:&quot;&quot;,&quot;onBeforeDelete&quot;:&quot;&quot;,&quot;onAfterDelete&quot;:&quot;&quot;,&quot;onAfterFill&quot;:&quot;&quot;,&quot;dataComponent&quot;:&quot;crn-datasource&quot;,&quot;id&quot;:&quot;&quot;,&quot;oldName&quot;:&quot;&quot;},&quot;allowPaging&quot;:true,&quot;allowSorting&quot;:true,&quot;allowGrouping&quot;:false,&quot;allowSelectionTotalPageToShow&quot;:true,&quot;allowRefreshGrid&quot;:true,&quot;allowSelectionRow&quot;:true,&quot;batchMode&quot;:true,&quot;hideModalButtons&quot;:true,&quot;editable&quot;:&quot;datasource&quot;,&quot;pathView&quot;:&quot;src/main/webapp/views/logged/logmensagens.view.html&quot;,&quot;modelGrid&quot;:&quot;custom&quot;,&quot;columns&quot;:[{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;dataGeracao&quot;,&quot;headerText&quot;:&quot;Data Geração&quot;,&quot;type&quot;:&quot;datetime&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:true,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;inputType&quot;:&quot;date&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;schema&quot;:[]},&quot;relationDataSource&quot;:{&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;startswith&quot;:&quot;Starts with&quot;,&quot;contains&quot;:&quot;Contains&quot;,&quot;endswith&quot;:&quot;Ends With&quot;},&quot;customTemplate&quot;:false},&quot;dateOptions&quot;:{&quot;type&quot;:&quot;datetime&quot;,&quot;dateInput&quot;:true},&quot;aggregates&quot;:[],&quot;widthDevices&quot;:[{&quot;width&quot;:&quot;20%&quot;,&quot;device&quot;:&quot;deviceBig&quot;,&quot;visible&quot;:true},{&quot;width&quot;:&quot;20%&quot;,&quot;device&quot;:&quot;deviceDesktop&quot;,&quot;visible&quot;:true}]},{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;mensagem&quot;,&quot;headerText&quot;:&quot;Mensagem&quot;,&quot;type&quot;:&quot;string&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:true,&quot;format&quot;:&quot;&quot;,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;schema&quot;:[]},&quot;relationDataSource&quot;:{&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;startswith&quot;:&quot;Starts with&quot;,&quot;contains&quot;:&quot;Contains&quot;,&quot;endswith&quot;:&quot;Ends With&quot;},&quot;customTemplate&quot;:false},&quot;aggregates&quot;:[],&quot;widthDevices&quot;:[{&quot;width&quot;:&quot;70%&quot;,&quot;device&quot;:&quot;deviceBig&quot;,&quot;visible&quot;:true},{&quot;width&quot;:&quot;70%&quot;,&quot;device&quot;:&quot;deviceDesktop&quot;,&quot;visible&quot;:true}]},{&quot;dataType&quot;:&quot;Command&quot;,&quot;sortable&quot;:false,&quot;filterable&quot;:true,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;command&quot;:&quot;edit&quot;,&quot;required&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;schema&quot;:[]},&quot;relationDataSource&quot;:{&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;startswith&quot;:&quot;Starts with&quot;,&quot;contains&quot;:&quot;Contains&quot;,&quot;endswith&quot;:&quot;Ends With&quot;},&quot;customTemplate&quot;:false},&quot;aggregates&quot;:[],&quot;widthDevices&quot;:[{&quot;width&quot;:&quot;10%&quot;,&quot;device&quot;:&quot;deviceBig&quot;,&quot;visible&quot;:true},{&quot;width&quot;:&quot;10%&quot;,&quot;device&quot;:&quot;deviceDesktop&quot;,&quot;visible&quot;:true}]}],&quot;toolBarButtons&quot;:[{&quot;type&quot;:&quot;Title&quot;,&quot;template&quot;:&quot;<div class=\&quot;crn-grid-title\&quot;>Mensagens do Sistema - Últimos 30 dias</div>&quot;},{&quot;type&quot;:&quot;Native&quot;,&quot;title&quot;:&quot;excel&quot;}],&quot;details&quot;:[],&quot;groupings&quot;:[]}" ng-model="vars.grid79218" class="" style="">
+    </cron-grid>
+</div>
+
+<div data-component="crn-form" id="crn-form-form-LogMensagens-79218">
+    <div class="form" ng-show="LogMensagens.editing || LogMensagens.inserting">
+        <form crn-datasource="LogMensagens" class="">
+            <div class="tool-bar" ng-hide="datasource.editing || datasource.inserting">
+                <button class="btn btn-primary btn-fab k-button" data-component="crn-button" ng-click="datasource.startInserting()"><span class="k-icon k-i-plus"></span></button>
+                <button class="btn btn-primary btn-fab k-button" data-component="crn-button" ng-click="datasource.startEditing()"><span class="k-icon k-i-edit"></span></button>
+                <button class="btn btn-primary btn-fab k-button" data-component="crn-button" ng-disabled="!datasource.hasPrevious()" ng-click="datasource.previous()"><span class="k-icon k-i-arrow-chevron-left"></span></button>
+                <button class="btn btn-primary btn-fab k-button" data-component="crn-button" ng-disabled="!datasource.hasNext()" ng-click="datasource.next()"><span class="k-icon k-i-arrow-chevron-right"></span></button>
+                <button class="btn btn-danger btn-fab k-button" data-component="crn-button" ng-click="datasource.remove()"><span class="k-icon k-i-close"></span></button>
+            </div>
+            <div class="active-bar" ng-hide="!datasource.editing &amp;&amp; !datasource.inserting">
+                <button class="btn btn-success btn-fab k-button" id="btn_crud_post41107" data-component="crn-button" ng-click="datasource.post()"><span class="k-icon k-i-check"></span></button>
+                <button class="btn btn-danger btn-fab k-button" id="btn_crud_cancel41107" data-component="crn-button" ng-click="datasource.cancel()"><span class="k-icon k-i-cancel"></span></button>
+            </div>
+            <br>
+            <fieldset ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting">
+
+
+                    <div data-component="crn-textinput" id="crn-textinput-dataGeracao-79218" class="" cronapp-security="visible : Authenticated, enabled : None">
+                        <div class="form-group">
+                                <label for="textinput-dataGeracao" class="">Data Geração</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                    <input type="datetime" ng-model="LogMensagens.active.dataGeracao" class="form-control k-textbox" id="textinput-dataGeracao" placeholder="Data Geração" mask="" mask-placeholder="" ng-required="true">
+                             <!-- end if !model.hasCronappFramework() -->
+                        </div>
+                    </div>
+
+
+                    <div class="component-holder ng-binding ng-scope" data-component="crn-textarea" id="crn-textarea-983225" cronapp-security="visible : Authenticated, enabled : None"><div class="form-group"><label for="input1124">Mesagem</label><textarea id="textArea1124" ng-model="LogMensagens.active.mensagem" maxlength="300" style="resize:none" resize="resize:none;" class="form-control k-textbox" rows="5"></textarea></div></div>
+                <!-- NtoN  -->
+                <!-- NtoN  end-->
+            </fieldset>
+        </form>
+        <form>
+            <fieldset>
+                <!-- OneToN -->
+                <!-- OneToOne  end -->
+            </fieldset>
+        </form>
+         
+    </div>
+</div>
+
+

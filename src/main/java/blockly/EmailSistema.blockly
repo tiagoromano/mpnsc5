@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly bpmnAble="false" formTarget="" resourceType="JAVA" ruleDescription="EmailSistema" ruleName="EmailSistema" ruleSynchronous="false" ruleTimeout="" ruleType="I">
+  <metadata scale="1" scrollx="519.5999999999995" scrolly="-93.80000000000075" target=".N|~(4eVB`Vo}c+])S4^"/>
+  <block colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Creates a function with an output." type="procedures_defreturn" x="-350" y="130">
+    <mutation>
+      <arg name="Entity&amp;lt;base.entity.EmailsSistema&amp;gt;"/>
+    </mutation>
+    <field name="NAME">getFlgEnviadoDescricao</field>
+    <comment h="80" pinned="false" w="160">EmailSistema</comment>
+    <statement name="STACK">
+      <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="X.nF@Iyvm:$,Xjsin4q/" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+        <field name="VAR">flgEnviado</field>
+        <value name="VALUE">
+          <block colour="#c88330" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="-_)#W]pe[B2[lnrU6e3j" multilayer="false" namespace="cronapi.object.Operations.getObjectField" origintype="procedures_get_field" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EGet%20field%20on%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20get%20a%20field%20object%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Map%20:%20Object%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Path%20to%20move%20:%20String%3C/span%3E%3Cdiv%3E%20Example:%20state%5B3%5D.uf%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Object%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.object.Operations.getObjectField%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.object.Operations.getObjectField%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_get_field">
+            <mutation name="{{cronapi.object.Operations.getObjectField}}">
+              <arg name="Map"/>
+              <arg name="Path to move"/>
+            </mutation>
+            <value name="PARAM0">
+              <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="S^O:H/Pf=3#)*SCWVi;m" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">Entity&lt;base.entity.EmailsSistema&gt;</field>
+              </block>
+            </value>
+            <value name="PARAM1">
+              <block colour="#c88330" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="CC?j$VD^v(!J4d)QaD}=" origintype="procedures_get_field_object" output="true" type="procedures_get_field_object">
+                <mutation name="" return-raw-type="undefined"/>
+                <field name="SELECT">flgEnviado</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block colour="#487f7f" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="pST3Dt:S/-QU.u-zs.^A" multilayer="false" namespace="cronapi.util.Operations.callBlockly" origintype="procedures_callblockly_callreturn" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3ECall%20blockly%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20call%20a%20blocky%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Block%20:%20Object%3C/span%3E%3Cdiv%3E%20Block%20name%3C/div%3E%3Cspan%3E%20-%20Parameters%20:%20Object%3C/span%3E%3Cdiv%3E%20Parameters%20to%20be%20passed%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Object%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.util.Operations.callBlockly%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.util.Operations.callBlockly%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callblockly_callreturn">
+        <mutation data="%7B%22name%22:%22Util%22,%22class%22:%22blockly.Util%22,%22function%22:%22getYesNo%22,%22oldName%22:%22getYesNo%22,%22params%22:%22%5B%5C%22flag%5C%22%5D%22,%22type%22:%22java%22,%22namespace%22:%22blockly.Util%22,%22jsonBlocklySelected%22:%7B%22namespace%22:%22blockly.Util%22,%22sourcePath%22:%22src/main/java/blockly/Util.blockly%22,%22language%22:%22java%22,%22class%22:%22blockly.Util%22,%22methods%22:%5B%7B%22name%22:%22getYesNo%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22flag%22%5D%7D,%7B%22name%22:%22getDateDaysToIncrease%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22days%22%5D%7D,%7B%22name%22:%22getTipoBanco%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22tipoBanco%22%5D%7D,%7B%22name%22:%22setLimitsText%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22text%22,%22size%22%5D%7D%5D%7D%7D" name="{{cronapi.util.Operations.callBlockly}}">
+          <arg name="flag"/>
+        </mutation>
+        <value name="ARG0">
+          <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="KUs`,f@3U#~.f1_I:x+C" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+            <field name="VAR">flgEnviado</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block colour="#995ba5" id=".N|~(4eVB`Vo}c+])S4^" origintype="procedures_defreturn" output="false" tooltip="Creates a function with an output." type="procedures_defreturn" x="-330" y="170">
+    <mutation>
+      <arg name="Entity&amp;lt;base.entity.EmailsSistema&amp;gt;"/>
+      <arg name="size"/>
+    </mutation>
+    <field name="NAME">getCorpoEmailGrade</field>
+    <comment h="80" pinned="false" w="160">EmailSistema</comment>
+    <statement name="STACK">
+      <block colour="#0088ee" dependencyby=".N|~(4eVB`Vo}c+])S4^" id="}sA]cwuCk|j7f-rxm$9F" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+        <field name="VAR">corpoEmail</field>
+        <value name="VALUE">
+          <block colour="#c88330" dependencyby=".N|~(4eVB`Vo}c+])S4^" id="bR%G5x?!/%yMRC,vO%EE" multilayer="false" namespace="cronapi.object.Operations.getObjectField" origintype="procedures_get_field" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EGet%20field%20on%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20get%20a%20field%20object%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Map%20:%20Object%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Path%20to%20move%20:%20String%3C/span%3E%3Cdiv%3E%20Example:%20state%5B3%5D.uf%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Object%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.object.Operations.getObjectField%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.object.Operations.getObjectField%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_get_field">
+            <mutation name="{{cronapi.object.Operations.getObjectField}}">
+              <arg name="Map"/>
+              <arg name="Path to move"/>
+            </mutation>
+            <value name="PARAM0">
+              <block colour="#0088ee" dependencyby=".N|~(4eVB`Vo}c+])S4^" id="l$L?:1#Z0C?!0G+iWzt!" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">Entity&lt;base.entity.EmailsSistema&gt;</field>
+              </block>
+            </value>
+            <value name="PARAM1">
+              <block colour="#c88330" dependencyby=".N|~(4eVB`Vo}c+])S4^" id="LL:e:olZY7XinUoIUJ{g" origintype="procedures_get_field_object" output="true" type="procedures_get_field_object">
+                <mutation name="" return-raw-type="undefined"/>
+                <field name="SELECT">corpoEmail</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block colour="#487f7f" dependencyby=".N|~(4eVB`Vo}c+])S4^" id="(s%f*jqo-Bw7x0D+_H/Z" multilayer="false" namespace="cronapi.util.Operations.callBlockly" origintype="procedures_callblockly_callreturn" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3ECall%20blockly%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20call%20a%20blocky%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Block%20:%20Object%3C/span%3E%3Cdiv%3E%20Block%20name%3C/div%3E%3Cspan%3E%20-%20Parameters%20:%20Object%3C/span%3E%3Cdiv%3E%20Parameters%20to%20be%20passed%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Object%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.util.Operations.callBlockly%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.util.Operations.callBlockly%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callblockly_callreturn">
+        <mutation data="%7B%22name%22:%22Util%22,%22class%22:%22blockly.Util%22,%22function%22:%22setLimitsText%22,%22oldName%22:%22setLimitsText%22,%22params%22:%22%5B%5C%22text%5C%22,%5C%22size%5C%22%5D%22,%22type%22:%22java%22,%22namespace%22:%22blockly.Util%22,%22jsonBlocklySelected%22:%7B%22namespace%22:%22blockly.Util%22,%22sourcePath%22:%22src/main/java/blockly/Util.blockly%22,%22language%22:%22java%22,%22class%22:%22blockly.Util%22,%22methods%22:%5B%7B%22name%22:%22getYesNo%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22flag%22%5D%7D,%7B%22name%22:%22getDateDaysToIncrease%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22days%22%5D%7D,%7B%22name%22:%22getTipoBanco%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22tipoBanco%22%5D%7D,%7B%22name%22:%22setLimitsText%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22text%22,%22size%22%5D%7D,%7B%22name%22:%22getIdUserSATO%22,%22hasReturn%22:%22true%22,%22params%22:%5B%5D%7D%5D%7D%7D" name="{{cronapi.util.Operations.callBlockly}}">
+          <arg name="text"/>
+          <arg name="size"/>
+        </mutation>
+        <value name="ARG0">
+          <block colour="#0088ee" dependencyby=".N|~(4eVB`Vo}c+])S4^" id="$X/qj+o`2G.Lzc@1/RmJ" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+            <field name="VAR">corpoEmail</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block colour="#0088ee" dependencyby=".N|~(4eVB`Vo}c+])S4^" id="kpEaNqob;d3j=o_wpCoW" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+            <field name="VAR">size</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+</blockly>

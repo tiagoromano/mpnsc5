@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="app" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <non-jta-data-source>java:comp/env/jdbc/main</non-jta-data-source>
+        <class>app.entity.User</class>
+        <class>app.entity.Role</class>
+        <properties>
+            <property name="eclipselink.ddl-generation" value="none"/>
+            <property name="eclipselink.cache.shared.default" value="false"/>
+            <property name="eclipselink.query-results-cache" value="false"/>
+        </properties>
+    </persistence-unit>
+    <persistence-unit name="base" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <non-jta-data-source>java:comp/env/jdbc/appdata</non-jta-data-source>
+        <class>base.entity.VmOrclWaits</class>
+        <class>base.entity.VmOrclLockSessions</class>
+        <class>base.entity.VmOrclLockSessionsSql</class>
+        <class>base.entity.UsuariosSato</class>
+        <class>base.entity.EmailsSistema</class>
+        <class>base.entity.LogMensagens</class>
+        <class>base.entity.VwPolomsgAvisos</class>
+        <class>base.entity.PolomsgAvisos</class>
+        <class>base.entity.AlertasColeta</class>
+        <class>base.entity.Bancos</class>
+        <class>base.entity.BancosIlhas</class>
+        <class>base.entity.Clientes</class>
+        <class>base.entity.TiposAlertas</class>
+        <class>base.entity.TiposBancos</class>
+        <properties>
+            <property name="eclipselink.ddl-generation" value="none"/>
+            <property name="eclipselink.cache.shared.default" value="false"/>
+            <property name="eclipselink.query-results-cache" value="false"/>
+        </properties>
+    </persistence-unit>
+    <persistence-unit name="reports" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <non-jta-data-source>java:comp/env/jdbc/main</non-jta-data-source>
+        <class>reports.entity.VwPolomsgAvisosReport</class>
+        <class>reports.entity.Clientes</class>
+        <class>reports.entity.VmOrclResourceLimit</class>
+        <class>reports.entity.VxOrclArchived</class>
+        <class>reports.entity.VxOrclArchivedTypeHour</class>
+        <class>reports.entity.VxOrclArchivedHour</class>
+        <class>reports.entity.VxOrclArchivedLogHour</class>
+        <class>reports.entity.VmOrclParameters</class>
+        <class>reports.entity.VwApontamentosChamados</class>
+        <class>reports.entity.VmOrclBufferRatio</class>
+        <class>reports.entity.VmOrclMemory</class>
+        <class>reports.entity.VwOrclAsm</class>
+        <class>reports.entity.VyOrclTablespacesAno</class>
+        <class>reports.entity.VwBancos</class>
+        <class>reports.entity.VwOrclSessions</class>
+        <class>reports.entity.VmOrclSistemaOperacional</class>
+        <class>reports.entity.VyOrclTablespaces</class>
+        <class>reports.entity.VmOrclTablespaces</class>
+        <class>reports.entity.VmOrclLocksEventos</class>
+        <class>reports.entity.DataGraficoAux</class>
+        <class>reports.entity.VwOrclSessionsCurrent</class>
+        <class>reports.entity.BancosStatusSessoes</class>
+        <class>reports.entity.VwRestarts</class>
+        <class>reports.entity.VmOrclInstance</class>
+        <class>reports.entity.VmOrclVersion</class>
+        <class>reports.entity.TiposBancos</class>
+        <class>reports.entity.AlertasColeta</class>
+        <class>reports.entity.VmOrclDatabase</class>
+        <properties>
+            <property name="eclipselink.ddl-generation" value="none"/>
+            <property name="eclipselink.cache.shared.default" value="false"/>
+            <property name="eclipselink.query-results-cache" value="false"/>
+        </properties>
+    </persistence-unit>
+</persistence>

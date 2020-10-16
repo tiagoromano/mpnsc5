@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><Context>
+<Resource accessToUnderlyingConnectionAllowed="true" driverClassName="oracle.jdbc.OracleDriver" logAbandoned="true" name="jdbc/main" password="oracle9087dev" profile="DEV" removeAbandoned="false" removeAbandonedTimeout="60" schema="" type="javax.sql.DataSource" url="jdbc:oracle:thin:@140.238.178.251:1521/prod" username="DBACONSULTA"/>
+<Resource accessToUnderlyingConnectionAllowed="false" driverClassName="oracle.jdbc.OracleDriver" logAbandoned="true" name="jdbc/appdata" password="oracle9087dev" profile="DEV" removeAbandoned="false" removeAbandonedTimeout="60" schema="" type="javax.sql.DataSource" url="jdbc:oracle:thin:@140.238.178.251:1521/prod" username="DBACENTER_APP"/>
+<Resource accessToUnderlyingConnectionAllowed="false" driverClassName="oracle.jdbc.OracleDriver" logAbandoned="true" name="jdbc/imp" password="IMP" profile="DEV" removeAbandoned="false" removeAbandonedTimeout="60" schema="" type="javax.sql.DataSource" url="jdbc:oracle:thin:@140.238.178.251:1521/prod" username="IMP"/>
+<Profile value="DEV"/>
+<Profile value="PROD"/>
+</Context>

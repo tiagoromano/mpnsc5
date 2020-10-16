@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly bpmnAble="false" formTarget="" resourceType="JAVA" ruleDescription="Avisos" ruleName="Avisos" ruleSynchronous="false" ruleTimeout="" ruleType="I">
+  <metadata scale="1" scrollx="448.0000000000002" scrolly="-586.5" target="o@_XJ$$]T`nr:L{VfRj$"/>
+  <block colour="#fca03b" id="y5n!y*UqGHsY3EvS7cfv" origintype="procedures_defreturn" output="false" tooltip="Creates a function with an output." type="procedures_defreturn" x="-412" y="458">
+    <mutation>
+      <arg name="flag"/>
+    </mutation>
+    <field name="NAME">getYesNo</field>
+    <comment h="80" pinned="false" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block colour="#fca03b" dependencyby="y5n!y*UqGHsY3EvS7cfv" id="XRSrXy^EU~BzN|YDy:KV" origintype="procedures_ifreturn" output="false" tooltip="If a value is true, then return a second value." type="procedures_ifreturn">
+        <mutation value="1"/>
+        <value name="CONDITION">
+          <block colour="#5b80a5" dependencyby="y5n!y*UqGHsY3EvS7cfv" id="RPL+n62Ntzo%x)][4KPD" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block colour="#5ba58c" dependencyby="y5n!y*UqGHsY3EvS7cfv" id="3YJ{^HGK~A-W,Vp{1y2q" origintype="text_changeCase" output="true" tooltip="Return a copy of the text in a different case." type="text_changeCase">
+                <field name="CASE">UPPERCASE</field>
+                <value name="TEXT">
+                  <shadow colour="#5ba593" dependencyby="y5n!y*UqGHsY3EvS7cfv" id="/,W.di,--Rwt~-I]LR8v" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                  <block colour="#0088ee" dependencyby="y5n!y*UqGHsY3EvS7cfv" id="hc,V)x#;ve@WD;E17m[G" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                    <field name="VAR">flag</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block colour="#5ba593" dependencyby="y5n!y*UqGHsY3EvS7cfv" id="W}V3jkQl`ec:Xsw7sclN" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field name="TEXT">S</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <value name="VALUE">
+          <block colour="#5ba593" dependencyby="y5n!y*UqGHsY3EvS7cfv" id="WKjFEwwE3`8iWXZqY#}8" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+            <field name="TEXT">SIM</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block colour="#5ba593" dependencyby="y5n!y*UqGHsY3EvS7cfv" id="B5tq@g.tnSzj`WOHmAsi" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+        <field name="TEXT">NÃO</field>
+      </block>
+    </value>
+  </block>
+  <block colour="#fca03b" id="CG0=6Z/pT@^8K-q.FTQ=" origintype="procedures_defreturn" output="false" tooltip="Creates a function with an output." type="procedures_defreturn" x="-232" y="458">
+    <mutation>
+      <arg name="days"/>
+    </mutation>
+    <field name="NAME">getDateDaysToIncrease</field>
+    <comment h="80" pinned="false" w="160">Describe this function...</comment>
+    <value name="RETURN">
+      <block colour="#7d9137" dependencyby="CG0=6Z/pT@^8K-q.FTQ=" id="=)7h$}Dh:H8HUy-8][7G" multilayer="false" namespace="cronapi.dateTime.Operations.incDay" origintype="procedures_callreturn" output="true" returntype="ObjectType.DATETIME" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EIncrease%20day%20on%20date%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20increment%20day%20on%20date%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Date%20:%20DateTime%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Days%20to%20increase%20:%20Long%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20DateTime%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.dateTime.Operations.incDay%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.dateTime.Operations.incDay%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+        <mutation name="{{cronapi.dateTime.Operations.incDay}}" return-raw-type="cronapi.Var">
+          <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.DATETIME" name="Date"/>
+          <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.LONG" name="Days to increase"/>
+        </mutation>
+        <value name="ARG0">
+          <block colour="#7d9137" dependencyby="CG0=6Z/pT@^8K-q.FTQ=" id="Kg;`sPIiL[r[QHMc^3m^" multilayer="false" namespace="cronapi.dateTime.Operations.getNowNoHour" origintype="procedures_callreturn" output="true" returntype="ObjectType.DATETIME" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EGet%20current%20date%20with%20no%20hours%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20get%20current%20date%20with%20no%20hour%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20DateTime%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.dateTime.Operations.getNowNoHour%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.dateTime.Operations.getNowNoHour%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+            <mutation name="{{cronapi.dateTime.Operations.getNowNoHour}}" return-raw-type="cronapi.Var"/>
+          </block>
+        </value>
+        <value name="ARG1">
+          <shadow colour="#5b67a5" dependencyby="CG0=6Z/pT@^8K-q.FTQ=" id="ebRtAc-YM,wt.?B]T7sE" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+            <field name="NUM">-2</field>
+          </shadow>
+          <block colour="#0088ee" dependencyby="CG0=6Z/pT@^8K-q.FTQ=" id="]2f:hbt0Wm9:n:ccTzgz" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+            <field name="VAR">days</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Creates a function with an output." type="procedures_defreturn" x="-103" y="524">
+    <mutation>
+      <arg name="tipoBanco"/>
+    </mutation>
+    <field name="NAME">getTipoBanco</field>
+    <comment h="80" pinned="false" w="160">Avisos</comment>
+    <statement name="STACK">
+      <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="4}@`PR~b2F1~MJ8kvX+," origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+        <field name="VAR">urlBase</field>
+        <value name="VALUE">
+          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="f)j.[eZ6Cj}dpu?]M@*a" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+            <field name="TEXT">&lt;img src="views/public/imgs/</field>
+          </block>
+        </value>
+        <next>
+          <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="]Odrm/X2uFvSJ6LA@4LZ" origintype="controls_if" output="false" tooltip="function () { [native code] }" type="controls_if">
+            <mutation elseif="3"/>
+            <value name="IF0">
+              <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="YM(^*`ZHDVC6!2DCH|S-" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="5qNKcYTl[)WBlVm!.Pt6" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                    <field name="VAR">tipoBanco</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=";UNHgiDaEA/_ITwRC_E#" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="}b]Po+qujvno2r|-=)XF" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+                <field name="VAR">item</field>
+                <value name="VALUE">
+                  <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="EumM1179u2fkB!KBo/][" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT">database_oracle.png</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF1">
+              <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="]}o5~#]#@MporwM^M9Bs" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="#(jncHDX{19ADF:(aPN$" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                    <field name="VAR">tipoBanco</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="?xaiXVH}muk_U@k]GT~$" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                    <field name="NUM">2</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO1">
+              <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="siBR.C21j`nqj*Km+GJz" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+                <field name="VAR">item</field>
+                <value name="VALUE">
+                  <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="!#4)Doy3-U%YUsrGc=Ms" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT">database_sql.png</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF2">
+              <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="vjlus{FYcWLLN+4U(j.B" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="#e#:Hy,qf?,jtb_~[Dbg" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                    <field name="VAR">tipoBanco</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=",YcEnve1a9STN!k@Jls[" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                    <field name="NUM">3</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO2">
+              <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="{$XyfNX^84n7RNU~15CJ" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+                <field name="VAR">item</field>
+                <value name="VALUE">
+                  <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="-i:A;Q.Yyt{QZKk2_M}V" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT">database_postgre.png</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF3">
+              <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Q=D|RFrj#=|u,C0;3#N]" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="wU+)d`:mE^,ufdF!*sXJ" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                    <field name="VAR">tipoBanco</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="q{sT,s2`G6{fK9y#8%JS" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                    <field name="NUM">4</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO3">
+              <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="ofR.mb|C_@QjYLVI=lyk" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+                <field name="VAR">item</field>
+                <value name="VALUE">
+                  <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="E-Qz,zz81H0}ZCUrNwta" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT">database_mysql.png</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Jbb*dhZUjd,B^?6VxXvZ" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+                <field name="VAR">fim</field>
+                <value name="VALUE">
+                  <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="?WoYdty)B}jP^DZWx,yi" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT">"&gt;</field>
+                  </block>
+                </value>
+                <next>
+                  <block colour="#5ba58c" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="#u#gl-j#`4~d=L/!USw0" origintype="text_append" output="false" tooltip="function() {&#10;      return Blockly.Msg.TEXT_APPEND_TOOLTIP.replace('%1', thisBlock.getFieldValue('VAR'));&#10;    }" type="text_append">
+                    <field name="VAR">urlBase</field>
+                    <value name="TEXT">
+                      <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="T=`8I}u@,x(ni.1GPr,u" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                        <field name="TEXT"/>
+                      </shadow>
+                      <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="GORB5T,Nh;S0B*vpnA$#" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                        <field name="VAR">item</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block colour="#5ba58c" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="E}2Ltzr^pNfDr,J;]9K:" origintype="text_append" output="false" tooltip="function() {&#10;      return Blockly.Msg.TEXT_APPEND_TOOLTIP.replace('%1', thisBlock.getFieldValue('VAR'));&#10;    }" type="text_append">
+                        <field name="VAR">urlBase</field>
+                        <value name="TEXT">
+                          <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="T=`8I}u@,x(ni.1GPr,u" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT"/>
+                          </shadow>
+                          <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="YC74fVmCyO)iNth(p$t+" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                            <field name="VAR">fim</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="?Mk-+Y:{9k!$A]B2Z}lk" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+        <field name="VAR">urlBase</field>
+      </block>
+    </value>
+  </block>
+  <block colour="#fca03b" id="IRhIN/y[;h0{Pmo.0$7!" origintype="procedures_defreturn" output="false" tooltip="Creates a function with an output." type="procedures_defreturn" x="-202" y="563">
+    <mutation>
+      <arg name="text"/>
+      <arg name="size"/>
+    </mutation>
+    <field name="NAME">setLimitsText</field>
+    <comment h="80" pinned="false" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block colour="#5b80a5" dependencyby="IRhIN/y[;h0{Pmo.0$7!" id="CJ1Fm0QB)1WDpE}Jr]~1" origintype="controls_if" output="false" tooltip="function () { [native code] }" type="controls_if">
+        <value name="IF0">
+          <block colour="#5b80a5" dependencyby="IRhIN/y[;h0{Pmo.0$7!" id="1mT:PacT{bV[+.$9744C" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+            <field name="OP">GT</field>
+            <value name="A">
+              <block colour="#5ba58c" dependencyby="IRhIN/y[;h0{Pmo.0$7!" id=".8UsCMnUHoscrH?yv3T?" origintype="text_length" output="true" tooltip="Returns the number of letters (including spaces) in the provided text." type="text_length">
+                <value name="VALUE">
+                  <shadow colour="#5ba593" dependencyby="IRhIN/y[;h0{Pmo.0$7!" id="6[PcnJPKl;U4BF}_5hO0" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                  <block colour="#0088ee" dependencyby="IRhIN/y[;h0{Pmo.0$7!" id=":ol7+9!K:YX/6)]VVf$e" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                    <field name="VAR">text</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block colour="#0088ee" dependencyby="IRhIN/y[;h0{Pmo.0$7!" id="bN$wsj}$jjueQloN*WH[" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">size</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block colour="#0088ee" dependencyby="IRhIN/y[;h0{Pmo.0$7!" id="}R6jH/.cG7o;7*3sol:!" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+            <field name="VAR">text</field>
+            <value name="VALUE">
+              <block colour="#5ba58c" dependencyby="IRhIN/y[;h0{Pmo.0$7!" id="#qo*b0mF!mDX{I:M01t:" origintype="text_getSubstring" output="true" tooltip="Returns a specified portion of the text." type="text_getSubstring">
+                <mutation at1="false" at2="true"/>
+                <field name="WHERE1">FIRST</field>
+                <field name="WHERE2">FROM_START</field>
+                <value name="STRING">
+                  <block colour="#0088ee" dependencyby="IRhIN/y[;h0{Pmo.0$7!" id="Q7L576g~[%{{Co)+fO8d" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                    <field name="VAR">text</field>
+                  </block>
+                </value>
+                <value name="AT2">
+                  <block colour="#0088ee" dependencyby="IRhIN/y[;h0{Pmo.0$7!" id="^I(s$2$Y/|#L1@F?Dl$4" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                    <field name="VAR">size</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block colour="#5ba58c" dependencyby="IRhIN/y[;h0{Pmo.0$7!" id="0Go+msO.ObgG+!+W4~*@" origintype="text_append" output="false" tooltip="function() {&#10;      return Blockly.Msg.TEXT_APPEND_TOOLTIP.replace('%1', thisBlock.getFieldValue('VAR'));&#10;    }" type="text_append">
+                <field name="VAR">text</field>
+                <value name="TEXT">
+                  <shadow colour="#5ba593" dependencyby="IRhIN/y[;h0{Pmo.0$7!" id="DcKcP,bl6z@FppdG$b[m" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT">...</field>
+                  </shadow>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block colour="#0088ee" dependencyby="IRhIN/y[;h0{Pmo.0$7!" id="^G]h!T0ezn~nO7=Cjh)a" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+        <field name="VAR">text</field>
+      </block>
+    </value>
+  </block>
+  <block colour="#fca03b" id="o@_XJ$$]T`nr:L{VfRj$" origintype="procedures_defreturn" output="false" tooltip="Creates a function with an output." type="procedures_defreturn" x="-307" y="653">
+    <field name="NAME">getIdUserSATO</field>
+    <comment h="80" pinned="false" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block colour="#0088ee" dependencyby="o@_XJ$$]T`nr:L{VfRj$" id="2~*6hwxx01O@t{N!lQ$|" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+        <field name="VAR">usuaCodigo</field>
+        <value name="VALUE">
+          <block colour="#aa2f00" dependencyby="o@_XJ$$]T`nr:L{VfRj$" id="y-$n9|v;rUrL}i*c.T/_" multilayer="false" namespace="cronapi.database.Operations.query" origintype="procedures_sql_callreturn" output="true" returntype="ObjectType.DATASET" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EOpen%20query%20database%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20retrieve%20data%20from%20database%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Entity%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Query%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Query%20params%20:%20List%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20DataSet%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_callreturn">
+            <mutation data="%7B%22queryBuilderJson%22:%7B%22isValid%22:true,%22isEmpty%22:false,%22operationType%22:%22object%22,%22type%22:%22select%22,%22rulesEntity%22:%5B%7B%22entity%22:%22UsuariosSato%22,%22namespace%22:%22base.entity.UsuariosSato%22,%22alias%22:%22u%22%7D%5D,%22rulesSelect%22:%5B%7B%22func%22:%22get%22,%22field%22:%22u.id%22,%22type%22:%22double%22%7D%5D,%22rulesGroupBy%22:%5B%5D,%22rulesHaving%22:%5B%5D,%22rulesOrderBy%22:%5B%5D,%22rules%22:%7B%22condition%22:%22AND%22,%22rules%22:%5B%7B%22id%22:%22u.email%22,%22field%22:%22u.email%22,%22type%22:%22string%22,%22input%22:%22text%22,%22operator%22:%22equal%22,%22value%22:%22:email%22,%22valueIsField%22:false%7D%5D,%22not%22:false,%22valid%22:true%7D,%22isRawSql%22:false,%22multiTenant%22:false,%22paginatorAutomatic%22:false,%22pagination%22:false%7D,%22entity%22:%22UsuariosSato%22,%22entityFullName%22:%22base.entity.UsuariosSato%22,%22filter%22:%22select%20u.id%20from%20UsuariosSato%20u%20where%20u.email%20=%20:email%22,%22queryMode%22:%22object%22,%22params%22:%22%5B%5C%22email%5C%22%5D%22%7D" name="{{cronapi.database.Operations.query}}">
+              <arg name="email"/>
+            </mutation>
+            <value name="ARG0">
+              <block colour="#487f7f" dependencyby="o@_XJ$$]T`nr:L{VfRj$" id="ByMJmva*Nt)b6ZV;.*wA" multilayer="false" namespace="cronapi.util.Operations.getCurrentUserName" origintype="procedures_callreturn" output="true" returntype="ObjectType.STRING" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EGet%20current%20user%20name%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20that%20get%20current%20user%20name%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20String%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.util.Operations.getCurrentUserName%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.util.Operations.getCurrentUserName%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                <mutation name="{{cronapi.util.Operations.getCurrentUserName}}" return-raw-type="cronapi.Var"/>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block colour="#5b80a5" dependencyby="o@_XJ$$]T`nr:L{VfRj$" id="W9Kp!B/(4!K%?guZrwg3" origintype="controls_if" output="false" tooltip="function () { [native code] }" type="controls_if">
+            <value name="IF0">
+              <block colour="#5b80a5" dependencyby="o@_XJ$$]T`nr:L{VfRj$" id="2DG/L/W:FZ^JJBRDu-.]" inline="true" multilayer="false" namespace="cronapi.logic.Operations.isNullOrEmpty" origintype="procedures_callreturn" output="true" returntype="ObjectType.BOOLEAN" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3Eis%20null%20or%20empty?%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20that%20check%20if%20a%20variable%20is%20null%20or%20empty.%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Parameter%20:%20Object%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Boolean%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.logic.Operations.isNullOrEmpty%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.logic.Operations.isNullOrEmpty%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                <mutation name="{{cronapi.logic.Operations.isNullOrEmpty}}" return-raw-type="cronapi.Var">
+                  <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.OBJECT" name="Parameter"/>
+                </mutation>
+                <value name="ARG0">
+                  <block colour="#0088ee" dependencyby="o@_XJ$$]T`nr:L{VfRj$" id="[QD2,Eu32`ZY[*:(I^u/" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                    <field name="VAR">usuaCodigo</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block colour="#934848" dependencyby="o@_XJ$$]T`nr:L{VfRj$" id="CX?M{+H#;9fP1rwqvY1^" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EShow%20notification%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20that%20show%20a%20notification%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Notification%20type%20:%20String%3C/span%3E%3Cdiv%3E%20Can%20receive%20values%20success,%20error,%20warning,%20info%20or%20primary%3C/div%3E%3Cspan%3E%20-%20Message%20:%20String%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                <field name="SELECT">warning</field>
+                <value name="MESSAGE">
+                  <shadow colour="#5ba593" dependencyby="o@_XJ$$]T`nr:L{VfRj$" id="0X5rl$Z$]EV[BVMh#]1N" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT">Usuário não identificado no SATO</field>
+                  </shadow>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block colour="#0088ee" dependencyby="o@_XJ$$]T`nr:L{VfRj$" id="@z+cL-;LN!Hf?tLx}Kz," origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+        <field name="VAR">usuaCodigo</field>
+      </block>
+    </value>
+  </block>
+</blockly>

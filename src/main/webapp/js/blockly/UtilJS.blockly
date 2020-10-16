@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly bpmnAble="false" formTarget="" resourceType="JS" ruleDescription="UtilJS" ruleName="UtilJS" ruleSynchronous="false" ruleTimeout="" ruleType="I">
+  <metadata scale="1" scrollx="499.5999999999999" scrolly="-133.80000000000007" target="L1m?L2{fVBJ7YC8GdoTq"/>
+  <block colour="#995ba5" id="L1m?L2{fVBJ7YC8GdoTq" origintype="procedures_defreturn" output="false" tooltip="Creates a function with an output." type="procedures_defreturn" x="-310" y="210">
+    <mutation>
+      <arg name="days"/>
+    </mutation>
+    <field name="NAME">getDateDaysToIncrease</field>
+    <comment h="80" pinned="false" w="160">UtilJS</comment>
+    <value name="RETURN">
+      <block colour="#7d9137" dependencyby="L1m?L2{fVBJ7YC8GdoTq" id="]Mo#=mAOS.n-Q,M~Za$v" multilayer="false" namespace="cronapi.dateTime.incDay" origintype="procedures_callreturn" output="true" returntype="ObjectType.DATETIME" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EIncrement%20day%20on%20date%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20increment%20day%20in%20date%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Date%20:%20DateTime%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Days%20to%20increase%20:%20Long%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20DateTime%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.dateTime.incDay%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.dateTime.incDay%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+        <mutation name="{{cronapi.dateTime.incDay}}" return-raw-type="undefined">
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.DATETIME" name="Date"/>
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.LONG" name="Days to increase"/>
+        </mutation>
+        <value name="ARG0">
+          <block colour="#7d9137" dependencyby="L1m?L2{fVBJ7YC8GdoTq" id="RR*(xl*zAiE/p%UE;v@L" multilayer="false" namespace="cronapi.dateTime.getNow" origintype="procedures_callreturn" output="true" returntype="ObjectType.DATETIME" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EGet%20current%20date%20and%20time%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20get%20current%20date%20and%20time%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20DateTime%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.dateTime.getNow%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.dateTime.getNow%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+            <mutation name="{{cronapi.dateTime.getNow}}" return-raw-type="undefined"/>
+          </block>
+        </value>
+        <value name="ARG1">
+          <shadow colour="#5b67a5" dependencyby="L1m?L2{fVBJ7YC8GdoTq" id="G3#mp_v0VP)WE(tNMxp," origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+          <block colour="#0088ee" dependencyby="L1m?L2{fVBJ7YC8GdoTq" id="PY0Ko%~}*M?NxNycE?4)" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+            <field name="VAR">days</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+</blockly>

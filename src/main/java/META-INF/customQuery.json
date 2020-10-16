@@ -1,0 +1,5773 @@
+{
+  "auth": {
+    "customId": "auth",
+    "queryName": "Autenticar",
+    "screen": "",
+    "sourceType": "entityFullName",
+    "blockly": null,
+    "entitySimpleName": "User",
+    "entityFullName": "app.entity.User",
+    "query": "select o from User o where o.login \u003d :login",
+    "queryParamsValues": [
+      {
+        "fieldName": "login",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": false,
+      "GETAuthorities": null,
+      "POST": false,
+      "POSTAuthorities": null,
+      "PUT": false,
+      "PUTAuthorities": null,
+      "DELETE": false,
+      "DELETEAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "id": null,
+      "email": null,
+      "name": null,
+      "login": null,
+      "picture": null,
+      "password": null,
+      "theme": null
+    },
+    "security": {
+      "id": null,
+      "email": null,
+      "name": null,
+      "login": null,
+      "picture": null,
+      "password": null,
+      "theme": null
+    },
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/query/auth/"
+  },
+  "roles": {
+    "customId": "roles",
+    "queryName": "Obter Autorização",
+    "screen": "",
+    "sourceType": "entityFullName",
+    "blockly": null,
+    "entitySimpleName": "Role",
+    "entityFullName": "app.entity.Role",
+    "query": "select o.id from Role o where o.user.login \u003d :login",
+    "queryParamsValues": [
+      {
+        "fieldName": "login",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": false,
+      "GETAuthorities": null,
+      "POST": false,
+      "POSTAuthorities": null,
+      "PUT": false,
+      "PUTAuthorities": null,
+      "DELETE": false,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "id": null,
+      "user": null
+    },
+    "security": {
+      "id": null,
+      "user": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/query/roles/"
+  },
+  "query760377": {
+    "customId": "query760377",
+    "queryName": "qryOrclDatabase",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "VmOrclDatabase",
+    "entityFullName": "reports.entity.VmOrclDatabase",
+    "query": {
+      "isEmpty": true,
+      "isRawSql": true,
+      "sqlContent": "select v.bancId, v.created, v.dbid, v.dbname, v.eventoExecucaoId, v.logMode, v.nome, v.openMode, v.platformName, v.protectionLevel, v.protectionMode \r\nfrom VmOrclDatabase v where v.bancId \u003d :bancId \r\nand v.eventoExecucaoId \u003d (select max(x.eventoExecucaoId) from  VmOrclDatabase x where v.bancId \u003d x.bancId and x.dataInicio \u003e\u003d :dataInicio)",
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "seqResultado": null,
+      "bancId": null,
+      "created": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "dbid": null,
+      "dbname": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "logMode": null,
+      "nome": null,
+      "openMode": null,
+      "platformName": null,
+      "protectionLevel": null,
+      "protectionMode": null
+    },
+    "defaultValuesProperties": {
+      "seqResultado": null,
+      "bancId": null,
+      "created": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "dbid": null,
+      "dbname": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "logMode": null,
+      "nome": null,
+      "openMode": null,
+      "platformName": null,
+      "protectionLevel": null,
+      "protectionMode": null
+    },
+    "security": {
+      "seqResultado": null,
+      "bancId": null,
+      "created": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "dbid": null,
+      "dbname": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "logMode": null,
+      "nome": null,
+      "openMode": null,
+      "platformName": null,
+      "protectionLevel": null,
+      "protectionMode": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/reports/query760377/"
+  },
+  "query984067": {
+    "customId": "query984067",
+    "queryName": "qryOrclInstance",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "VmOrclInstance",
+    "entityFullName": "reports.entity.VmOrclInstance",
+    "query": {
+      "isEmpty": true,
+      "isRawSql": true,
+      "sqlContent": "select v.bancId, v.eventoExecucaoId, v.nome, v.hostName, v.status, v.parallel, v.archiver, v.databaseStatus, v.startupTime, v.instanceName from VmOrclInstance v\r\nwhere v.bancId \u003d :bancId \r\nand v.eventoExecucaoId \u003d (select max(x.eventoExecucaoId) from  VmOrclInstance x where v.bancId \u003d x.bancId and x.dataInicio \u003e\u003d :dataInicio)",
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "seqResultado": null,
+      "bancId": null,
+      "startupTime": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "instanceName": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "hostName": null,
+      "nome": null,
+      "status": null,
+      "parallel": null,
+      "archiver": null,
+      "databaseStatus": null
+    },
+    "defaultValuesProperties": {
+      "seqResultado": null,
+      "bancId": null,
+      "startupTime": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "instanceName": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "hostName": null,
+      "nome": null,
+      "status": null,
+      "parallel": null,
+      "archiver": null,
+      "databaseStatus": null
+    },
+    "security": {
+      "seqResultado": null,
+      "bancId": null,
+      "startupTime": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "instanceName": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "hostName": null,
+      "nome": null,
+      "status": null,
+      "parallel": null,
+      "archiver": null,
+      "databaseStatus": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/reports/query984067/"
+  },
+  "query89337": {
+    "customId": "query89337",
+    "queryName": "qryOrclVersion",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "VmOrclVersion",
+    "entityFullName": "reports.entity.VmOrclVersion",
+    "query": {
+      "isEmpty": true,
+      "isRawSql": true,
+      "sqlContent": "select v from VmOrclVersion v\r\nwhere v.bancId \u003d :bancId \r\nand v.eventoExecucaoId \u003d (select max(x.eventoExecucaoId) from  VmOrclVersion x where v.bancId \u003d x.bancId)",
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "banner": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "nome": null
+    },
+    "defaultValuesProperties": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "banner": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "nome": null
+    },
+    "security": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "banner": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "nome": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/reports/query89337/"
+  },
+  "query515015": {
+    "customId": "query515015",
+    "queryName": "qryOrclSistemaOperacional",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "VmOrclSistemaOperacional",
+    "entityFullName": "reports.entity.VmOrclSistemaOperacional",
+    "query": {
+      "isEmpty": true,
+      "isRawSql": true,
+      "sqlContent": "select substring(v.line,0,90) as line from VmOrclSistemaOperacional v\r\nwhere v.bancId \u003d :bancId \r\nand v.eventoExecucaoId \u003d (select max(x.eventoExecucaoId) from  VmOrclSistemaOperacional x where v.bancId \u003d x.bancId and x.dataInicio between :dataInicio and :dataFim )\r\nand v.line is not null\r\nand length(v.line) \u003e 2\r\norder by v.seqResultado",
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataFim",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "line": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "nome": null
+    },
+    "defaultValuesProperties": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "line": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "nome": null
+    },
+    "security": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "line": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "nome": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/reports/query515015/"
+  },
+  "query846338": {
+    "customId": "query846338",
+    "queryName": "qryVwBancosAtivos",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "VwBancos",
+    "entityFullName": "reports.entity.VwBancos",
+    "query": {
+      "isValid": true,
+      "isEmpty": false,
+      "operationType": "object",
+      "type": "select",
+      "rulesEntity": [
+        {
+          "entity": "VwBancos",
+          "namespace": "reports.entity.VwBancos",
+          "alias": "v"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "v",
+          "type": "string"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [
+        {
+          "func": "get",
+          "field": "v.id",
+          "order": "asc"
+        }
+      ],
+      "rules": {
+        "condition": "AND",
+        "rules": [
+          {
+            "id": "v.ativo",
+            "field": "v.ativo",
+            "type": "string",
+            "input": "text",
+            "operator": "equal",
+            "value": "S",
+            "valueIsField": false
+          }
+        ],
+        "not": false,
+        "valid": true
+      },
+      "isRawSql": false,
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "id": null,
+      "ativo": null,
+      "bancosIlhas": null,
+      "clientes": null,
+      "host": null,
+      "instancia": null,
+      "instanciaPoloserver": null,
+      "itemCodigo": null,
+      "nome": null,
+      "numMaxSessoes": null,
+      "serverName": null,
+      "standbyId": null,
+      "status": null,
+      "tiposBancos": null,
+      "versao": null
+    },
+    "defaultValuesProperties": {
+      "id": null,
+      "ativo": null,
+      "bancosIlhas": null,
+      "clientes": null,
+      "host": null,
+      "instancia": null,
+      "instanciaPoloserver": null,
+      "itemCodigo": null,
+      "nome": null,
+      "numMaxSessoes": null,
+      "serverName": null,
+      "standbyId": null,
+      "status": null,
+      "tiposBancos": null,
+      "versao": null
+    },
+    "security": {
+      "id": null,
+      "ativo": null,
+      "bancosIlhas": null,
+      "clientes": null,
+      "host": null,
+      "instancia": null,
+      "instanciaPoloserver": null,
+      "itemCodigo": null,
+      "nome": null,
+      "numMaxSessoes": null,
+      "serverName": null,
+      "standbyId": null,
+      "status": null,
+      "tiposBancos": null,
+      "versao": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/reports/query846338/"
+  },
+  "query470226": {
+    "customId": "query470226",
+    "queryName": "qryClientes",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "Clientes",
+    "entityFullName": "base.entity.Clientes",
+    "query": {
+      "isValid": true,
+      "isEmpty": false,
+      "operationType": "object",
+      "type": "select",
+      "rulesEntity": [
+        {
+          "entity": "Clientes",
+          "namespace": "base.entity.Clientes",
+          "alias": "c"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "c",
+          "type": "string"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [
+        {
+          "func": "get",
+          "field": "c.nome",
+          "order": "asc"
+        }
+      ],
+      "rules": {
+        "condition": "AND",
+        "rules": [],
+        "not": false,
+        "valid": true
+      },
+      "isRawSql": false,
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "id": null,
+      "negocio": null,
+      "nome": null,
+      "sigla": null,
+      "status": null
+    },
+    "defaultValuesProperties": {
+      "id": null,
+      "negocio": null,
+      "nome": null,
+      "sigla": null,
+      "status": null
+    },
+    "security": {
+      "id": null,
+      "negocio": null,
+      "nome": null,
+      "sigla": null,
+      "status": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/base/query470226/"
+  },
+  "query10403": {
+    "customId": "query10403",
+    "queryName": "qryVwBancosId",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "VwBancos",
+    "entityFullName": "reports.entity.VwBancos",
+    "query": {
+      "isEmpty": true,
+      "isRawSql": true,
+      "sqlContent": "select v.clientes.nome, v.nome from VwBancos v where v.id \u003d :bancId",
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "id": null,
+      "ativo": null,
+      "bancosIlhas": null,
+      "clientes": null,
+      "host": null,
+      "instancia": null,
+      "instanciaPoloserver": null,
+      "itemCodigo": null,
+      "nome": null,
+      "numMaxSessoes": null,
+      "serverName": null,
+      "standbyId": null,
+      "status": null,
+      "tiposBancos": null,
+      "versao": null
+    },
+    "defaultValuesProperties": {
+      "id": null,
+      "ativo": null,
+      "bancosIlhas": null,
+      "clientes": null,
+      "host": null,
+      "instancia": null,
+      "instanciaPoloserver": null,
+      "itemCodigo": null,
+      "nome": null,
+      "numMaxSessoes": null,
+      "serverName": null,
+      "standbyId": null,
+      "status": null,
+      "tiposBancos": null,
+      "versao": null
+    },
+    "security": {
+      "id": null,
+      "ativo": null,
+      "bancosIlhas": null,
+      "clientes": null,
+      "host": null,
+      "instancia": null,
+      "instanciaPoloserver": null,
+      "itemCodigo": null,
+      "nome": null,
+      "numMaxSessoes": null,
+      "serverName": null,
+      "standbyId": null,
+      "status": null,
+      "tiposBancos": null,
+      "versao": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/reports/query10403/"
+  },
+  "query721649": {
+    "customId": "query721649",
+    "queryName": "qryVwRestarts",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "VwRestarts",
+    "entityFullName": "reports.entity.VwRestarts",
+    "query": {
+      "isValid": true,
+      "isEmpty": false,
+      "operationType": "object",
+      "type": "select",
+      "rulesEntity": [
+        {
+          "entity": "VwRestarts",
+          "namespace": "reports.entity.VwRestarts",
+          "alias": "v"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "v",
+          "type": "string"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [
+        {
+          "func": "get",
+          "field": "v.startupTime",
+          "order": "desc"
+        }
+      ],
+      "rules": {
+        "condition": "AND",
+        "rules": [
+          {
+            "id": "v.bancId",
+            "field": "v.bancId",
+            "type": "double",
+            "input": "text",
+            "operator": "equal",
+            "value": ":bancId",
+            "valueIsField": false
+          }
+        ],
+        "not": false,
+        "valid": true
+      },
+      "isRawSql": false,
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "id": null,
+      "bancId": null,
+      "startupTime": null
+    },
+    "defaultValuesProperties": {
+      "id": null,
+      "bancId": null,
+      "startupTime": null
+    },
+    "security": {
+      "id": null,
+      "bancId": null,
+      "startupTime": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/reports/query721649/"
+  },
+  "query823933": {
+    "customId": "query823933",
+    "queryName": "qryOrclResourceLimit",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "VmOrclResourceLimit",
+    "entityFullName": "reports.entity.VmOrclResourceLimit",
+    "query": {
+      "isEmpty": true,
+      "isRawSql": true,
+      "sqlContent": "select v from VmOrclResourceLimit v\r\nwhere v.bancId \u003d :bancId \r\nand v.eventoExecucaoId \u003d (select max(x.eventoExecucaoId) from  VmOrclResourceLimit x where v.bancId \u003d x.bancId and x.dataInicio between :dataInicio and :dataFim )\r\norder by v.seqResultado",
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataFim",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "nome": null,
+      "resourceName": null,
+      "currentUtilization": null,
+      "maxUtilization": null,
+      "initialAllocation": null,
+      "limitValue": null
+    },
+    "defaultValuesProperties": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "nome": null,
+      "resourceName": null,
+      "currentUtilization": null,
+      "maxUtilization": null,
+      "initialAllocation": null,
+      "limitValue": null
+    },
+    "security": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "nome": null,
+      "resourceName": null,
+      "currentUtilization": null,
+      "maxUtilization": null,
+      "initialAllocation": null,
+      "limitValue": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/reports/query823933/"
+  },
+  "query375053": {
+    "customId": "query375053",
+    "queryName": "qryApontamentosChamados",
+    "sourceType": "blockly",
+    "baseEntity": "reports.entity.VwApontamentosChamados",
+    "blockly": {
+      "type": "server",
+      "blocklyMethod": "fncQryChamados",
+      "blocklyClass": "blockly.Consultas",
+      "blocklyLanguage": "java",
+      "blocklyParams": [],
+      "blocklyJson": {
+        "namespace": "blockly.Consultas",
+        "sourcePath": "src/main/java/blockly/Consultas.blockly",
+        "language": "java",
+        "methods": [
+          {
+            "name": "fncQryTablespaces",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryTablespacesGraph",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryChamados",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryTablespacesTotal",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          }
+        ]
+      },
+      "blocklyGETMethod": "fncQryChamados",
+      "blocklyPOSTMethod": "default",
+      "blocklyPUTMethod": "default",
+      "blocklyDELETEMethod": "default",
+      "blocklyFILTERMethod": "default",
+      "blocklyCOUNTMethod": "fncQryChamados"
+    },
+    "entitySimpleName": null,
+    "entityFullName": null,
+    "query": "",
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataFim",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "agenSequencia": null,
+      "atividade": null,
+      "cecuCodigo": null,
+      "clieId": null,
+      "clieNome": null,
+      "codigoChamado": null,
+      "compromisso": null,
+      "data": null,
+      "datahoraAbertura": null,
+      "descServico": null,
+      "descStatus": null,
+      "descricao": null,
+      "emprNome": null,
+      "horaFinal": null,
+      "horaInicio": null,
+      "itemCodigo": null,
+      "local": null,
+      "profApelido": null,
+      "profNome": null,
+      "profNumero": null,
+      "servico": null,
+      "status": null,
+      "sugiroNaoFaturar": null
+    },
+    "defaultValuesProperties": {
+      "agenSequencia": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "atividade": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "cecuCodigo": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "clieId": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "clieNome": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "codigoChamado": {
+        "key": true,
+        "nullable": true,
+        "type": "Double"
+      },
+      "compromisso": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "data": {
+        "key": false,
+        "nullable": true,
+        "type": "Date"
+      },
+      "datahoraAbertura": {
+        "key": false,
+        "nullable": true,
+        "type": "Date"
+      },
+      "descServico": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "descStatus": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "descricao": {
+        "key": false,
+        "nullable": false,
+        "type": "String"
+      },
+      "emprNome": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "horaFinal": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "horaInicio": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "itemCodigo": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "local": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "profApelido": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "profNome": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "profNumero": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "servico": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "status": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "sugiroNaoFaturar": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      }
+    },
+    "security": {
+      "agenSequencia": null,
+      "atividade": null,
+      "cecuCodigo": null,
+      "clieId": null,
+      "clieNome": null,
+      "codigoChamado": null,
+      "compromisso": null,
+      "data": null,
+      "datahoraAbertura": null,
+      "descServico": null,
+      "descStatus": null,
+      "descricao": null,
+      "emprNome": null,
+      "horaFinal": null,
+      "horaInicio": null,
+      "itemCodigo": null,
+      "local": null,
+      "profApelido": null,
+      "profNome": null,
+      "profNumero": null,
+      "servico": null,
+      "status": null,
+      "sugiroNaoFaturar": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/app/query375053/"
+  },
+  "query931538": {
+    "customId": "query931538",
+    "queryName": "qryBancosStatusSessoesSumario",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "BancosStatusSessoes",
+    "entityFullName": "reports.entity.BancosStatusSessoes",
+    "query": {
+      "isEmpty": true,
+      "isRawSql": true,
+      "sqlContent": "select MIN(b.qtdeSessoesAtivas) as minAtivas, MAX(b.qtdeSessoesAtivas) as maxAtivas, AVG(b.qtdeSessoesAtivas) as avgAtivas, a.numMaxSessoes as numMaxSessoes \nfrom BancosStatusSessoes b, VwBancos a \nwhere a.id \u003d b.bancId and b.bancId \u003d :bancId AND b.dataGeracao BETWEEN :dataInicio AND :dataFim group by numMaxSessoes",
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataFim",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "bancId": null,
+      "dataGeracao": null,
+      "qtdeSessoesAtivas": null
+    },
+    "defaultValuesProperties": {
+      "bancId": null,
+      "dataGeracao": null,
+      "qtdeSessoesAtivas": null
+    },
+    "security": {
+      "bancId": null,
+      "dataGeracao": null,
+      "qtdeSessoesAtivas": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/reports/query931538/"
+  },
+  "query206282": {
+    "customId": "query206282",
+    "queryName": "qryBancosStatusSessoesList",
+    "sourceType": "blockly",
+    "baseEntity": "reports.entity.BancosStatusSessoes",
+    "blockly": {
+      "type": "server",
+      "blocklyMethod": "fncQryBancosStatusSessoesList",
+      "blocklyClass": "blockly.Consultas",
+      "blocklyLanguage": "java",
+      "blocklyParams": [],
+      "blocklyJson": {
+        "namespace": "blockly.Consultas",
+        "sourcePath": "src/main/java/blockly/Consultas.blockly",
+        "language": "java",
+        "methods": [
+          {
+            "name": "fncQryTablespaces",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryBancosStatusSessoes",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryBancosLimite",
+            "hasReturn": "true",
+            "params": [
+              "bancId"
+            ]
+          },
+          {
+            "name": "fncQryTablespacesGraph",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryTablespacesTotal",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryChamados",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryBancosStatusSessoesList",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          }
+        ]
+      },
+      "blocklyGETMethod": "fncQryBancosStatusSessoesList",
+      "blocklyPOSTMethod": "default",
+      "blocklyPUTMethod": "default",
+      "blocklyDELETEMethod": "default",
+      "blocklyFILTERMethod": "default",
+      "blocklyCOUNTMethod": "fncQryBancosStatusSessoesList"
+    },
+    "entitySimpleName": null,
+    "entityFullName": null,
+    "query": "",
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataFim",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "bancId": null,
+      "dataGeracao": null,
+      "qtdeSessoesAtivas": null
+    },
+    "defaultValuesProperties": {
+      "bancId": {
+        "key": true,
+        "nullable": true,
+        "type": "Double"
+      },
+      "dataGeracao": {
+        "key": true,
+        "nullable": true,
+        "type": "Date"
+      },
+      "qtdeSessoesAtivas": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      }
+    },
+    "security": {
+      "bancId": null,
+      "dataGeracao": null,
+      "qtdeSessoesAtivas": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/app/query206282/"
+  },
+  "query143304": {
+    "customId": "query143304",
+    "queryName": "qryBancosStatusSessoesHora",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "BancosStatusSessoes",
+    "entityFullName": "reports.entity.BancosStatusSessoes",
+    "query": {
+      "isEmpty": true,
+      "isRawSql": true,
+      "sqlContent": "select MIN(b.qtdeSessoesAtivas) as minAtivas, MAX(b.qtdeSessoesAtivas) as maxAtivas, AVG(b.qtdeSessoesAtivas) as avgAtivas, SQL(\u0027FCN_DATE_HOUR(?)\u0027, b.dataGeracao) AS dataHora,  \r\n a.numMaxSessoes as numMaxSessoes from BancosStatusSessoes b, VwBancos a \r\nwhere a.id \u003d b.bancId and b.bancId \u003d :bancId AND b.dataGeracao BETWEEN :dataInicio AND :dataFim group by dataHora, numMaxSessoes order by dataHora",
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataFim",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "bancId": null,
+      "dataGeracao": null,
+      "qtdeSessoesAtivas": null
+    },
+    "defaultValuesProperties": {
+      "bancId": null,
+      "dataGeracao": null,
+      "qtdeSessoesAtivas": null
+    },
+    "security": {
+      "bancId": null,
+      "dataGeracao": null,
+      "qtdeSessoesAtivas": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/reports/query143304/"
+  },
+  "query864841": {
+    "customId": "query864841",
+    "queryName": "qryBancosStatusSessoesTotais",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "VwOrclSessionsCurrent",
+    "entityFullName": "reports.entity.VwOrclSessionsCurrent",
+    "query": {
+      "isEmpty": true,
+      "isRawSql": true,
+      "sqlContent": "select MIN(b.currentUtilization) as minAtivas, MAX(b.currentUtilization) as maxAtivas, AVG(b.currentUtilization) as avgAtivas, SQL(\u0027FCN_DATE_DAY_HOUR(?)\u0027, b.dataInicio) AS dataHora, \r\nSQL(\u0027TRUNC(?)\u0027, b.dataInicio) AS data \r\nfrom VwOrclSessionsCurrent b \r\nwhere  b.bancId \u003d :bancId AND b.dataInicio BETWEEN :dataInicio AND :dataFim group by data, dataHora order by data, dataHora ",
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataFim",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "nome": null,
+      "currentUtilization": null
+    },
+    "defaultValuesProperties": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "nome": null,
+      "currentUtilization": null
+    },
+    "security": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "nome": null,
+      "currentUtilization": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/reports/query864841/"
+  },
+  "query940834": {
+    "customId": "query940834",
+    "queryName": "qryBancosStatusSessoesTotaisSumario",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "VwOrclSessionsCurrent",
+    "entityFullName": "reports.entity.VwOrclSessionsCurrent",
+    "query": {
+      "isEmpty": true,
+      "isRawSql": true,
+      "sqlContent": "select MIN(b.currentUtilization) as minAtivas, MAX(b.currentUtilization) as maxAtivas, AVG(b.currentUtilization) as avgAtivas \r\nfrom VwOrclSessionsCurrent b \r\nwhere  b.bancId \u003d :bancId AND b.dataInicio BETWEEN :dataInicio AND :dataFim",
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataFim",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "nome": null,
+      "currentUtilization": null
+    },
+    "defaultValuesProperties": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "nome": null,
+      "currentUtilization": null
+    },
+    "security": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "nome": null,
+      "currentUtilization": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/reports/query940834/"
+  },
+  "query574247": {
+    "customId": "query574247",
+    "queryName": "qryBancosStatusSessoesTotaisHora",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "VwOrclSessionsCurrent",
+    "entityFullName": "reports.entity.VwOrclSessionsCurrent",
+    "query": {
+      "isEmpty": true,
+      "isRawSql": true,
+      "sqlContent": "select MIN(b.currentUtilization) as minAtivas, MAX(b.currentUtilization) as maxAtivas, AVG(b.currentUtilization) as avgAtivas,  SQL(\u0027FCN_DATE_HOUR(?)\u0027, b.dataInicio) AS dataHora \r\nfrom VwOrclSessionsCurrent b \r\nwhere  b.bancId \u003d :bancId AND b.dataInicio BETWEEN :dataInicio AND :dataFim group by dataHora order by dataHora ",
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataFim",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "nome": null,
+      "currentUtilization": null
+    },
+    "defaultValuesProperties": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "nome": null,
+      "currentUtilization": null
+    },
+    "security": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "nome": null,
+      "currentUtilization": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/reports/query574247/"
+  },
+  "query266300": {
+    "customId": "query266300",
+    "queryName": "qryLockEventos",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "VmOrclLocksEventos",
+    "entityFullName": "reports.entity.VmOrclLocksEventos",
+    "query": {
+      "isEmpty": true,
+      "isRawSql": true,
+      "sqlContent": "select sum(v.qtdLocks) as qtdLocks , SQL(\u0027FCN_DATE_DAY_HOUR(?)\u0027, d.dataInicio) AS dataHora, SQL(\u0027TRUNC(?)\u0027, d.dataInicio) AS data \r\nfrom VmOrclLocksEventos v, DataGraficoAux d where v.bancId \u003d :bancId \r\nAND d.dataInicio BETWEEN :dataInicio AND :dataFim \r\nAND v.dataInicio BETWEEN d.dataInicio AND d.dataFim\r\ngroup by dataHora, data  \r\norder by dataHora, data",
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataFim",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "bancId": null,
+      "dataInicio": null,
+      "qtdLocks": null
+    },
+    "defaultValuesProperties": {
+      "bancId": null,
+      "dataInicio": null,
+      "qtdLocks": null
+    },
+    "security": {
+      "bancId": null,
+      "dataInicio": null,
+      "qtdLocks": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/reports/query266300/"
+  },
+  "query809175": {
+    "customId": "query809175",
+    "queryName": "qryOrclTablespacesDelta",
+    "sourceType": "blockly",
+    "baseEntity": null,
+    "blockly": {
+      "type": "server",
+      "blocklyMethod": "fncQryTablespaces",
+      "blocklyClass": "blockly.Consultas",
+      "blocklyLanguage": "java",
+      "blocklyParams": [],
+      "blocklyJson": {
+        "namespace": "blockly.Consultas",
+        "sourcePath": "src/main/java/blockly/Consultas.blockly",
+        "language": "java",
+        "class": "blockly.Consultas",
+        "methods": [
+          {
+            "name": "fncQryTablespaces",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryChamados",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryBancosStatusSessoes",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryBancosLimite",
+            "hasReturn": "true",
+            "params": [
+              "bancId"
+            ]
+          },
+          {
+            "name": "fcnQryVxOrclArchivedLogHour",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryTablespacesTotal",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryBancosStatusSessoesList",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryTablespacesGraph",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fcnQryVxOrclArchivedHourByHour",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryOrclTablespacesAno",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          }
+        ]
+      },
+      "blocklyGETMethod": "fncQryTablespaces",
+      "blocklyPOSTMethod": "fncQryTablespaces",
+      "blocklyPUTMethod": "fncQryTablespaces",
+      "blocklyDELETEMethod": "fncQryTablespaces",
+      "blocklyFILTERMethod": "fncQryTablespaces",
+      "blocklyCOUNTMethod": "fncQryTablespaces"
+    },
+    "entitySimpleName": null,
+    "entityFullName": null,
+    "query": "",
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataFim",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "dataInicioGraph": null,
+      "dataInicioRef": null,
+      "tablespaceName": null,
+      "totalAlocado": null
+    },
+    "defaultValuesProperties": {
+      "dataInicioGraph": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "dataInicioRef": {
+        "key": false,
+        "nullable": true,
+        "type": "DateTime"
+      },
+      "tablespaceName": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "totalAlocado": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      }
+    },
+    "security": {
+      "dataInicioGraph": null,
+      "dataInicioRef": null,
+      "tablespaceName": null,
+      "totalAlocado": {}
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/app/query809175/"
+  },
+  "query306037": {
+    "customId": "query306037",
+    "queryName": "qryOrclTablespacesGraph",
+    "sourceType": "blockly",
+    "baseEntity": null,
+    "blockly": {
+      "type": "server",
+      "blocklyMethod": "fncQryTablespacesGraph",
+      "blocklyClass": "blockly.Consultas",
+      "blocklyLanguage": "java",
+      "blocklyParams": [],
+      "blocklyJson": {
+        "namespace": "blockly.Consultas",
+        "sourcePath": "src/main/java/blockly/Consultas.blockly",
+        "language": "java",
+        "class": "blockly.Consultas",
+        "methods": [
+          {
+            "name": "fncQryTablespaces",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryChamados",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fcnQryVxOrclArchivedLogHour",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryBancosStatusSessoes",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryTablespacesGraph",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryBancosLimite",
+            "hasReturn": "true",
+            "params": [
+              "bancId"
+            ]
+          },
+          {
+            "name": "fncQryTablespacesTotal",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryBancosStatusSessoesList",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryOrclTablespacesAno",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          }
+        ]
+      },
+      "blocklyGETMethod": "fncQryTablespacesGraph",
+      "blocklyPOSTMethod": "fncQryTablespacesGraph",
+      "blocklyPUTMethod": "fncQryTablespacesGraph",
+      "blocklyDELETEMethod": "fncQryTablespacesGraph",
+      "blocklyFILTERMethod": "fncQryTablespacesGraph",
+      "blocklyCOUNTMethod": "fncQryTablespacesGraph"
+    },
+    "entitySimpleName": null,
+    "entityFullName": null,
+    "query": "",
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataFim",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "dataInicioGraph": null,
+      "dataInicioRef": null,
+      "tablespaceName": null,
+      "totalAlocado": null
+    },
+    "defaultValuesProperties": {
+      "dataInicioGraph": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "dataInicioRef": {
+        "key": false,
+        "nullable": true,
+        "type": "DateTime"
+      },
+      "tablespaceName": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "totalAlocado": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      }
+    },
+    "security": {
+      "dataInicioGraph": null,
+      "dataInicioRef": null,
+      "tablespaceName": null,
+      "totalAlocado": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/reports/query306037/"
+  },
+  "query358534": {
+    "customId": "query358534",
+    "queryName": "qryBancosSessoesDia",
+    "sourceType": "blockly",
+    "baseEntity": "reports.entity.VwOrclSessions",
+    "blockly": {
+      "type": "server",
+      "blocklyMethod": "fncQryBancosStatusSessoes",
+      "blocklyClass": "blockly.Consultas",
+      "blocklyLanguage": "java",
+      "blocklyParams": [],
+      "blocklyJson": {
+        "namespace": "blockly.Consultas",
+        "sourcePath": "src/main/java/blockly/Consultas.blockly",
+        "language": "java",
+        "class": "blockly.Consultas",
+        "methods": [
+          {
+            "name": "fncQryTablespaces",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryTablespacesGraph",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryChamados",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryTablespacesTotal",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryBancosStatusSessoes",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          }
+        ]
+      },
+      "blocklyGETMethod": "fncQryBancosStatusSessoes",
+      "blocklyPOSTMethod": "default",
+      "blocklyPUTMethod": "default",
+      "blocklyDELETEMethod": "default",
+      "blocklyFILTERMethod": "default",
+      "blocklyCOUNTMethod": "fncQryBancosStatusSessoes"
+    },
+    "entitySimpleName": null,
+    "entityFullName": null,
+    "query": "",
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataFim",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "avgAtivas": null,
+      "bancId": null,
+      "dataGeracao": null,
+      "dataHora": null,
+      "maxAtivas": null,
+      "minAtivas": null,
+      "numMaxSessoes": null
+    },
+    "defaultValuesProperties": {
+      "avgAtivas": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "bancId": {
+        "key": true,
+        "nullable": true,
+        "type": "Double"
+      },
+      "dataGeracao": {
+        "key": true,
+        "nullable": true,
+        "type": "Date"
+      },
+      "dataHora": {
+        "key": true,
+        "nullable": true,
+        "type": "String"
+      },
+      "maxAtivas": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "minAtivas": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "numMaxSessoes": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      }
+    },
+    "security": {
+      "avgAtivas": null,
+      "bancId": null,
+      "dataGeracao": null,
+      "dataHora": null,
+      "maxAtivas": null,
+      "minAtivas": null,
+      "numMaxSessoes": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/app/query358534/"
+  },
+  "query185431": {
+    "customId": "query185431",
+    "queryName": "qryOrclTablespacesList",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "VyOrclTablespaces",
+    "entityFullName": "reports.entity.VyOrclTablespaces",
+    "query": {
+      "isEmpty": true,
+      "isRawSql": true,
+      "sqlContent": "select v from VyOrclTablespaces v where v.bancId \u003d :bancId AND v.dataInicio BETWEEN :dataInicio AND :dataFim \nAND v.eventoExecucaoId \u003d ( SELECT MAX(x.eventoExecucaoId) FROM VyOrclTablespaces x WHERE v.bancId \u003d x.bancId AND x.dataInicio BETWEEN :dataInicio AND :dataFim ) \norder by v.tablespaceName asc ",
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataFim",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoExecucaoId": null,
+      "nome": null,
+      "tablespaceName": null,
+      "pctUsed": null,
+      "totalMb": null,
+      "totalAlocado": null,
+      "espacoExtendido": null,
+      "freeMb": null,
+      "dataInicioRef": null,
+      "dataInicioGraph": null
+    },
+    "defaultValuesProperties": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoExecucaoId": null,
+      "nome": null,
+      "tablespaceName": null,
+      "pctUsed": null,
+      "totalMb": null,
+      "totalAlocado": null,
+      "espacoExtendido": null,
+      "freeMb": null,
+      "dataInicioRef": null,
+      "dataInicioGraph": null
+    },
+    "security": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoExecucaoId": null,
+      "nome": null,
+      "tablespaceName": null,
+      "pctUsed": null,
+      "totalMb": null,
+      "totalAlocado": null,
+      "espacoExtendido": null,
+      "freeMb": null,
+      "dataInicioRef": null,
+      "dataInicioGraph": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/reports/query185431/"
+  },
+  "query576337": {
+    "customId": "query576337",
+    "queryName": "qryOrclTablespacesAno",
+    "sourceType": "blockly",
+    "baseEntity": "reports.entity.VyOrclTablespacesAno",
+    "blockly": {
+      "type": "server",
+      "blocklyMethod": "fncQryOrclTablespacesAno",
+      "blocklyClass": "blockly.Consultas",
+      "blocklyLanguage": "java",
+      "blocklyParams": [],
+      "blocklyJson": {
+        "namespace": "blockly.Consultas",
+        "sourcePath": "src/main/java/blockly/Consultas.blockly",
+        "language": "java",
+        "class": "blockly.Consultas",
+        "methods": [
+          {
+            "name": "fncQryTablespaces",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryBancosStatusSessoes",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryBancosLimite",
+            "hasReturn": "true",
+            "params": [
+              "bancId"
+            ]
+          },
+          {
+            "name": "fncQryTablespacesTotal",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryChamados",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryTablespacesGraph",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryBancosStatusSessoesList",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryOrclTablespacesAno",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          }
+        ]
+      },
+      "blocklyGETMethod": "fncQryOrclTablespacesAno",
+      "blocklyPOSTMethod": "default",
+      "blocklyPUTMethod": "default",
+      "blocklyDELETEMethod": "default",
+      "blocklyFILTERMethod": "default",
+      "blocklyCOUNTMethod": "fncQryOrclTablespacesAno"
+    },
+    "entitySimpleName": null,
+    "entityFullName": null,
+    "query": "",
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataFim",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "areaAlocadaMb": null,
+      "areaTotalMb": null,
+      "bancId": null,
+      "dataInicio": null,
+      "dataMes": null
+    },
+    "defaultValuesProperties": {
+      "areaAlocadaMb": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "areaTotalMb": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "bancId": {
+        "key": true,
+        "nullable": true,
+        "type": "Double"
+      },
+      "dataInicio": {
+        "key": true,
+        "nullable": true,
+        "type": "Date"
+      },
+      "dataMes": {
+        "key": true,
+        "nullable": true,
+        "type": "String"
+      }
+    },
+    "security": {
+      "areaAlocadaMb": null,
+      "areaTotalMb": null,
+      "bancId": null,
+      "dataInicio": null,
+      "dataMes": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/app/query576337/"
+  },
+  "query464427": {
+    "customId": "query464427",
+    "queryName": "qryOrclTablespacesAnoGraph",
+    "sourceType": "blockly",
+    "baseEntity": "reports.entity.VyOrclTablespacesAno",
+    "blockly": {
+      "type": "server",
+      "blocklyMethod": "fncQryOrclTablespacesAno",
+      "blocklyClass": "blockly.Consultas",
+      "blocklyLanguage": "java",
+      "blocklyParams": [],
+      "blocklyJson": {
+        "namespace": "blockly.Consultas",
+        "sourcePath": "src/main/java/blockly/Consultas.blockly",
+        "language": "java",
+        "class": "blockly.Consultas",
+        "methods": [
+          {
+            "name": "fncQryTablespaces",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryBancosStatusSessoes",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryBancosLimite",
+            "hasReturn": "true",
+            "params": [
+              "bancId"
+            ]
+          },
+          {
+            "name": "fncQryTablespacesTotal",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryChamados",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryTablespacesGraph",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryBancosStatusSessoesList",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryOrclTablespacesAno",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          }
+        ]
+      },
+      "blocklyGETMethod": "fncQryOrclTablespacesAno",
+      "blocklyPOSTMethod": "default",
+      "blocklyPUTMethod": "default",
+      "blocklyDELETEMethod": "default",
+      "blocklyFILTERMethod": "default",
+      "blocklyCOUNTMethod": "fncQryOrclTablespacesAno"
+    },
+    "entitySimpleName": null,
+    "entityFullName": null,
+    "query": "",
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataFim",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "areaAlocadaMb": null,
+      "areaTotalMb": null,
+      "bancId": null,
+      "dataInicio": null,
+      "dataMes": null
+    },
+    "defaultValuesProperties": {
+      "areaAlocadaMb": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "areaTotalMb": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "bancId": {
+        "key": true,
+        "nullable": true,
+        "type": "Double"
+      },
+      "dataInicio": {
+        "key": true,
+        "nullable": true,
+        "type": "Date"
+      },
+      "dataMes": {
+        "key": true,
+        "nullable": true,
+        "type": "String"
+      }
+    },
+    "security": {
+      "areaAlocadaMb": null,
+      "areaTotalMb": null,
+      "bancId": null,
+      "dataInicio": null,
+      "dataMes": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/app/query464427/"
+  },
+  "query925857": {
+    "customId": "query925857",
+    "queryName": "qryOrclAsm",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "VwOrclAsm",
+    "entityFullName": "reports.entity.VwOrclAsm",
+    "query": {
+      "isEmpty": true,
+      "isRawSql": true,
+      "sqlContent": "select v from VwOrclAsm v\r\nwhere v.bancId \u003d :bancId \r\nand v.eventoExecucaoId \u003d (select max(x.eventoExecucaoId) from  VwOrclAsm x where v.bancId \u003d x.bancId and x.dataInicio between :dataInicio and :dataFim )\r\norder by v.seqResultado",
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataFim",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoExecucaoId": null,
+      "nome": null,
+      "groupNumber": null,
+      "groupName": null,
+      "totalMb": null,
+      "freeMb": null
+    },
+    "defaultValuesProperties": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoExecucaoId": null,
+      "nome": null,
+      "groupNumber": null,
+      "groupName": null,
+      "totalMb": null,
+      "freeMb": null
+    },
+    "security": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoExecucaoId": null,
+      "nome": null,
+      "groupNumber": null,
+      "groupName": null,
+      "totalMb": null,
+      "freeMb": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/reports/query925857/"
+  },
+  "query85434": {
+    "customId": "query85434",
+    "queryName": "qryVmOrclMemory",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "VmOrclMemory",
+    "entityFullName": "reports.entity.VmOrclMemory",
+    "query": {
+      "isEmpty": true,
+      "isRawSql": true,
+      "sqlContent": "select v from VmOrclMemory v\r\nwhere v.bancId \u003d :bancId \r\nand v.eventoExecucaoId \u003d (select max(x.eventoExecucaoId) from  VmOrclMemory x where v.bancId \u003d x.bancId and x.dataInicio between :dataInicio and :dataFim )\r\norder by v.name",
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataFim",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoExecucaoId": null,
+      "nome": null,
+      "pool": null,
+      "name": null,
+      "valor": null
+    },
+    "defaultValuesProperties": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoExecucaoId": null,
+      "nome": null,
+      "pool": null,
+      "name": null,
+      "valor": null
+    },
+    "security": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoExecucaoId": null,
+      "nome": null,
+      "pool": null,
+      "name": null,
+      "valor": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/reports/query85434/"
+  },
+  "query522515": {
+    "customId": "query522515",
+    "queryName": "qryOrclBufferRatio",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "VmOrclBufferRatio",
+    "entityFullName": "reports.entity.VmOrclBufferRatio",
+    "query": {
+      "isEmpty": true,
+      "isRawSql": true,
+      "sqlContent": "select MIN(b.hitRatio) as minHitRatio, MAX(b.hitRatio) as maxHitRatio, SQL(\u0027FCN_DATE_DAY_HOUR(?)\u0027, b.dataInicio) AS dataHora\r\nfrom VmOrclBufferRatio b\r\nwhere b.bancId \u003d :bancId AND b.dataInicio BETWEEN :dataInicio AND :dataFim group by dataHora order by dataHora",
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataFim",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoExecucaoId": null,
+      "nome": null,
+      "hitRatio": null
+    },
+    "defaultValuesProperties": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoExecucaoId": null,
+      "nome": null,
+      "hitRatio": null
+    },
+    "security": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoExecucaoId": null,
+      "nome": null,
+      "hitRatio": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/reports/query522515/"
+  },
+  "query255358": {
+    "customId": "query255358",
+    "queryName": "qryOrclParameters",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "VmOrclParameters",
+    "entityFullName": "reports.entity.VmOrclParameters",
+    "query": {
+      "isEmpty": true,
+      "isRawSql": true,
+      "sqlContent": "select v from VmOrclParameters v\r\nwhere v.bancId \u003d :bancId \r\nand v.eventoExecucaoId \u003d (select max(x.eventoExecucaoId) from  VmOrclParameters x where v.bancId \u003d x.bancId and x.dataInicio between :dataInicio and :dataFim )\r\norder by v.nomeParametro",
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataFim",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoExecucaoId": null,
+      "nome": null,
+      "nomeParametro": null,
+      "valor": null
+    },
+    "defaultValuesProperties": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoExecucaoId": null,
+      "nome": null,
+      "nomeParametro": null,
+      "valor": null
+    },
+    "security": {
+      "seqResultado": null,
+      "bancId": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "eventoExecucaoId": null,
+      "nome": null,
+      "nomeParametro": null,
+      "valor": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/reports/query255358/"
+  },
+  "query177504": {
+    "customId": "query177504",
+    "queryName": "qryVxOrclArchivedLogHour",
+    "sourceType": "blockly",
+    "baseEntity": "reports.entity.VxOrclArchivedLogHour",
+    "blockly": {
+      "type": "server",
+      "blocklyMethod": "fcnQryVxOrclArchivedLogHour",
+      "blocklyClass": "blockly.Consultas",
+      "blocklyLanguage": "java",
+      "blocklyParams": [],
+      "blocklyJson": {
+        "namespace": "blockly.Consultas",
+        "sourcePath": "src/main/java/blockly/Consultas.blockly",
+        "language": "java",
+        "class": "blockly.Consultas",
+        "methods": [
+          {
+            "name": "fncQryTablespaces",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryChamados",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryBancosStatusSessoes",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryBancosLimite",
+            "hasReturn": "true",
+            "params": [
+              "bancId"
+            ]
+          },
+          {
+            "name": "fcnQryVxOrclArchivedLogHour",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryTablespacesTotal",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryBancosStatusSessoesList",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryTablespacesGraph",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fcnQryVxOrclArchivedHourByHour",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          },
+          {
+            "name": "fncQryOrclTablespacesAno",
+            "hasReturn": "true",
+            "params": [
+              "bancId",
+              "dataInicio",
+              "dataFim"
+            ]
+          }
+        ]
+      },
+      "blocklyGETMethod": "fcnQryVxOrclArchivedLogHour",
+      "blocklyPOSTMethod": "default",
+      "blocklyPUTMethod": "default",
+      "blocklyDELETEMethod": "default",
+      "blocklyFILTERMethod": "default",
+      "blocklyCOUNTMethod": "fcnQryVxOrclArchivedLogHour"
+    },
+    "entitySimpleName": null,
+    "entityFullName": null,
+    "query": "",
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "datafim",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "bancId": null,
+      "d00": null,
+      "d01": null,
+      "d02": null,
+      "d03": null,
+      "d04": null,
+      "d05": null,
+      "d06": null,
+      "d07": null,
+      "d08": null,
+      "d09": null,
+      "d10": null,
+      "d11": null,
+      "d12": null,
+      "d13": null,
+      "d14": null,
+      "d15": null,
+      "d16": null,
+      "d17": null,
+      "d18": null,
+      "d19": null,
+      "d20": null,
+      "d21": null,
+      "d22": null,
+      "d23": null,
+      "dataArchiveLog": null,
+      "qtdFiles": null
+    },
+    "defaultValuesProperties": {
+      "bancId": {
+        "key": true,
+        "nullable": false,
+        "type": "Double"
+      },
+      "d00": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "d01": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "d02": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "d03": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "d04": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "d05": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "d06": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "d07": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "d08": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "d09": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "d10": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "d11": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "d12": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "d13": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "d14": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "d15": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "d16": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "d17": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "d18": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "d19": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "d20": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "d21": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "d22": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "d23": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      },
+      "dataArchiveLog": {
+        "key": true,
+        "nullable": false,
+        "type": "Date"
+      },
+      "qtdFiles": {
+        "key": false,
+        "nullable": true,
+        "type": "Double"
+      }
+    },
+    "security": {
+      "bancId": null,
+      "d00": null,
+      "d01": null,
+      "d02": null,
+      "d03": null,
+      "d04": null,
+      "d05": null,
+      "d06": null,
+      "d07": null,
+      "d08": null,
+      "d09": null,
+      "d10": null,
+      "d11": null,
+      "d12": null,
+      "d13": null,
+      "d14": null,
+      "d15": null,
+      "d16": null,
+      "d17": null,
+      "d18": null,
+      "d19": null,
+      "d20": null,
+      "d21": null,
+      "d22": null,
+      "d23": null,
+      "dataArchiveLog": null,
+      "qtdFiles": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/app/query177504/"
+  },
+  "query829726": {
+    "customId": "query829726",
+    "queryName": "qryOrclArchivedHourByHour",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "VxOrclArchivedHour",
+    "entityFullName": "reports.entity.VxOrclArchivedHour",
+    "query": {
+      "isValid": true,
+      "isEmpty": false,
+      "operationType": "object",
+      "type": "select",
+      "rulesEntity": [
+        {
+          "entity": "VxOrclArchivedHour",
+          "namespace": "reports.entity.VxOrclArchivedHour",
+          "alias": "v"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "sum",
+          "field": "v.archiveHoraMbytes",
+          "type": "double"
+        },
+        {
+          "func": "get",
+          "field": "v.horaLog",
+          "type": "string"
+        }
+      ],
+      "rulesGroupBy": [
+        {
+          "field": "v.horaLog"
+        }
+      ],
+      "rulesHaving": [],
+      "rulesOrderBy": [
+        {
+          "func": "get",
+          "field": "v.horaLog",
+          "order": "asc"
+        }
+      ],
+      "rules": {
+        "condition": "AND",
+        "rules": [
+          {
+            "id": "v.bancId",
+            "field": "v.bancId",
+            "type": "double",
+            "input": "text",
+            "operator": "equal",
+            "value": ":bancId",
+            "valueIsField": false
+          },
+          {
+            "id": "v.dataInicio",
+            "field": "v.dataInicio",
+            "type": "date",
+            "input": "text",
+            "operator": "between",
+            "value": [
+              ":dataInicio",
+              ":dataFim"
+            ],
+            "valueIsField": false
+          }
+        ],
+        "not": false,
+        "valid": true
+      },
+      "isRawSql": false,
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataFim",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "bancId": null,
+      "dataInicio": null,
+      "horaLog": null,
+      "archiveHoraMbytes": null
+    },
+    "defaultValuesProperties": {
+      "bancId": null,
+      "dataInicio": null,
+      "horaLog": null,
+      "archiveHoraMbytes": null
+    },
+    "security": {
+      "bancId": null,
+      "dataInicio": null,
+      "horaLog": null,
+      "archiveHoraMbytes": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/reports/query829726/"
+  },
+  "query139918": {
+    "customId": "query139918",
+    "queryName": "qryOrclArchivedHourByDay",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "VxOrclArchivedHour",
+    "entityFullName": "reports.entity.VxOrclArchivedHour",
+    "query": {
+      "isEmpty": true,
+      "isRawSql": true,
+      "sqlContent": "select SUM(v.archiveHoraMbytes), SQL(\u0027FCN_DATE_MONTH(?)\u0027, v.dataInicio) as dataMes, v.dataInicio \nfrom VxOrclArchivedHour v where v.bancId \u003d :bancId AND v.dataInicio BETWEEN :dataInicio AND :dataFim \ngroup by dataMes, v.dataInicio  order by v.dataInicio asc",
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataFim",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "bancId": null,
+      "dataInicio": null,
+      "horaLog": null,
+      "archiveHoraMbytes": null
+    },
+    "defaultValuesProperties": {
+      "bancId": null,
+      "dataInicio": null,
+      "horaLog": null,
+      "archiveHoraMbytes": null
+    },
+    "security": {
+      "bancId": null,
+      "dataInicio": null,
+      "horaLog": null,
+      "archiveHoraMbytes": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/reports/query139918/"
+  },
+  "query377468": {
+    "customId": "query377468",
+    "queryName": "qryOrclArchived",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "VxOrclArchived",
+    "entityFullName": "reports.entity.VxOrclArchived",
+    "query": {
+      "isEmpty": true,
+      "isRawSql": true,
+      "sqlContent": "select AVG(v.qtdFiles) + SQL(\u0027STDDEV(?)\u0027,v.qtdFiles) as alertaLimite from VxOrclArchived v  where v.bancId \u003d :bancId AND v.dataInicio BETWEEN :dataInicio AND :dataFim",
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataFim",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "bancId": null,
+      "dataInicio": null,
+      "horaLog": null,
+      "archiveMbytes": null
+    },
+    "defaultValuesProperties": {
+      "bancId": null,
+      "dataInicio": null,
+      "horaLog": null,
+      "archiveMbytes": null
+    },
+    "security": {
+      "bancId": null,
+      "dataInicio": null,
+      "horaLog": null,
+      "archiveMbytes": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/reports/query377468/"
+  },
+  "query383963": {
+    "customId": "query383963",
+    "queryName": "qryAvisos",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "VwPolomsgAvisos",
+    "entityFullName": "base.entity.VwPolomsgAvisos",
+    "query": {
+      "isEmpty": true,
+      "isRawSql": true,
+      "sqlContent": "select v from VwPolomsgAvisos v order by v.dataAviso desc",
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "id": null,
+      "alerId": null,
+      "chamCodigo": null,
+      "ciente": null,
+      "codiBanc": null,
+      "consId": null,
+      "dataAlertaAtraso": null,
+      "dataAviso": null,
+      "dataCiente": null,
+      "descricao": null,
+      "dsTipoBanco": null,
+      "eventoId": null,
+      "justificativa": null,
+      "msgErro": null,
+      "nome": null,
+      "parametro": null,
+      "tipoAlerta": null,
+      "tipoAlertaDesc": null,
+      "tipoAtraso": null,
+      "tipoAtrasoDesc": null,
+      "usuaCodigo": null,
+      "usuaNome": null,
+      "ilha": null,
+      "tipoBanco": null
+    },
+    "defaultValuesProperties": {
+      "id": null,
+      "alerId": null,
+      "chamCodigo": null,
+      "ciente": null,
+      "codiBanc": null,
+      "consId": null,
+      "dataAlertaAtraso": null,
+      "dataAviso": null,
+      "dataCiente": null,
+      "descricao": null,
+      "dsTipoBanco": null,
+      "eventoId": null,
+      "justificativa": null,
+      "msgErro": null,
+      "nome": null,
+      "parametro": null,
+      "tipoAlerta": null,
+      "tipoAlertaDesc": null,
+      "tipoAtraso": null,
+      "tipoAtrasoDesc": null,
+      "usuaCodigo": null,
+      "usuaNome": null,
+      "ilha": null,
+      "tipoBanco": null
+    },
+    "security": {
+      "id": null,
+      "alerId": null,
+      "chamCodigo": null,
+      "ciente": null,
+      "codiBanc": null,
+      "consId": null,
+      "dataAlertaAtraso": null,
+      "dataAviso": null,
+      "dataCiente": null,
+      "descricao": null,
+      "dsTipoBanco": null,
+      "eventoId": null,
+      "justificativa": null,
+      "msgErro": null,
+      "nome": null,
+      "parametro": null,
+      "tipoAlerta": null,
+      "tipoAlertaDesc": null,
+      "tipoAtraso": null,
+      "tipoAtrasoDesc": null,
+      "usuaCodigo": null,
+      "usuaNome": null,
+      "ilha": null,
+      "tipoBanco": null
+    },
+    "calcFields": {
+      "avisos24Horas": {
+        "type": "server",
+        "blocklyMethod": "getAvisos24horas",
+        "blocklyClass": "blockly.AvisosPendentes",
+        "blocklyLanguage": "java",
+        "blocklyParams": [
+          {
+            "name": "Entity\u0026lt;base.entity.VwPolomsgAvisos\u0026gt;",
+            "value": "data",
+            "type": "CUSTOM"
+          }
+        ],
+        "blocklyJson": {
+          "namespace": "blockly.AvisosPendentes",
+          "sourcePath": "src/main/java/blockly/AvisosPendentes.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "setCientePoloMsgAvisos",
+              "hasReturn": "false",
+              "params": []
+            },
+            {
+              "name": "doRefresh",
+              "hasReturn": "false",
+              "params": []
+            },
+            {
+              "name": "getMensagemGrade",
+              "hasReturn": "true",
+              "params": [
+                "Entity\u0026lt;base.entity.VwPolomsgAvisos\u0026gt;",
+                "size"
+              ]
+            },
+            {
+              "name": "getIconeBanco",
+              "hasReturn": "true",
+              "params": [
+                "Entity\u0026lt;base.entity.VwPolomsgAvisos\u0026gt;"
+              ]
+            },
+            {
+              "name": "getCiente",
+              "hasReturn": "true",
+              "params": [
+                "Entity\u0026lt;base.entity.VwPolomsgAvisos\u0026gt;"
+              ]
+            },
+            {
+              "name": "getAvisos24horas",
+              "hasReturn": "true",
+              "params": [
+                "Entity\u0026lt;base.entity.VwPolomsgAvisos\u0026gt;"
+              ]
+            }
+          ]
+        },
+        "blocklyGETMethod": null,
+        "blocklyPOSTMethod": null,
+        "blocklyPUTMethod": null,
+        "blocklyDELETEMethod": null,
+        "blocklyFILTERMethod": null,
+        "blocklyCOUNTMethod": null
+      },
+      "cienteAux": {
+        "type": "server",
+        "blocklyMethod": "getCiente",
+        "blocklyClass": "blockly.AvisosPendentes",
+        "blocklyLanguage": "java",
+        "blocklyParams": [
+          {
+            "name": "Entity\u0026lt;base.entity.VwPolomsgAvisos\u0026gt;",
+            "value": "data",
+            "type": "CUSTOM"
+          }
+        ],
+        "blocklyJson": {
+          "namespace": "blockly.AvisosPendentes",
+          "sourcePath": "src/main/java/blockly/AvisosPendentes.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "setCientePoloMsgAvisos",
+              "hasReturn": "false",
+              "params": [
+                "ciente"
+              ]
+            },
+            {
+              "name": "getIconeBanco",
+              "hasReturn": "true",
+              "params": [
+                "Entity\u0026lt;base.entity.VwPolomsgAvisos\u0026gt;"
+              ]
+            },
+            {
+              "name": "getCiente",
+              "hasReturn": "true",
+              "params": [
+                "Entity\u0026lt;base.entity.VwPolomsgAvisos\u0026gt;"
+              ]
+            }
+          ]
+        },
+        "blocklyGETMethod": null,
+        "blocklyPOSTMethod": null,
+        "blocklyPUTMethod": null,
+        "blocklyDELETEMethod": null,
+        "blocklyFILTERMethod": null,
+        "blocklyCOUNTMethod": null
+      },
+      "iconeBanco": {
+        "type": "server",
+        "blocklyMethod": "getIconeBanco",
+        "blocklyClass": "blockly.AvisosPendentes",
+        "blocklyLanguage": "java",
+        "blocklyParams": [
+          {
+            "name": "Entity\u0026lt;base.entity.VwPolomsgAvisos\u0026gt;",
+            "value": "data",
+            "type": "CUSTOM"
+          }
+        ],
+        "blocklyJson": {
+          "namespace": "blockly.AvisosPendentes",
+          "sourcePath": "src/main/java/blockly/AvisosPendentes.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "setCientePoloMsgAvisos",
+              "hasReturn": "false",
+              "params": [
+                "ciente"
+              ]
+            },
+            {
+              "name": "getIconeBanco",
+              "hasReturn": "true",
+              "params": [
+                "Entity\u0026lt;base.entity.VwPolomsgAvisos\u0026gt;"
+              ]
+            },
+            {
+              "name": "getCiente",
+              "hasReturn": "true",
+              "params": [
+                "Entity\u0026lt;base.entity.VwPolomsgAvisos\u0026gt;"
+              ]
+            }
+          ]
+        },
+        "blocklyGETMethod": null,
+        "blocklyPOSTMethod": null,
+        "blocklyPUTMethod": null,
+        "blocklyDELETEMethod": null,
+        "blocklyFILTERMethod": null,
+        "blocklyCOUNTMethod": null
+      },
+      "mensagemGrade": {
+        "type": "server",
+        "blocklyMethod": "getMensagemGrade",
+        "blocklyClass": "blockly.AvisosPendentes",
+        "blocklyLanguage": "java",
+        "blocklyParams": [
+          {
+            "name": "Entity\u0026lt;base.entity.VwPolomsgAvisos\u0026gt;",
+            "value": "data",
+            "type": "CUSTOM"
+          },
+          {
+            "name": "size",
+            "value": "130",
+            "type": "CUSTOM"
+          }
+        ],
+        "blocklyJson": {
+          "namespace": "blockly.AvisosPendentes",
+          "sourcePath": "src/main/java/blockly/AvisosPendentes.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "setCientePoloMsgAvisos",
+              "hasReturn": "false",
+              "params": [
+                "ciente"
+              ]
+            },
+            {
+              "name": "doRefresh",
+              "hasReturn": "false",
+              "params": []
+            },
+            {
+              "name": "getIconeBanco",
+              "hasReturn": "true",
+              "params": [
+                "Entity\u0026lt;base.entity.VwPolomsgAvisos\u0026gt;"
+              ]
+            },
+            {
+              "name": "getCiente",
+              "hasReturn": "true",
+              "params": [
+                "Entity\u0026lt;base.entity.VwPolomsgAvisos\u0026gt;"
+              ]
+            },
+            {
+              "name": "getMensagemGrade",
+              "hasReturn": "true",
+              "params": [
+                "Entity\u0026lt;base.entity.VwPolomsgAvisos\u0026gt;",
+                "size"
+              ]
+            }
+          ]
+        },
+        "blocklyGETMethod": null,
+        "blocklyPOSTMethod": null,
+        "blocklyPUTMethod": null,
+        "blocklyDELETEMethod": null,
+        "blocklyFILTERMethod": null,
+        "blocklyCOUNTMethod": null
+      }
+    },
+    "calcFieldsSecurity": {
+      "avisos24Horas": null,
+      "cienteAux": null,
+      "iconeBanco": null,
+      "mensagemGrade": null
+    },
+    "calcFieldsProperties": {
+      "avisos24Horas": {
+        "type": "String"
+      },
+      "cienteAux": {
+        "type": "String"
+      },
+      "iconeBanco": {
+        "type": "String"
+      },
+      "mensagemGrade": {
+        "type": "String"
+      }
+    },
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/base/query383963/"
+  },
+  "query446400": {
+    "customId": "query446400",
+    "queryName": "qrlyLogMensagens",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "LogMensagens",
+    "entityFullName": "base.entity.LogMensagens",
+    "query": {
+      "isValid": true,
+      "isEmpty": false,
+      "operationType": "object",
+      "type": "select",
+      "rulesEntity": [
+        {
+          "entity": "LogMensagens",
+          "namespace": "base.entity.LogMensagens",
+          "alias": "l"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "l",
+          "type": "string"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [
+        {
+          "func": "get",
+          "field": "l.dataGeracao",
+          "order": "desc"
+        }
+      ],
+      "rules": {
+        "condition": "AND",
+        "rules": [
+          {
+            "id": "l.dataGeracao",
+            "field": "l.dataGeracao",
+            "type": "date",
+            "input": "text",
+            "operator": "greater_or_equal",
+            "value": ":dataGeracao",
+            "valueIsField": false
+          }
+        ],
+        "not": false,
+        "valid": true
+      },
+      "isRawSql": false,
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "dataGeracao",
+        "fieldValue": {
+          "type": "server",
+          "blocklyMethod": "getDateDaysToIncrease",
+          "blocklyClass": "blockly.Util",
+          "blocklyLanguage": "java",
+          "blocklyParams": [
+            {
+              "name": "days",
+              "value": "-30",
+              "type": "CUSTOM"
+            }
+          ],
+          "blocklyJson": {
+            "namespace": "blockly.Util",
+            "sourcePath": "src/main/java/blockly/Util.blockly",
+            "language": "java",
+            "methods": [
+              {
+                "name": "getYesNo",
+                "hasReturn": "true",
+                "params": [
+                  "flag"
+                ]
+              },
+              {
+                "name": "getDateDaysToIncrease",
+                "hasReturn": "true",
+                "params": [
+                  "days"
+                ]
+              },
+              {
+                "name": "getTipoBanco",
+                "hasReturn": "true",
+                "params": [
+                  "tipoBanco"
+                ]
+              },
+              {
+                "name": "setLimitsText",
+                "hasReturn": "true",
+                "params": [
+                  "text",
+                  "size"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "id": null,
+      "mensagem": null,
+      "dataGeracao": null
+    },
+    "defaultValuesProperties": {
+      "id": null,
+      "mensagem": null,
+      "dataGeracao": null
+    },
+    "security": {
+      "id": null,
+      "mensagem": null,
+      "dataGeracao": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/base/query446400/"
+  },
+  "query544183": {
+    "customId": "query544183",
+    "queryName": "qryEmailSistema",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "EmailsSistema",
+    "entityFullName": "base.entity.EmailsSistema",
+    "query": {
+      "isValid": true,
+      "isEmpty": false,
+      "operationType": "object",
+      "type": "select",
+      "rulesEntity": [
+        {
+          "entity": "EmailsSistema",
+          "namespace": "base.entity.EmailsSistema",
+          "alias": "e"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "e",
+          "type": "string"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [
+        {
+          "func": "get",
+          "field": "e.dataEmail",
+          "order": "desc"
+        }
+      ],
+      "rules": {
+        "condition": "AND",
+        "rules": [
+          {
+            "id": "e.dataEmail",
+            "field": "e.dataEmail",
+            "type": "date",
+            "input": "text",
+            "operator": "greater_or_equal",
+            "value": ":dataEmail",
+            "valueIsField": false
+          },
+          {
+            "id": "e.codiRemeEmail",
+            "field": "e.codiRemeEmail",
+            "type": "double",
+            "input": "text",
+            "operator": "not_equal",
+            "value": "40",
+            "valueIsField": false
+          }
+        ],
+        "not": false,
+        "valid": true
+      },
+      "isRawSql": false,
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "dataEmail",
+        "fieldValue": {
+          "type": "server",
+          "blocklyMethod": "getDateDaysToIncrease",
+          "blocklyClass": "blockly.Util",
+          "blocklyLanguage": "java",
+          "blocklyParams": [
+            {
+              "name": "days",
+              "value": "-30",
+              "type": "CUSTOM"
+            }
+          ],
+          "blocklyJson": {
+            "namespace": "blockly.Util",
+            "sourcePath": "src/main/java/blockly/Util.blockly",
+            "language": "java",
+            "methods": [
+              {
+                "name": "getYesNo",
+                "hasReturn": "true",
+                "params": [
+                  "flag"
+                ]
+              },
+              {
+                "name": "getDateDaysToIncrease",
+                "hasReturn": "true",
+                "params": [
+                  "days"
+                ]
+              },
+              {
+                "name": "getTipoBanco",
+                "hasReturn": "true",
+                "params": [
+                  "tipoBanco"
+                ]
+              },
+              {
+                "name": "setLimitsText",
+                "hasReturn": "true",
+                "params": [
+                  "text",
+                  "size"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "id": null,
+      "codiRemeEmail": null,
+      "destinatario": null,
+      "assunto": null,
+      "corpoEmail": null,
+      "dataEmail": null,
+      "dataProcessamento": null,
+      "flgEnviado": null,
+      "spool": null,
+      "idBanco": null,
+      "status": null,
+      "flgShw": null,
+      "codiUsua": null
+    },
+    "defaultValuesProperties": {
+      "id": null,
+      "codiRemeEmail": null,
+      "destinatario": null,
+      "assunto": null,
+      "corpoEmail": null,
+      "dataEmail": null,
+      "dataProcessamento": null,
+      "flgEnviado": null,
+      "spool": null,
+      "idBanco": null,
+      "status": null,
+      "flgShw": null,
+      "codiUsua": null
+    },
+    "security": {
+      "id": null,
+      "codiRemeEmail": null,
+      "destinatario": null,
+      "assunto": null,
+      "corpoEmail": null,
+      "dataEmail": null,
+      "dataProcessamento": null,
+      "flgEnviado": null,
+      "spool": null,
+      "idBanco": null,
+      "status": null,
+      "flgShw": null,
+      "codiUsua": null
+    },
+    "calcFields": {
+      "emailCorpoGrade": {
+        "type": "server",
+        "blocklyMethod": "getCorpoEmailGrade",
+        "blocklyClass": "blockly.EmailSistema",
+        "blocklyLanguage": "java",
+        "blocklyParams": [
+          {
+            "name": "Entity\u0026lt;base.entity.EmailsSistema\u0026gt;",
+            "value": "data",
+            "type": "CUSTOM"
+          },
+          {
+            "name": "size",
+            "value": "100",
+            "type": "CUSTOM"
+          }
+        ],
+        "blocklyJson": {
+          "namespace": "blockly.EmailSistema",
+          "sourcePath": "src/main/java/blockly/EmailSistema.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "getFlgEnviadoDescricao",
+              "hasReturn": "true",
+              "params": [
+                "Entity\u0026lt;base.entity.EmailsSistema\u0026gt;"
+              ]
+            },
+            {
+              "name": "getCorpoEmailGrade",
+              "hasReturn": "true",
+              "params": [
+                "Entity\u0026lt;base.entity.EmailsSistema\u0026gt;",
+                "size"
+              ]
+            }
+          ]
+        },
+        "blocklyGETMethod": null,
+        "blocklyPOSTMethod": null,
+        "blocklyPUTMethod": null,
+        "blocklyDELETEMethod": null,
+        "blocklyFILTERMethod": null,
+        "blocklyCOUNTMethod": null
+      },
+      "flgEnviadoDescricao": {
+        "blocklyClass": "blockly.EmailSistema",
+        "blocklyMethod": "getFlgEnviadoDescricao",
+        "blocklyLanguage": "java",
+        "blocklyParams": [
+          {
+            "name": "Entity\u003cbase.entity.EmailsSistema\u003e",
+            "value": "data",
+            "type": "CUSTOM"
+          }
+        ],
+        "blocklyJson": {
+          "namespace": "blockly.EmailSistema",
+          "sourcePath": "src/main/java/blockly/EmailSistema.blockly",
+          "language": "java",
+          "class": "blockly.EmailSistema",
+          "methods": [
+            {
+              "name": "getFlgEnviadoDescricao",
+              "hasReturn": "true",
+              "params": [
+                "Entity\u003cbase.entity.EmailsSistema\u003e"
+              ]
+            }
+          ]
+        },
+        "blocklyGETMethod": null,
+        "blocklyPOSTMethod": null,
+        "blocklyPUTMethod": null,
+        "blocklyDELETEMethod": null,
+        "blocklyFILTERMethod": null,
+        "blocklyCOUNTMethod": null
+      }
+    },
+    "calcFieldsSecurity": {
+      "emailCorpoGrade": null,
+      "flgEnviadoDescricao": null
+    },
+    "calcFieldsProperties": {
+      "emailCorpoGrade": {
+        "type": "String"
+      },
+      "flgEnviadoDescricao": {
+        "type": "String"
+      }
+    },
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/base/query544183/"
+  },
+  "query203451": {
+    "customId": "query203451",
+    "queryName": "qryUsuariosSato",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "UsuariosSato",
+    "entityFullName": "base.entity.UsuariosSato",
+    "query": {
+      "isValid": true,
+      "isEmpty": false,
+      "operationType": "object",
+      "type": "select",
+      "rulesEntity": [
+        {
+          "entity": "UsuariosSato",
+          "namespace": "base.entity.UsuariosSato",
+          "alias": "u"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "u",
+          "type": "string"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [
+        {
+          "func": "get",
+          "field": "u.email",
+          "order": "asc"
+        }
+      ],
+      "rules": {
+        "condition": "AND",
+        "rules": [],
+        "not": false,
+        "valid": true
+      },
+      "isRawSql": false,
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "id": null,
+      "nome": null,
+      "flgResponsavel": null,
+      "cnntCodigo": null,
+      "clieId": null,
+      "email": null,
+      "status": null
+    },
+    "defaultValuesProperties": {
+      "id": null,
+      "nome": null,
+      "flgResponsavel": null,
+      "cnntCodigo": null,
+      "clieId": null,
+      "email": null,
+      "status": null
+    },
+    "security": {
+      "id": null,
+      "nome": null,
+      "flgResponsavel": null,
+      "cnntCodigo": null,
+      "clieId": null,
+      "email": null,
+      "status": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/base/query203451/"
+  },
+  "query14380": {
+    "customId": "query14380",
+    "queryName": "qryUser",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "User",
+    "entityFullName": "app.entity.User",
+    "query": {
+      "isValid": true,
+      "rulesEntity": [
+        {
+          "entity": "User",
+          "alias": "u",
+          "namespace": "app.entity.User"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "u"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [],
+      "rules": {
+        "condition": "AND",
+        "not": false,
+        "valid": true,
+        "rules": []
+      }
+    },
+    "queryParamsValues": [],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "id": null,
+      "email": null,
+      "name": null,
+      "login": null,
+      "picture": null,
+      "password": null,
+      "theme": null
+    },
+    "defaultValuesProperties": {
+      "id": null,
+      "email": null,
+      "name": null,
+      "login": null,
+      "picture": null,
+      "password": null,
+      "theme": null
+    },
+    "security": {
+      "id": null,
+      "email": null,
+      "name": null,
+      "login": null,
+      "picture": null,
+      "password": null,
+      "theme": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/app/query14380/"
+  },
+  "query991000": {
+    "customId": "query991000",
+    "queryName": "qryOrclLockSessions",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "VmOrclLockSessions",
+    "entityFullName": "base.entity.VmOrclLockSessions",
+    "query": {
+      "isValid": true,
+      "isEmpty": false,
+      "operationType": "object",
+      "type": "select",
+      "rulesEntity": [
+        {
+          "entity": "VmOrclLockSessions",
+          "namespace": "base.entity.VmOrclLockSessions",
+          "alias": "v"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "v",
+          "type": "string"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [
+        {
+          "func": "get",
+          "field": "v.eventoExecucaoId",
+          "order": "asc"
+        },
+        {
+          "func": "get",
+          "field": "v.seqResultado",
+          "order": "asc"
+        }
+      ],
+      "rules": {
+        "condition": "AND",
+        "rules": [
+          {
+            "id": "v.bancId",
+            "field": "v.bancId",
+            "type": "double",
+            "input": "text",
+            "operator": "equal",
+            "value": ":bancId",
+            "valueIsField": false
+          },
+          {
+            "id": "v.dataInicio",
+            "field": "v.dataInicio",
+            "type": "date",
+            "input": "text",
+            "operator": "between",
+            "value": [
+              ":dataInicio",
+              ":dataFim"
+            ],
+            "valueIsField": false
+          }
+        ],
+        "not": false,
+        "valid": true
+      },
+      "isRawSql": false,
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataFim",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "seqResultado": null,
+      "bancId": null,
+      "blockingInstance": null,
+      "blockingSession": null,
+      "blockingSessionStatus": null,
+      "clientInfo": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "elapsedTime": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "finalBlockingInstance": null,
+      "finalBlockingSessionStatus": null,
+      "instId": null,
+      "lastSql": null,
+      "lockMode": null,
+      "lockType": null,
+      "logonTime": null,
+      "machine": null,
+      "module": null,
+      "nome": null,
+      "objectLocked": null,
+      "osuser": null,
+      "program": null,
+      "serial": null,
+      "sid": null,
+      "status": null,
+      "type": null,
+      "userStatus": null
+    },
+    "defaultValuesProperties": {
+      "seqResultado": null,
+      "bancId": null,
+      "blockingInstance": null,
+      "blockingSession": null,
+      "blockingSessionStatus": null,
+      "clientInfo": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "elapsedTime": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "finalBlockingInstance": null,
+      "finalBlockingSessionStatus": null,
+      "instId": null,
+      "lastSql": null,
+      "lockMode": null,
+      "lockType": null,
+      "logonTime": null,
+      "machine": null,
+      "module": null,
+      "nome": null,
+      "objectLocked": null,
+      "osuser": null,
+      "program": null,
+      "serial": null,
+      "sid": null,
+      "status": null,
+      "type": null,
+      "userStatus": null
+    },
+    "security": {
+      "seqResultado": null,
+      "bancId": null,
+      "blockingInstance": null,
+      "blockingSession": null,
+      "blockingSessionStatus": null,
+      "clientInfo": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "elapsedTime": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "finalBlockingInstance": null,
+      "finalBlockingSessionStatus": null,
+      "instId": null,
+      "lastSql": null,
+      "lockMode": null,
+      "lockType": null,
+      "logonTime": null,
+      "machine": null,
+      "module": null,
+      "nome": null,
+      "objectLocked": null,
+      "osuser": null,
+      "program": null,
+      "serial": null,
+      "sid": null,
+      "status": null,
+      "type": null,
+      "userStatus": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/base/query991000/"
+  },
+  "query394261": {
+    "customId": "query394261",
+    "queryName": "qryVmOrclWaits",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "VmOrclWaits",
+    "entityFullName": "base.entity.VmOrclWaits",
+    "query": {
+      "isValid": true,
+      "isEmpty": false,
+      "operationType": "object",
+      "type": "select",
+      "rulesEntity": [
+        {
+          "entity": "VmOrclWaits",
+          "namespace": "base.entity.VmOrclWaits",
+          "alias": "v"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "v",
+          "type": "string"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [
+        {
+          "func": "get",
+          "field": "v.eventoExecucaoId",
+          "order": "asc"
+        },
+        {
+          "func": "get",
+          "field": "v.seqResultado",
+          "order": "asc"
+        }
+      ],
+      "rules": {
+        "condition": "AND",
+        "rules": [
+          {
+            "id": "v.bancId",
+            "field": "v.bancId",
+            "type": "double",
+            "input": "text",
+            "operator": "equal",
+            "value": ":bancId",
+            "valueIsField": false
+          },
+          {
+            "id": "v.dataInicio",
+            "field": "v.dataInicio",
+            "type": "date",
+            "input": "text",
+            "operator": "between",
+            "value": [
+              ":dataInicio",
+              ":dataFim"
+            ],
+            "valueIsField": false
+          }
+        ],
+        "not": false,
+        "valid": true
+      },
+      "isRawSql": false,
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataFim",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "bancId": null,
+      "avgMs": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "event": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "nome": null,
+      "pctTime": null,
+      "seqResultado": null,
+      "totalMs": null,
+      "waitClass": null,
+      "waits": null
+    },
+    "defaultValuesProperties": {
+      "bancId": null,
+      "avgMs": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "event": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "nome": null,
+      "pctTime": null,
+      "seqResultado": null,
+      "totalMs": null,
+      "waitClass": null,
+      "waits": null
+    },
+    "security": {
+      "bancId": null,
+      "avgMs": null,
+      "dataFim": null,
+      "dataInicio": null,
+      "event": null,
+      "eventoAgendaId": null,
+      "eventoBancoId": null,
+      "eventoExecucaoId": null,
+      "eventoId": null,
+      "nome": null,
+      "pctTime": null,
+      "seqResultado": null,
+      "totalMs": null,
+      "waitClass": null,
+      "waits": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/base/query394261/"
+  },
+  "query95224": {
+    "customId": "query95224",
+    "queryName": "qryPolomsgAvisosReport",
+    "sourceType": "entityFullName",
+    "baseEntity": null,
+    "blockly": null,
+    "entitySimpleName": "VwPolomsgAvisosReport",
+    "entityFullName": "reports.entity.VwPolomsgAvisosReport",
+    "query": {
+      "isValid": true,
+      "isEmpty": false,
+      "operationType": "object",
+      "type": "select",
+      "rulesEntity": [
+        {
+          "entity": "VwPolomsgAvisosReport",
+          "namespace": "reports.entity.VwPolomsgAvisosReport",
+          "alias": "v"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "v",
+          "type": "string"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [
+        {
+          "func": "get",
+          "field": "v.dataAviso",
+          "order": "asc"
+        }
+      ],
+      "rules": {
+        "condition": "AND",
+        "rules": [
+          {
+            "id": "v.dataAviso",
+            "field": "v.dataAviso",
+            "type": "date",
+            "input": "text",
+            "operator": "between",
+            "value": [
+              ":dataInicio",
+              ":dataFim"
+            ],
+            "valueIsField": false
+          },
+          {
+            "id": "v.codiBanc",
+            "field": "v.codiBanc",
+            "type": "double",
+            "input": "text",
+            "operator": "equal",
+            "value": ":bancId",
+            "valueIsField": false
+          }
+        ],
+        "not": false,
+        "valid": true
+      },
+      "isRawSql": false,
+      "multiTenant": false,
+      "paginatorAutomatic": false,
+      "pagination": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "dataInicio",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "dataFim",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "bancId",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "GETAuthorities": null,
+      "POST": true,
+      "POSTAuthorities": null,
+      "PUT": true,
+      "PUTAuthorities": null,
+      "DELETE": true,
+      "DELETEAuthorities": null,
+      "FILTER": true,
+      "FILTERAuthorities": null,
+      "COUNT": true,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "id": null,
+      "alerId": null,
+      "chamCodigo": null,
+      "ciente": null,
+      "codiBanc": null,
+      "consId": null,
+      "dataAlertaAtraso": null,
+      "dataAviso": null,
+      "dataCiente": null,
+      "descricao": null,
+      "dsTipoBanco": null,
+      "eventoId": null,
+      "justificativa": null,
+      "msgErro": null,
+      "nome": null,
+      "parametro": null,
+      "tipoAlerta": null,
+      "tipoAlertaDesc": null,
+      "tipoAtraso": null,
+      "tipoAtrasoDesc": null,
+      "usuaCodigo": null,
+      "usuaNome": null,
+      "ilha": null,
+      "tipoBanco": null
+    },
+    "defaultValuesProperties": {
+      "id": null,
+      "alerId": null,
+      "chamCodigo": null,
+      "ciente": null,
+      "codiBanc": null,
+      "consId": null,
+      "dataAlertaAtraso": null,
+      "dataAviso": null,
+      "dataCiente": null,
+      "descricao": null,
+      "dsTipoBanco": null,
+      "eventoId": null,
+      "justificativa": null,
+      "msgErro": null,
+      "nome": null,
+      "parametro": null,
+      "tipoAlerta": null,
+      "tipoAlertaDesc": null,
+      "tipoAtraso": null,
+      "tipoAtrasoDesc": null,
+      "usuaCodigo": null,
+      "usuaNome": null,
+      "ilha": null,
+      "tipoBanco": null
+    },
+    "security": {
+      "id": null,
+      "alerId": null,
+      "chamCodigo": null,
+      "ciente": null,
+      "codiBanc": null,
+      "consId": null,
+      "dataAlertaAtraso": null,
+      "dataAviso": null,
+      "dataCiente": null,
+      "descricao": null,
+      "dsTipoBanco": null,
+      "eventoId": null,
+      "justificativa": null,
+      "msgErro": null,
+      "nome": null,
+      "parametro": null,
+      "tipoAlerta": null,
+      "tipoAlertaDesc": null,
+      "tipoAtraso": null,
+      "tipoAtrasoDesc": null,
+      "usuaCodigo": null,
+      "usuaNome": null,
+      "ilha": null,
+      "tipoBanco": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/odata/v2/reports/query95224/"
+  }
+}

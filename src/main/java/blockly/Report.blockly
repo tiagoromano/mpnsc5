@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly audit="false" bpmnAble="false" formTarget="src/main/webapp/views/logged/bancosList.search.view.html" resourceType="JAVA" ruleDescription="Report" ruleName="Report" ruleSynchronous="false" ruleTimeout="300" ruleType="I" soap="false">
+  <metadata scale="1" scrollx="403.4000000000001" scrolly="-33.49999999999994" target="Anb:u5+^,0vLkL9QIqn5"/>
+  <block asynccall="false" colour="#995ba5" id="mlVUk,of~!eYxfDK4=/I" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-382" y="8">
+    <field name="NAME">ExecuteOrclMapArchive</field>
+    <comment h="80" pinned="false" w="160">Report</comment>
+    <statement name="STACK">
+      <block asynccall="false" colour="#0088ee" dependencyby="mlVUk,of~!eYxfDK4=/I" id="o^R5MCD{CH}.-F:WZB4Q" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+        <field name="VAR">bancId</field>
+        <value name="VALUE">
+          <block asynccall="false" colour="#934848" dependencyby="mlVUk,of~!eYxfDK4=/I" id="6;z,A3|FMZOL+Vp=a%$$" multilayer="false" namespace="cronapi.screen.Operations.getValueOfField" origintype="procedures_callreturn" output="true" returntype="ObjectType.JSON" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EGet%20field%20value%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20that%20get%20field%20value%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Field%20:%20String%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Json%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.Operations.getValueOfField%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.Operations.getValueOfField%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+            <mutation name="{{cronapi.screen.Operations.getValueOfField}}" return-raw-type="cronapi.Var">
+              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Field"/>
+            </mutation>
+            <value name="ARG0">
+              <block asynccall="false" colour="#934848" dependencyby="mlVUk,of~!eYxfDK4=/I" id="~8b!nu0!,WTEgt(*MBa!" origintype="form_fieldscreen_callreturn" output="true" type="form_fieldscreen_callreturn">
+                <field name="SELECT">VwBancos.active.id</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block asynccall="false" colour="#0088ee" dependencyby="mlVUk,of~!eYxfDK4=/I" id="l$*r8`j6!%M6@VxG6jP," origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+            <field name="VAR">dataInicio</field>
+            <value name="VALUE">
+              <block asynccall="false" colour="#934848" dependencyby="mlVUk,of~!eYxfDK4=/I" id="um%bp4bp%VJhaFsxFZn(" multilayer="false" namespace="cronapi.screen.Operations.getValueOfField" origintype="procedures_callreturn" output="true" returntype="ObjectType.JSON" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EGet%20field%20value%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20that%20get%20field%20value%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Field%20:%20String%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Json%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.Operations.getValueOfField%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.Operations.getValueOfField%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                <mutation name="{{cronapi.screen.Operations.getValueOfField}}" return-raw-type="cronapi.Var">
+                  <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Field"/>
+                </mutation>
+                <value name="ARG0">
+                  <block asynccall="false" colour="#934848" dependencyby="mlVUk,of~!eYxfDK4=/I" id="@oZ=vUb2qi(Bh,u_iF]q" origintype="form_fieldscreen_callreturn" output="true" type="form_fieldscreen_callreturn">
+                    <field name="SELECT">vars.dataInicio</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block asynccall="false" colour="#0088ee" dependencyby="mlVUk,of~!eYxfDK4=/I" id=";He]a?0pq^hl9QV5VtOf" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+                <field name="VAR">dataFim</field>
+                <value name="VALUE">
+                  <block asynccall="false" colour="#934848" dependencyby="mlVUk,of~!eYxfDK4=/I" id="0euWDO)m+FMUgYSZ(cv7" multilayer="false" namespace="cronapi.screen.Operations.getValueOfField" origintype="procedures_callreturn" output="true" returntype="ObjectType.JSON" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EGet%20field%20value%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20that%20get%20field%20value%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Field%20:%20String%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Json%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.Operations.getValueOfField%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.Operations.getValueOfField%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                    <mutation name="{{cronapi.screen.Operations.getValueOfField}}" return-raw-type="cronapi.Var">
+                      <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Field"/>
+                    </mutation>
+                    <value name="ARG0">
+                      <block asynccall="false" colour="#934848" dependencyby="mlVUk,of~!eYxfDK4=/I" id="Uj+2kY.lngjq~n!BQ?%n" origintype="form_fieldscreen_callreturn" output="true" type="form_fieldscreen_callreturn">
+                        <field name="SELECT">vars.datafim</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block asynccall="false" colour="#487f7f" dependencyby="mlVUk,of~!eYxfDK4=/I" id="W!a?_C$]UY`8ja`AD;aj" multilayer="true" namespace="cronapi.util.openReport" origintype="procedures_openreport_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EOpen%20Report%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20responsible%20for%20opening%20a%20report.%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Report%20:%20String%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.util.openReport%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.util.openReport%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_openreport_callnoreturn">
+                    <mutation name="{{cronapi.util.openReport}}" return-raw-type="undefined">
+                      <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Report"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicioReport"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataFimReport"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicio"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="datafim"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicio"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataFim"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicio"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataFim"/>
+                    </mutation>
+                    <value name="ARG0">
+                      <block asynccall="false" colour="#487f7f" dependencyby="mlVUk,of~!eYxfDK4=/I" id="?3vmRr)G%;}fQGW8G=3G" origintype="util_report_list" output="true" type="util_report_list">
+                        <mutation>
+                          <arg name="" value=""/>
+                        </mutation>
+                        <field name="SELECT">reports/oracleMapArchive.report</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block asynccall="false" colour="#7d9137" dependencyby="mlVUk,of~!eYxfDK4=/I" id="eGi?lkTN$SIt@c-MB]z," multilayer="false" namespace="cronapi.dateTime.Operations.formatDateTime" origintype="procedures_callreturn" output="true" returntype="ObjectType.STRING" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EFormat%20date%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20format%20date%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Date%20:%20DateTime%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Mask%20:%20String%3C/span%3E%3Cdiv%3E%20Mask.%20Ex:%20dd/MM/yyyy%20HH:mm:ss,%20DateTimeFormat,%20DateFormat%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20String%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.dateTime.Operations.formatDateTime%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.dateTime.Operations.formatDateTime%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                        <mutation name="{{cronapi.dateTime.Operations.formatDateTime}}" return-raw-type="cronapi.Var">
+                          <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.DATETIME" name="Date"/>
+                          <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Mask"/>
+                        </mutation>
+                        <value name="ARG0">
+                          <block asynccall="false" colour="#0088ee" dependencyby="mlVUk,of~!eYxfDK4=/I" id="7A[D(_]C^[}FPr6r#d*i" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                            <field name="VAR">dataInicio</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <shadow asynccall="false" colour="#5ba593" dependencyby="mlVUk,of~!eYxfDK4=/I" id="p+aaLVA:tlDt+.|F]~P1" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">dd/MM/yyyy HH:mm</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ARG2">
+                      <block asynccall="false" colour="#7d9137" dependencyby="mlVUk,of~!eYxfDK4=/I" id="mcE`zRZoK`B`[LFDyu_c" multilayer="false" namespace="cronapi.dateTime.Operations.formatDateTime" origintype="procedures_callreturn" output="true" returntype="ObjectType.STRING" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EFormat%20date%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20format%20date%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Date%20:%20DateTime%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Mask%20:%20String%3C/span%3E%3Cdiv%3E%20Mask.%20Ex:%20dd/MM/yyyy%20HH:mm:ss,%20DateTimeFormat,%20DateFormat%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20String%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.dateTime.Operations.formatDateTime%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.dateTime.Operations.formatDateTime%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                        <mutation name="{{cronapi.dateTime.Operations.formatDateTime}}" return-raw-type="cronapi.Var">
+                          <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.DATETIME" name="Date"/>
+                          <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Mask"/>
+                        </mutation>
+                        <value name="ARG0">
+                          <block asynccall="false" colour="#0088ee" dependencyby="mlVUk,of~!eYxfDK4=/I" id="h]m}Y8o^p.fn@R}A*)=w" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                            <field name="VAR">dataFim</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <shadow asynccall="false" colour="#5ba593" dependencyby="mlVUk,of~!eYxfDK4=/I" id="jzmnwU3;L95~_T%EG.`/" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">dd/MM/yyyy HH:mm</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ARG3">
+                      <block asynccall="false" colour="#0088ee" dependencyby="mlVUk,of~!eYxfDK4=/I" id="25x9vo@|9oPunw]#%4k6" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG4">
+                      <block asynccall="false" colour="#0088ee" dependencyby="mlVUk,of~!eYxfDK4=/I" id="+tt1s:TYb8J+!X0wxSV4" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG5">
+                      <block asynccall="false" colour="#0088ee" dependencyby="mlVUk,of~!eYxfDK4=/I" id="#pgNf9985GbxI3v/sxQ$" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataInicio</field>
+                      </block>
+                    </value>
+                    <value name="ARG6">
+                      <block asynccall="false" colour="#0088ee" dependencyby="mlVUk,of~!eYxfDK4=/I" id="=Q4k3:{krBcj!Uo}E/R;" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataFim</field>
+                      </block>
+                    </value>
+                    <value name="ARG7">
+                      <block asynccall="false" colour="#0088ee" dependencyby="mlVUk,of~!eYxfDK4=/I" id="w:`o%TzMBHjw.;lw-P%o" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG8">
+                      <block asynccall="false" colour="#0088ee" dependencyby="mlVUk,of~!eYxfDK4=/I" id="urq_HlR-%?rwi;^zlNPA" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataInicio</field>
+                      </block>
+                    </value>
+                    <value name="ARG9">
+                      <block asynccall="false" colour="#0088ee" dependencyby="mlVUk,of~!eYxfDK4=/I" id="a1$B=_5~?=3`r7SU})UP" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataFim</field>
+                      </block>
+                    </value>
+                    <value name="ARG10">
+                      <block asynccall="false" colour="#0088ee" dependencyby="mlVUk,of~!eYxfDK4=/I" id="B-UOU/xW2ta,.[ldTEXO" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG11">
+                      <block asynccall="false" colour="#0088ee" dependencyby="mlVUk,of~!eYxfDK4=/I" id="?dC(~s+ATw.uz%{kZQ@G" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataInicio</field>
+                      </block>
+                    </value>
+                    <value name="ARG12">
+                      <block asynccall="false" colour="#0088ee" dependencyby="mlVUk,of~!eYxfDK4=/I" id=")2$%]taT.G9V0EUl%OdH" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataFim</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block asynccall="false" colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-265" y="63">
+    <field name="NAME">Execute</field>
+    <comment h="80" pinned="false" w="160">Report</comment>
+    <statement name="STACK">
+      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Syw`Pj#wH)H$sa3k#fjL" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+        <field name="VAR">bancId</field>
+        <value name="VALUE">
+          <block asynccall="false" colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="/X4p_f?d^X%%$|x:)KQu" multilayer="false" namespace="cronapi.screen.Operations.getValueOfField" origintype="procedures_callreturn" output="true" returntype="ObjectType.JSON" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EGet%20field%20value%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20that%20get%20field%20value%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Field%20:%20String%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Json%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.Operations.getValueOfField%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.Operations.getValueOfField%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+            <mutation name="{{cronapi.screen.Operations.getValueOfField}}" return-raw-type="cronapi.Var">
+              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Field"/>
+            </mutation>
+            <value name="ARG0">
+              <block asynccall="false" colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="SWVB@5:C_HZ-%Y@.OT.F" origintype="form_fieldscreen_callreturn" output="true" type="form_fieldscreen_callreturn">
+                <field name="SELECT">VwBancos.active.id</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="J?-#=8=RuVZ`~e*~NM.S" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+            <field name="VAR">dataInicio</field>
+            <value name="VALUE">
+              <block asynccall="false" colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Rk}SYpZXjP!CW7$K7lb7" multilayer="false" namespace="cronapi.screen.Operations.getValueOfField" origintype="procedures_callreturn" output="true" returntype="ObjectType.JSON" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EGet%20field%20value%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20that%20get%20field%20value%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Field%20:%20String%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Json%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.Operations.getValueOfField%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.Operations.getValueOfField%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                <mutation name="{{cronapi.screen.Operations.getValueOfField}}" return-raw-type="cronapi.Var">
+                  <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Field"/>
+                </mutation>
+                <value name="ARG0">
+                  <block asynccall="false" colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="0g0WFv5@M;VA-sN#:cNi" origintype="form_fieldscreen_callreturn" output="true" type="form_fieldscreen_callreturn">
+                    <field name="SELECT">vars.dataInicio</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="$#,Va4k4h][pU$WGo_`$" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+                <field name="VAR">dataFim</field>
+                <value name="VALUE">
+                  <block asynccall="false" colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=":np3U1aaqUg4reHu#b:X" multilayer="false" namespace="cronapi.screen.Operations.getValueOfField" origintype="procedures_callreturn" output="true" returntype="ObjectType.JSON" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EGet%20field%20value%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20that%20get%20field%20value%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Field%20:%20String%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Json%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.Operations.getValueOfField%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.Operations.getValueOfField%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                    <mutation name="{{cronapi.screen.Operations.getValueOfField}}" return-raw-type="cronapi.Var">
+                      <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Field"/>
+                    </mutation>
+                    <value name="ARG0">
+                      <block asynccall="false" colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="mBv1L+k+?Wgk#FZA%9zD" origintype="form_fieldscreen_callreturn" output="true" type="form_fieldscreen_callreturn">
+                        <field name="SELECT">vars.datafim</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block asynccall="false" colour="#487f7f" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Hrb+mOc3`v_AsyOKgT%8" inline="false" multilayer="true" namespace="cronapi.util.openReport" origintype="procedures_openreport_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EOpen%20Report%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20responsible%20for%20opening%20a%20report.%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Report%20:%20String%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.util.openReport%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.util.openReport%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_openreport_callnoreturn">
+                    <mutation name="{{cronapi.util.openReport}}" return-raw-type="undefined">
+                      <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Report"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicioReport"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataFimReport"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="totalAlocadoDb"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="delta"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="totalDelta"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="totalAlocado"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="deltaAno"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="ultimoValor"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicio"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicio"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicio"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataFim"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicio"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataFim"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicio"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataFim"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicio"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataFim"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicio"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataFim"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicio"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataFim"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicio"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataFim"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicio"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataFim"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicio"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataFim"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicio"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataFim"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicio"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataFim"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicio"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataFim"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicio"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataFim"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicio"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataFim"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicio"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataFim"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicio"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataFim"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicio"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataFim"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicio"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataFim"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="bancId"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataInicio"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="dataFim"/>
+                    </mutation>
+                    <value name="ARG0">
+                      <block asynccall="false" colour="#487f7f" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="f=`!l6oNzn(zyIF0~fGX" origintype="util_report_list" output="true" type="util_report_list">
+                        <mutation>
+                          <arg name="" value=""/>
+                        </mutation>
+                        <field name="SELECT">reports/oraclePerformance.report</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block asynccall="false" colour="#7d9137" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="P7*bLs{6/^_tOZ7|-[JX" multilayer="false" namespace="cronapi.dateTime.Operations.formatDateTime" origintype="procedures_callreturn" output="true" returntype="ObjectType.STRING" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EFormat%20date%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20format%20date%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Date%20:%20DateTime%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Mask%20:%20String%3C/span%3E%3Cdiv%3E%20Mask.%20Ex:%20dd/MM/yyyy%20HH:mm:ss,%20DateTimeFormat,%20DateFormat%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20String%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.dateTime.Operations.formatDateTime%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.dateTime.Operations.formatDateTime%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                        <mutation name="{{cronapi.dateTime.Operations.formatDateTime}}" return-raw-type="cronapi.Var">
+                          <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.DATETIME" name="Date"/>
+                          <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Mask"/>
+                        </mutation>
+                        <value name="ARG0">
+                          <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="e~Y|eT5gsiiq`77s{f3T" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                            <field name="VAR">dataInicio</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <shadow asynccall="false" colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="$Yqw*sO,!,XtFe?mBl,h" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">dd/MM/yyyy HH:mm</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ARG2">
+                      <block asynccall="false" colour="#7d9137" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="xoG4q|sJ+2/%[,6FQ(aU" multilayer="false" namespace="cronapi.dateTime.Operations.formatDateTime" origintype="procedures_callreturn" output="true" returntype="ObjectType.STRING" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EFormat%20date%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20format%20date%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Date%20:%20DateTime%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Mask%20:%20String%3C/span%3E%3Cdiv%3E%20Mask.%20Ex:%20dd/MM/yyyy%20HH:mm:ss,%20DateTimeFormat,%20DateFormat%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20String%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.dateTime.Operations.formatDateTime%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.dateTime.Operations.formatDateTime%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                        <mutation name="{{cronapi.dateTime.Operations.formatDateTime}}" return-raw-type="cronapi.Var">
+                          <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.DATETIME" name="Date"/>
+                          <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Mask"/>
+                        </mutation>
+                        <value name="ARG0">
+                          <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="3(qj0U~hjC/-uHdnC#{e" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                            <field name="VAR">dataFim</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <shadow asynccall="false" colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="y/wz~|]4s^wT[U5exNho" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">dd/MM/yyyy HH:mm</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ARG9">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="nPFcEYgVbfu?d230MNDG" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG10">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="yAcZ3VNo8YDy-9iahJkf" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG11">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="x`jP$I2xiifJ-^olFwz8" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataInicio</field>
+                      </block>
+                    </value>
+                    <value name="ARG12">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="`Nx01zR28wDp=!EHhdl@" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG13">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="2k9~Rj{i*},aELyGCxBT" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataInicio</field>
+                      </block>
+                    </value>
+                    <value name="ARG14">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="r0Uvpe:e%IYEq91c?#H[" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG15">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="adBqahhSsX73M;wzN1f$" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG16">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="mm%L_V=[T6@iitxtJNGe" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataInicio</field>
+                      </block>
+                    </value>
+                    <value name="ARG17">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="ZW[[yvz@IQOQ6;:Hl1:)" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataFim</field>
+                      </block>
+                    </value>
+                    <value name="ARG18">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="4=cQbZy)ccsgy1%w508e" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG19">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=".Uk[,p}YjE(%3hNrU3WF" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG20">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="IT]WgcF9n6p|o_zt$l/V" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataInicio</field>
+                      </block>
+                    </value>
+                    <value name="ARG21">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="-gjMiwqVq]#w4c~mSt(v" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataFim</field>
+                      </block>
+                    </value>
+                    <value name="ARG22">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="B2E5^WpA]tCJ*-aGr=%V" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG23">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="7sz6|Bv+,E6D0AX){KW_" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataInicio</field>
+                      </block>
+                    </value>
+                    <value name="ARG24">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Hd.WnzJE9eQuG,TSOa#Y" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataFim</field>
+                      </block>
+                    </value>
+                    <value name="ARG25">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="*_#L[{w-v[}XP?1ZtTg^" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG26">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="*wpR0g_CD2^lH53dH;(e" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataInicio</field>
+                      </block>
+                    </value>
+                    <value name="ARG27">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="T#$H7/tM$*p;MtqZc01/" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataFim</field>
+                      </block>
+                    </value>
+                    <value name="ARG28">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="I@g}zE:rItQ69{6ri9JW" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG29">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="F^qk?X-,Ex^H^odEt=c~" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataInicio</field>
+                      </block>
+                    </value>
+                    <value name="ARG30">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="l:hA;q|^adJ(d4eR8OQ_" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataFim</field>
+                      </block>
+                    </value>
+                    <value name="ARG31">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="1~?IyXrAPhXJHquh-xS-" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG32">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="3u-sFyQ{u2Lg{a_~2{ic" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataInicio</field>
+                      </block>
+                    </value>
+                    <value name="ARG33">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="7:6uSr0eDXd+w=Uesk*y" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataFim</field>
+                      </block>
+                    </value>
+                    <value name="ARG34">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="TYjQ#rwJBsWb/F3}d+}-" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG35">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="6~u_FZJms?f$iVeRri6F" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataInicio</field>
+                      </block>
+                    </value>
+                    <value name="ARG36">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="nEWX+_*Q9~eSEF7:mKHC" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataFim</field>
+                      </block>
+                    </value>
+                    <value name="ARG37">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="w!9=sxOdp:;p3@gIyQC1" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG38">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="PjvlXbSe0G5!Nmd|CD:4" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataInicio</field>
+                      </block>
+                    </value>
+                    <value name="ARG39">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="?jTrnX@*o#,Z0T%{5BX-" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataFim</field>
+                      </block>
+                    </value>
+                    <value name="ARG40">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="R6fY](Y7pWLS~mBNBX2[" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG41">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="ieZ`3TJ#qiXM:#t[swSn" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataInicio</field>
+                      </block>
+                    </value>
+                    <value name="ARG42">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="ME/oBDXcWf)JH`pT{:tR" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataFim</field>
+                      </block>
+                    </value>
+                    <value name="ARG43">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="F?hIq1@I/es1(^z2^TlJ" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG44">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="c}/$){v=)ij]*S$NUu`#" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataInicio</field>
+                      </block>
+                    </value>
+                    <value name="ARG45">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="69f_ys$c?%PpJbv%.$]u" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataFim</field>
+                      </block>
+                    </value>
+                    <value name="ARG46">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Lm02gKh{^YQ8(=^d)%$r" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG47">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="l3Loht[nE=obV9#_7i_0" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataInicio</field>
+                      </block>
+                    </value>
+                    <value name="ARG48">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=")CAHFsydO]Z@0zk6~C+:" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataFim</field>
+                      </block>
+                    </value>
+                    <value name="ARG49">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="5vHKI=$nGu0Ks^#(rCK:" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG50">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="@y{Wp%n7LmJ~:R6r2D`Z" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataInicio</field>
+                      </block>
+                    </value>
+                    <value name="ARG51">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="uNkFkQqn5rpL#D2n]zue" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataFim</field>
+                      </block>
+                    </value>
+                    <value name="ARG52">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="c%#26F/2K)xdjXXG55-P" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG53">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="rSY6;U/Vl(C{xewI@8.e" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataInicio</field>
+                      </block>
+                    </value>
+                    <value name="ARG54">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="NWaXy7ZwU.G^_XwC7AI$" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataFim</field>
+                      </block>
+                    </value>
+                    <value name="ARG55">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="o|/BizL}Lcfm1j%?n!%." origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG56">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="S;@,3McU_5[QV^e67a^O" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataInicio</field>
+                      </block>
+                    </value>
+                    <value name="ARG57">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="U|yoSiP%vFMk/doNl=/U" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataFim</field>
+                      </block>
+                    </value>
+                    <value name="ARG58">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Ge`|O.dC3pmvEgNdmAAM" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG59">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="GH}PO{xp]tUx@Ro;~[%1" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataInicio</field>
+                      </block>
+                    </value>
+                    <value name="ARG60">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="lmyoaPvf|V=}?x=,OSqC" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataFim</field>
+                      </block>
+                    </value>
+                    <value name="ARG61">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="M[j9j1?RV)fj?YErw]8d" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG62">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="YdyU!J8V|0X$sxxZ#u8P" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataInicio</field>
+                      </block>
+                    </value>
+                    <value name="ARG63">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="/2QCU7f`/@:_^Qj(pgH=" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataFim</field>
+                      </block>
+                    </value>
+                    <value name="ARG64">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="T{UWsXp:CZ%FP:40jOOM" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG65">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="I*%.3PQ*$:1$?$1sUt(J" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataInicio</field>
+                      </block>
+                    </value>
+                    <value name="ARG66">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="XB%^)ji#Tk4a9O.9@B/[" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataFim</field>
+                      </block>
+                    </value>
+                    <value name="ARG67">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=".Lrn$?%cx0Ezt(i@f3h!" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG68">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="E;ix[`_^+GMG{R3/,a)!" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataInicio</field>
+                      </block>
+                    </value>
+                    <value name="ARG69">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="aM+co@|!UP)[=2:pO1,m" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataFim</field>
+                      </block>
+                    </value>
+                    <value name="ARG70">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="%G,xIV%XgSs:kb0==0*^" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">bancId</field>
+                      </block>
+                    </value>
+                    <value name="ARG71">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="}MZsk(t*@(NHYh:)bOD?" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataInicio</field>
+                      </block>
+                    </value>
+                    <value name="ARG72">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="UA(ND@6ZZ_j8Ue[-H1Op" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">dataFim</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</blockly>
